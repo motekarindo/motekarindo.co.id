@@ -1,15 +1,15 @@
 ---
 title: "Solusi Organisasi / Perusahaan"
 eyebrow: "Untuk kebutuhan operasional"
-summary: "Pembuatan website, aplikasi internal, dan dukungan server untuk organisasi yang membutuhkan sistem web sederhana namun dapat diandalkan."
+summary: "Pembuatan website, aplikasi internal, DevOps, dan QA untuk organisasi yang membutuhkan sistem digital andal."
 services:
   - "Website company profile"
-  - "Aplikasi internal"
-  - "Server setup"
-  - "Maintenance"
-outcome: "Organisasi memiliki kanal digital dan infrastruktur web yang lebih tertata."
-featured: false
-order: 4
+  - "Aplikasi internal / dashboard"
+  - "DevOps / server setup"
+  - "QA dan testing"
+outcome: "Organisasi memiliki kanal digital dan infrastruktur web yang tertata, teruji, dan mudah dikelola."
+featured: true
+order: 3
 ---
 
-Solusi ini menyesuaikan ruang lingkup pekerjaan dengan kebutuhan aktual dan kapasitas operasional organisasi.
+Solusi ini menyesuaikan ruang lingkup dengan kebutuhan aktual — dari startup yang baru membangun presence digital hingga perusahaan yang perlu memperkuat tim teknis.

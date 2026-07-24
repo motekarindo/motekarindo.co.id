@@ -7,12 +7,12 @@ import { byOrder } from "@/lib/content";
 
 const portfolio = byOrder(await getCollection("portfolio"));
 const title = "Portfolio | Motekar Teknologi Indonesia";
-const description = "Portfolio implementasi OJS, ePrints, maintenance server, website profil, migrasi, dan troubleshooting aplikasi web.";
+const description = "Portfolio project: web development, OJS, ePrints, ERP, DevOps, maintenance server, dan troubleshooting.";
 ---
 
 <BaseLayout title={title} description={description}>
   <main>
-    <PageHero eyebrow="Portfolio" title="Implementasi yang menunjukkan cara kerja" description="Setiap portfolio menjelaskan masalah, solusi yang dikerjakan, teknologi, dan hasil. Identitas klien mengikuti izin publikasi." />
+    <PageHero eyebrow="Portfolio" title="Project yang menunjukkan kualitas kerja" description="Setiap portfolio menjelaskan masalah, solusi yang dikerjakan, teknologi, dan hasil. Identitas klien mengikuti izin publikasi." />
     <section class="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:px-8 lg:py-24">
       <div class="grid gap-6 lg:grid-cols-2">
         {portfolio.map((item) => (

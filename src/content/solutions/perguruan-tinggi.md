@@ -7,9 +7,9 @@ services:
   - "Instalasi ePrints"
   - "Website fakultas, prodi, atau institusi"
   - "Maintenance server akademik"
-outcome: "Sistem akademik berbasis web lebih siap digunakan oleh tim internal, pengelola jurnal, dan pengguna institusi."
+outcome: "Sistem akademik berbasis web siap digunakan oleh tim internal, pengelola jurnal, dan pengguna institusi."
 featured: true
 order: 1
 ---
 
-Solusi ini cocok untuk kampus yang ingin menata layanan digital tanpa membangun semua kebutuhan teknis dari nol.
+Salah satu sektor dengan pengalaman paling banyak. Solusi ini cocok untuk kampus yang ingin menata layanan digital tanpa membangun dari nol.

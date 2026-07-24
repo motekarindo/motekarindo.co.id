@@ -6,12 +6,12 @@ import { byOrder, statusLabel } from "@/lib/content";
 
 const products = byOrder(await getCollection("products"));
 const title = "Product | Motekar Teknologi Indonesia";
-const description = "Product Motekar disiapkan untuk pengembangan aplikasi dan tools digital.";
+const description = "Produk digital Motekar — ERP percetakan dan aplikasi custom.";
 ---
 
 <BaseLayout title={title} description={description}>
   <main>
-    <PageHero eyebrow="Product" title="Produk digital sedang disiapkan" description="Menu Product untuk aplikasi dan tools milik Motekar. Dikembangkan bertahap berdasarkan kebutuhan proyek dan masukan klien." />
+    <PageHero eyebrow="Product" title="Produk digital untuk operasional bisnis" description="Produk dikembangkan berdasarkan kebutuhan nyata — dimulai dari ERP untuk operasional percetakan digital." />
     <section class="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:px-8 lg:py-24">
       <div class="grid gap-6 lg:grid-cols-2">
         {products.map((p) => (

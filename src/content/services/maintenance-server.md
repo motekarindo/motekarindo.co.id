@@ -7,4 +7,4 @@ featured: true
 order: 6
 ---
 
-Maintenance dapat mencakup pengecekan service, update package, backup, monitoring ringan, serta troubleshooting saat terjadi gangguan.
+Maintenance mencakup pengecekan service, update package, backup, monitoring, serta troubleshooting saat terjadi gangguan — dirancang agar tim internal bisa fokus ke hal lain.
