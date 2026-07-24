@@ -1,25 +1,31 @@
 @import "tailwindcss" source("../");
 
 @theme {
-  --color-brand-50: #f2faf7;
-  --color-brand-100: #daf0e8;
-  --color-brand-200: #b5e1d2;
+  /* brand: hijau ColorHunt, 50=paling terang, 900=paling gelap */
+  --color-brand-50: #f2faf7;   /* background cards, hover ringan */
+  --color-brand-100: #daf0e8;   /* badge bg, highlight tipis */
+  --color-brand-200: #b5e1d2;   /* border ringan, dot pattern */
   --color-brand-300: #8fd2bc;
-  --color-brand-400: #6fcf97;
-  --color-brand-500: #4fbf8e;
-  --color-brand-600: #2fa084;
-  --color-brand-700: #278873;
-  --color-brand-800: #1f6f5f;
-  --color-brand-900: #175346;
-  --color-ink: #171717;
-  --color-muted: #525252;
-  --color-soft: #a3a3a3;
-  --color-line: #e5e7eb;
-  --color-surface: #ffffff;
-  --color-surface-alt: #eeeeee;
-  --color-asphalt: #1f6f5f;
-  --color-accent: #6fcf97;
-  --color-accent-hover: #2fa084;
+  --color-brand-400: #6fcf97;   /* ColorHunt hijau cerah, badge CTA di dark bg */
+  --color-brand-500: #4fbf8e;   /* connector line, check icon */
+  --color-brand-600: #2fa084;   /* ColorHunt primary — tombol, badge, link aktif */
+  --color-brand-700: #278873;   /* teks hijau gelap, hover teks */
+  --color-brand-800: #1f6f5f;   /* ColorHunt dark green — footer heading */
+  --color-brand-900: #175346;   /* teks di atas brand-400 */
+
+  /* neutral */
+  --color-ink: #171717;         /* teks utama, heading */
+  --color-muted: #525252;       /* teks deskripsi */
+  --color-soft: #a3a3a3;        /* teks tersier, label */
+  --color-line: #e5e7eb;        /* border ringan */
+  --color-surface: #ffffff;     /* background putih */
+  --color-surface-alt: #eeeeee; /* ColorHunt #EEEEEE — bg alternatif */
+
+  /* dark section & accent */
+  --color-asphalt: #2FA084;     /* bg gelap CTA & footer — netral hitam */
+  --color-accent: #eeeeee;       /* ColorHunt hijau cerah — tombol CTA di dark bg */
+  --color-accent-hover: #2fa084; /* hover tombol accent */
+
   --font-heading: "Sora", ui-sans-serif, system-ui, sans-serif;
   --font-body: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
   --radius-card: 0.75rem;
@@ -37,9 +43,9 @@
     -moz-osx-font-smoothing: grayscale;
   }
   body { min-height: 100vh; margin: 0; }
-  ::selection { background: #b5e1d2; color: #175346; }
+  ::selection { background: #b5e1d2; color: #175346; } /* seleksi teks: brand-200 + brand-900 */
   a { text-underline-offset: 0.2em; }
-  :focus-visible { outline: 2.5px solid var(--color-brand-600); outline-offset: 3px; border-radius: 2px; }
+  :focus-visible { outline: 2.5px solid var(--color-brand-600); outline-offset: 3px; border-radius: 2px; } /* aksesibilitas keyboard */
 }
 
 @keyframes fade-up {
