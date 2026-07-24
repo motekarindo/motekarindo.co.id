@@ -1,0 +1,139 @@
+---
+interface Props {
+  type: "Organization" | "Service" | "Product" | "Article" | "WebSite";
+  data: Record<string, any>;
+}
+
+const org = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Motekar Teknologi Indonesia",
+  url: "https://motekarindo.co.id",
+  logo: "https://motekarindo.co.id/favicon.svg",
+  description:
+    "IT consultant, web development, DevOps, QA, dan solusi digital untuk bisnis dan organisasi.",
+  telephone: "+6281212656699",
+  email: "hello@motekarindo.co.id",
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: "ID",
+  },
+  sameAs: ["https://wa.me/6281212656699"],
+  areaServed: {
+    "@type": "Country",
+    name: "Indonesia",
+  },
+  knowsAbout: [
+    "IT Consulting",
+    "Web Development",
+    "DevOps",
+    "Quality Assurance",
+    "Server Maintenance",
+    "OJS",
+    "ePrints",
+    "ERP Percetakan Digital",
+  ],
+  priceRange: "$$",
+};
+
+const website = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Motekar Teknologi Indonesia",
+  url: "https://motekarindo.co.id",
+  inLanguage: "id",
+  description:
+    "IT consultant, web development, DevOps, QA, dan solusi digital.",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: "https://motekarindo.co.id/search?q={search_term_string}",
+    "query-input": "required name=search_term_string",
+  },
+};
+
+const breadcrumbs = (items: { name: string; url: string }[]) => ({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: items.map((item, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: item.name,
+    item: item.url,
+  })),
+});
+
+function getSchema(type: string, data: Record<string, any>) {
+  switch (type) {
+    case "Organization":
+      return JSON.stringify(org);
+    case "WebSite":
+      return JSON.stringify({ "@graph": [org, website] });
+    case "Service":
+      return JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Service",
+        provider: { "@type": "ProfessionalService", name: "Motekar Teknologi Indonesia", url: "https://motekarindo.co.id" },
+        ...data,
+      });
+    case "Product":
+      return JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web",
+        offers: { "@type": "Offer", availability: "https://schema.org/InStock" },
+        ...data,
+      });
+    case "Article":
+      return JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        ...data,
+      });
+    default:
+      return "";
+  }
+}
+
+// Build schema per page type
+const path = Astro.url.pathname;
+
+// Default: homepage = full org + website + breadcrumbs
+let schema: string;
+
+if (path === "/") {
+  schema = JSON.stringify({
+    "@graph": [
+      org,
+      website,
+      breadcrumbs([{ name: "Home", url: "https://motekarindo.co.id" }]),
+    ],
+  });
+} else if (path.startsWith("/layanan")) {
+  schema = JSON.stringify({
+    "@graph": [
+      org,
+      website,
+      breadcrumbs([
+        { name: "Home", url: "https://motekarindo.co.id" },
+        { name: "Layanan", url: "https://motekarindo.co.id/layanan" },
+      ]),
+    ],
+  });
+} else if (path.startsWith("/solusi")) {
+  schema = JSON.stringify({
+    "@graph": [
+      org,
+      website,
+      breadcrumbs([
+        { name: "Home", url: "https://motekarindo.co.id" },
+        { name: "Solusi", url: "https://motekarindo.co.id/solusi" },
+      ]),
+    ],
+  });
+} else {
+  schema = JSON.stringify({ "@graph": [org, website] });
+}
+---
+
+<script type="application/ld+json" set:html={schema} />
