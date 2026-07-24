@@ -7,7 +7,7 @@ import ServiceCard from "@/components/ServiceCard.astro";
 import SolutionCard from "@/components/SolutionCard.astro";
 import { byOrder, featured } from "@/lib/content";
 
-const services = featured(await getCollection("services")).slice(0, 6);
+const services = featured(await getCollection("layanan")).slice(0, 6);
 const solutions = featured(await getCollection("solutions"));
 const clients = featured(await getCollection("clients"));
 const portfolio = featured(await getCollection("portfolio")).slice(0, 4);
@@ -151,7 +151,7 @@ const skills = [
       />
       <div class="mt-14 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((s) => (
-          <ServiceCard title={s.data.title} summary={s.data.summary} category={s.data.category} icon={s.data.icon} />
+          <ServiceCard title={s.data.title} summary={s.data.summary} category={s.data.category} icon={s.data.icon} href={`/layanan/${s.id}`} />
         ))}
       </div>
       <div class="mt-12 text-center">

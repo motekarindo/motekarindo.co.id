@@ -1,4 +1,5 @@
 @import "tailwindcss" source("../");
+@plugin "@tailwindcss/typography";
 
 @theme {
   /* brand: hijau ColorHunt, 50=paling terang, 900=paling gelap */
