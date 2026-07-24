@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHero from "@/components/PageHero.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
+import { byOrder } from "@/lib/content";
+
+const services = byOrder(await getCollection("services"));
+const title = "Layanan | Motekar Teknologi Indonesia";
+const description = "Layanan IT consultant, web development, instalasi OJS/ePrints, maintenance server, migrasi, dan troubleshooting aplikasi web.";
+---
+
+<BaseLayout title={title} description={description}>
+  <main>
+    <PageHero eyebrow="Layanan" title="Layanan teknis untuk website, aplikasi akademik, dan server" description="Pilih layanan sesuai kebutuhan proyek atau gabungkan menjadi solusi untuk institusi." />
+    <section class="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:px-8 lg:py-24">
+      <div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+        {services.map((s) => (<ServiceCard title={s.data.title} summary={s.data.summary} category={s.data.category} icon={s.data.icon} />))}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

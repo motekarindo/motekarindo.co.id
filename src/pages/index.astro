@@ -1,12 +1,212 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import PortfolioCard from "@/components/PortfolioCard.astro";
+import SectionHeading from "@/components/SectionHeading.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
+import SolutionCard from "@/components/SolutionCard.astro";
+import { byOrder, featured } from "@/lib/content";
 
-const title = "Motekar Teknologi Indonesia - Coming Soon";
-const description = "Cooming soon";
+const services = featured(await getCollection("services")).slice(0, 6);
+const solutions = featured(await getCollection("solutions"));
+const clients = featured(await getCollection("clients"));
+const portfolio = featured(await getCollection("portfolio")).slice(0, 4);
+
+const title = "Motekar Teknologi Indonesia \u2014 IT Consultant, Web Development, OJS & ePrints";
+const description = "Motekar Teknologi Indonesia menyediakan layanan IT consultant, web development, instalasi OJS/ePrints, dan maintenance server untuk institusi dan organisasi.";
+
+const skills = [
+  { label: "Konsultasi IT", desc: "Perencanaan, evaluasi sistem, dan rekomendasi teknis." },
+  { label: "Web Development", desc: "Website profil, landing page, aplikasi web." },
+  { label: "OJS & ePrints", desc: "Instalasi, konfigurasi, upgrade, dan maintenance." },
+  { label: "Server", desc: "Setup, migrasi, backup, monitoring, troubleshooting." },
+];
 ---
 
 <BaseLayout title={title} description={description}>
-  <main class="grid min-h-screen place-items-center bg-brand-50 px-6 text-ink">
-    <h1 class="font-heading text-4xl font-bold sm:text-6xl">Cooming soon</h1>
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="relative overflow-hidden border-b-2 border-brand-600 bg-white">
+      <div class="absolute inset-0 bg-dots opacity-30" aria-hidden="true"></div>
+      <div class="relative mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-6 lg:grid-cols-[1fr_1fr] lg:px-8 lg:py-28">
+        <div class="flex flex-col justify-center">
+          <span class="inline-block w-fit rounded-full bg-brand-600 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-white shadow-sm">
+            IT Consultant &bull; Web Development &bull; Server
+          </span>
+          <h1 class="mt-6 max-w-xl font-heading text-4xl font-extrabold leading-tight text-ink sm:text-5xl lg:text-[3.75rem]">
+            Mitra <span class="text-brand-600">teknologi</span> untuk sistem web <span class="text-brand-600">institusi.</span>
+          </h1>
+          <p class="mt-6 max-w-lg text-lg leading-8 text-muted">
+            Kami membantu perguruan tinggi, pengelola jurnal, dan organisasi membangun website, aplikasi akademik, serta merawat server pendukungnya.
+          </p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="/kontak" class="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-6 py-3.5 text-sm font-bold text-white shadow-md shadow-brand-600/30 transition-all hover:bg-brand-700 hover:shadow-lg hover:shadow-brand-600/40">
+              Konsultasi Gratis
+              <svg class="size-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="/layanan" class="inline-flex items-center gap-2 rounded-lg border-2 border-brand-600 bg-white px-6 py-3.5 text-sm font-semibold text-brand-700 transition-all hover:bg-brand-50 hover:text-brand-600">
+              Lihat Layanan
+            </a>
+          </div>
+        </div>
+
+        <div class="hidden lg:grid grid-cols-2 gap-4 content-center">
+          {skills.map(({ label, desc }) => (
+            <div class="rounded-xl border-2 border-brand-500 bg-brand-600 p-5 shadow-md shadow-brand-600/30 transition-all hover:bg-brand-700 hover:shadow-lg hover:shadow-brand-600/40">
+              <p class="font-heading text-sm font-bold text-white">{label}</p>
+              <p class="mt-2 text-xs leading-6 text-brand-100">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LAYANAN ===== -->
+    <section class="mx-auto max-w-7xl px-5 py-24 sm:px-6 lg:px-8">
+      <SectionHeading
+        eyebrow="Layanan"
+        title="Dukungan teknis dari konsultasi sampai maintenance"
+        description="Layanan Motekar mencakup pengembangan, instalasi, konfigurasi, dan perawatan aplikasi web yang digunakan institusi."
+      />
+      <div class="mt-14 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+        {services.map((s) => (
+          <ServiceCard title={s.data.title} summary={s.data.summary} category={s.data.category} icon={s.data.icon} />
+        ))}
+      </div>
+      <div class="mt-12 text-center">
+        <a href="/layanan" class="inline-flex items-center gap-2 rounded-lg border-2 border-brand-600 bg-white px-5 py-2.5 text-sm font-semibold text-brand-700 transition-all hover:bg-brand-50 hover:text-brand-600">
+          Semua Layanan <svg class="size-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== SOLUSI ===== -->
+    <section class="border-y-2 border-brand-600 bg-white py-24">
+      <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <SectionHeading
+          eyebrow="Solusi"
+          title="Paket layanan untuk kebutuhan institusi"
+          description="Beberapa layanan digabungkan menjadi solusi yang sesuai dengan konteks perguruan tinggi, pengelola jurnal, repository, atau organisasi."
+        />
+        <div class="mt-14 grid gap-8">
+          {solutions.map((sol) => (
+            <SolutionCard
+              title={sol.data.title}
+              eyebrow={sol.data.eyebrow}
+              summary={sol.data.summary}
+              services={sol.data.services}
+              outcome={sol.data.outcome}
+            />
+          ))}
+        </div>
+        <div class="mt-12 text-center">
+          <a href="/solusi" class="inline-flex items-center gap-2 rounded-lg border-2 border-brand-600 bg-white px-5 py-2.5 text-sm font-semibold text-brand-700 transition-all hover:bg-brand-50 hover:text-brand-600">
+            Semua Solusi <svg class="size-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== KLIEN ===== -->
+    <section class="bg-brand-50 py-24">
+      <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] items-start">
+          <SectionHeading
+            eyebrow="Klien"
+            title="Berpengalaman pada institusi dan layanan akademik"
+            description="Nama dan logo hanya ditampilkan setelah izin publikasi."
+          />
+          <div class="grid gap-5 sm:grid-cols-3">
+            {byOrder(clients).map((client) => (
+              <article class="group rounded-xl border-2 border-brand-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-brand-500">
+                <span class="inline-block rounded-full bg-brand-100 px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.1em] text-brand-700">{client.data.category}</span>
+                <h3 class="mt-4 font-heading text-lg font-bold text-ink group-hover:text-brand-600 transition-colors">{client.data.name}</h3>
+                <p class="mt-3 text-sm leading-7 text-muted">{client.data.description}</p>
+                <p class="mt-4 rounded-lg bg-brand-100 p-2.5 text-xs font-semibold text-brand-700">
+                  {client.data.public ? "\u2705 Publik" : "\U0001f512 Disamarkan"}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PORTFOLIO ===== -->
+    <section class="bg-white py-24">
+      <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <SectionHeading
+          eyebrow="Portfolio"
+          title="Contoh implementasi yang menunjukkan cara kerja"
+          description="Setiap portfolio menjelaskan masalah, solusi yang dikerjakan, teknologi, dan hasil."
+        />
+        <div class="mt-14 grid gap-6 lg:grid-cols-2">
+          {portfolio.map((item) => (
+            <PortfolioCard
+              title={item.data.title}
+              client={item.data.client}
+              problem={item.data.problem}
+              solution={item.data.solution}
+              technologies={item.data.technologies}
+              outcome={item.data.outcome}
+            />
+          ))}
+        </div>
+        <div class="mt-12 text-center">
+          <a href="/portfolio" class="inline-flex items-center gap-2 rounded-lg border-2 border-brand-600 bg-white px-5 py-2.5 text-sm font-semibold text-brand-700 transition-all hover:bg-brand-50 hover:text-brand-600">
+            Semua Portfolio <svg class="size-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CARA KERJA ===== -->
+    <section class="border-y-2 border-brand-600 bg-surface-alt py-24">
+      <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center">
+          <span class="inline-block rounded-full bg-brand-600 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-white shadow-sm">Cara Kerja</span>
+          <h2 class="mt-5 font-heading text-3xl font-extrabold leading-tight text-ink sm:text-4xl">Dari analisis sampai dokumentasi</h2>
+          <p class="mt-4 text-base leading-8 text-muted">Setiap proyek melewati tiga tahap yang memastikan hasil akhir terukur dan terdokumentasi.</p>
+        </div>
+        <div class="mt-16 grid gap-8 sm:grid-cols-3">
+          <div class="relative text-center">
+            <span class="inline-grid size-14 place-items-center rounded-full bg-brand-600 text-lg font-bold text-white shadow-lg shadow-brand-600/30">01</span>
+            <h3 class="mt-6 font-heading text-xl font-bold text-ink">Analisis Kebutuhan</h3>
+            <p class="mt-3 text-sm leading-7 text-muted">Kondisi sistem, akses teknis, dan prioritas dipetakan sebelum implementasi dimulai.</p>
+            <div class="absolute top-7 left-[65%] hidden h-0.5 w-[70%] bg-brand-500 sm:block" aria-hidden="true"></div>
+          </div>
+          <div class="relative text-center">
+            <span class="inline-grid size-14 place-items-center rounded-full bg-brand-600 text-lg font-bold text-white shadow-lg shadow-brand-600/30">02</span>
+            <h3 class="mt-6 font-heading text-xl font-bold text-ink">Implementasi Terarah</h3>
+            <p class="mt-3 text-sm leading-7 text-muted">Pekerjaan dijalankan sesuai scope, dari instalasi hingga maintenance.</p>
+            <div class="absolute top-7 left-[65%] hidden h-0.5 w-[70%] bg-brand-500 sm:block" aria-hidden="true"></div>
+          </div>
+          <div class="text-center">
+            <span class="inline-grid size-14 place-items-center rounded-full bg-brand-600 text-lg font-bold text-white shadow-lg shadow-brand-600/30">03</span>
+            <h3 class="mt-6 font-heading text-xl font-bold text-ink">Validasi & Dokumentasi</h3>
+            <p class="mt-3 text-sm leading-7 text-muted">Fungsi utama diverifikasi dan catatan teknis disiapkan untuk pengelolaan lanjutan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="bg-asphalt px-5 py-24 sm:px-6 lg:px-8">
+      <div class="mx-auto flex max-w-4xl flex-col items-center text-center gap-8">
+        <span class="inline-block rounded-full bg-brand-400 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-brand-900 shadow-md">Mulai dari kebutuhan Anda</span>
+        <h2 class="font-heading text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl">
+          Butuh bantuan website, OJS, ePrints, atau server?
+        </h2>
+        <p class="max-w-2xl text-lg leading-8 text-neutral-400">
+          Ceritakan kebutuhan teknis Anda. Kami bantu arahkan solusi yang sesuai\u2014tanpa biaya konsultasi awal.
+        </p>
+        <a href="/kontak" class="inline-flex items-center gap-2 rounded-lg bg-accent px-8 py-4 text-base font-bold text-ink shadow-lg shadow-accent/30 transition-all hover:bg-accent-hover hover:text-white hover:shadow-xl hover:shadow-accent/40">
+          Hubungi Motekar Sekarang
+          <svg class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
   </main>
 </BaseLayout>

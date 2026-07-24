@@ -1,0 +1,65 @@
+---
+const currentYear = new Date().getFullYear();
+const navLinks = [
+  { href: "/layanan", label: "Layanan" },
+  { href: "/solusi", label: "Solusi" },
+  { href: "/product", label: "Product" },
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/tentang", label: "Tentang Kami" },
+];
+const serviceLinks = [
+  { href: "/layanan", label: "IT Consultant" },
+  { href: "/layanan", label: "Web Development" },
+  { href: "/layanan", label: "Instalasi OJS" },
+  { href: "/layanan", label: "Instalasi ePrints" },
+  { href: "/layanan", label: "Maintenance Server" },
+];
+---
+
+<footer class="bg-asphalt text-white">
+  <div class="mx-auto max-w-7xl px-5 pt-20 pb-14 sm:px-6 lg:px-8">
+    <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
+      <div>
+        <div class="flex items-center gap-3">
+          <span class="grid size-9 shrink-0 place-items-center rounded-lg bg-brand-600 font-heading text-sm font-bold text-white">M</span>
+          <div>
+            <p class="font-heading text-base font-bold text-white">Motekar Teknologi Indonesia</p>
+            <p class="mt-0.5 text-sm text-neutral-400">IT Consultant &bull; Web Dev &bull; OJS &bull; ePrints</p>
+          </div>
+        </div>
+        <p class="mt-5 max-w-sm text-sm leading-7 text-neutral-400">
+          Membantu institusi dan organisasi membangun, mengelola, serta merawat aplikasi web dan server pendukungnya.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-heading text-xs font-bold uppercase tracking-[0.15em] text-brand-500">Navigasi</h2>
+        <ul class="mt-4 grid gap-2.5">
+          {navLinks.map((link) => (<li><a href={link.href} class="text-sm font-medium text-neutral-300 transition-colors hover:text-white">{link.label}</a></li>))}
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="font-heading text-xs font-bold uppercase tracking-[0.15em] text-brand-500">Layanan</h2>
+        <ul class="mt-4 grid gap-2.5">
+          {serviceLinks.map((link) => (<li><a href={link.href} class="text-sm font-medium text-neutral-300 transition-colors hover:text-white">{link.label}</a></li>))}
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="font-heading text-xs font-bold uppercase tracking-[0.15em] text-brand-500">Kontak</h2>
+        <ul class="mt-4 grid gap-3 text-sm">
+          <li><a href="mailto:hello@motekarindo.co.id" class="inline-flex items-center gap-2 font-medium text-neutral-300 transition-colors hover:text-white">
+            <svg class="size-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            hello@motekarindo.co.id</a></li>
+          <li><a href="/kontak" class="inline-flex items-center gap-2 font-medium text-neutral-300 transition-colors hover:text-white">
+            <svg class="size-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            Konsultasi Kebutuhan</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="border-t-2 border-brand-600 px-5 py-5">
+    <p class="text-center text-xs text-neutral-500">&copy; {currentYear} Motekar Teknologi Indonesia. All rights reserved.</p>
+  </div>
+</footer>

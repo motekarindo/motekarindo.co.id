@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHero from "@/components/PageHero.astro";
+import SolutionCard from "@/components/SolutionCard.astro";
+import { byOrder } from "@/lib/content";
+
+const solutions = byOrder(await getCollection("solutions"));
+const title = "Solusi | Motekar Teknologi Indonesia";
+const description = "Solusi Motekar menggabungkan layanan OJS, ePrints, website, dan maintenance server untuk perguruan tinggi, jurnal, repository, dan organisasi.";
+---
+
+<BaseLayout title={title} description={description}>
+  <main>
+    <PageHero eyebrow="Solusi" title="Solusi berdasarkan kebutuhan institusi" description="Gabungan layanan yang disesuaikan dengan konteks perguruan tinggi, pengelola jurnal, repository, atau organisasi." />
+    <section class="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:px-8 lg:py-24">
+      <div class="grid gap-8">
+        {solutions.map((sol) => (<SolutionCard title={sol.data.title} eyebrow={sol.data.eyebrow} summary={sol.data.summary} services={sol.data.services} outcome={sol.data.outcome} />))}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

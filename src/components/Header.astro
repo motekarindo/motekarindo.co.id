@@ -1,0 +1,80 @@
+---
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/layanan", label: "Layanan" },
+  { href: "/solusi", label: "Solusi" },
+  { href: "/product", label: "Product" },
+  { href: "/client", label: "Client" },
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/tentang", label: "Tentang" },
+  { href: "/kontak", label: "Kontak" },
+];
+const currentPath = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-50 border-b-2 border-brand-600 bg-white/95 backdrop-blur-lg">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 sm:px-6 lg:px-8">
+    <a href="/" class="flex items-center gap-2.5 shrink-0 group" aria-label="Motekar Teknologi Indonesia — Home">
+      <span class="grid size-9 shrink-0 place-items-center rounded-lg bg-brand-600 font-heading text-sm font-bold text-white shadow-sm shadow-brand-600/30 group-hover:bg-brand-700 transition-colors">
+        M
+      </span>
+      <span class="leading-tight hidden sm:block">
+        <span class="block font-heading text-sm font-bold tracking-[0.03em] text-ink uppercase">Motekar</span>
+        <span class="block text-[11px] font-semibold text-soft">Teknologi Indonesia</span>
+      </span>
+    </a>
+
+    <nav class="hidden items-center gap-0.5 lg:flex" aria-label="Navigasi utama">
+      {navItems.map((item) => {
+        const isActive = currentPath === item.href || (item.href !== "/" && currentPath.startsWith(item.href));
+        return (
+          <a
+            href={item.href}
+            class={`rounded-lg px-3 py-2 text-sm font-semibold transition-colors ${
+              isActive ? "bg-brand-50 text-brand-600" : "text-muted hover:bg-neutral-50 hover:text-ink"
+            }`}
+          >
+            {item.label}
+          </a>
+        );
+      })}
+    </nav>
+
+    <a
+      href="/kontak"
+      class="hidden items-center gap-1.5 rounded-lg bg-accent px-4 py-2.5 text-sm font-bold text-ink shadow-sm transition-all hover:bg-accent-hover hover:text-white lg:inline-flex"
+    >
+      Konsultasi
+      <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+
+    <button id="menu-btn" class="inline-flex items-center justify-center rounded-lg p-2 text-muted hover:bg-neutral-50 lg:hidden" aria-label="Toggle menu" aria-expanded="false">
+      <svg id="icon-open" class="size-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <svg id="icon-close" class="hidden size-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+
+  <nav id="mobile-nav" class="hidden border-t border-line/50 bg-white px-5 pb-4 pt-2 lg:hidden" aria-label="Navigasi mobile">
+    {navItems.map((item) => {
+      const isActive = currentPath === item.href || (item.href !== "/" && currentPath.startsWith(item.href));
+      return (
+        <a href={item.href} class={`block rounded-lg px-3 py-2.5 text-sm font-semibold transition-colors ${isActive ? "bg-brand-50 text-brand-600" : "text-muted hover:bg-neutral-50 hover:text-ink"}`}>{item.label}</a>
+      );
+    })}
+    <a href="/kontak" class="mt-2 block rounded-lg bg-accent px-4 py-2.5 text-center text-sm font-bold text-ink shadow-sm hover:bg-accent-hover hover:text-white">Konsultasi</a>
+  </nav>
+</header>
+
+<script>
+  const btn = document.getElementById("menu-btn");
+  const nav = document.getElementById("mobile-nav");
+  const o = document.getElementById("icon-open");
+  const c = document.getElementById("icon-close");
+  if (btn && nav) btn.addEventListener("click", () => {
+    const e = btn.getAttribute("aria-expanded") === "true";
+    btn.setAttribute("aria-expanded", String(!e));
+    nav.classList.toggle("hidden");
+    o?.classList.toggle("hidden");
+    c?.classList.toggle("hidden");
+  });
+</script>

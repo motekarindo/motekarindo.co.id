@@ -1,0 +1,52 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHero from "@/components/PageHero.astro";
+
+const title = "Kontak | Motekar Teknologi Indonesia";
+const description = "Hubungi Motekar untuk konsultasi web development, OJS, ePrints, dan maintenance server.";
+---
+
+<BaseLayout title={title} description={description}>
+  <main>
+    <PageHero eyebrow="Kontak" title="Ceritakan kebutuhan teknis Anda" description="Sampaikan kebutuhan website, OJS, ePrints, server, atau aplikasi web yang ingin dibangun, diperbaiki, atau dirawat." />
+    <section class="mx-auto grid max-w-7xl gap-6 px-5 py-20 sm:px-6 lg:grid-cols-[1fr_1fr] lg:px-8 lg:py-24">
+      <article class="rounded-xl border-2 border-line bg-white p-8 shadow-sm">
+        <div class="mb-6 grid size-12 place-items-center rounded-xl bg-brand-600 text-2xl text-white">📧</div>
+        <h2 class="font-heading text-2xl font-extrabold text-ink">Kontak Langsung</h2>
+        <p class="mt-3 text-sm leading-7 text-muted">Sampaikan kebutuhan via email. Tim merespons dalam 1×24 jam kerja.</p>
+        <div class="mt-6 grid gap-3">
+          <a href="mailto:hello@motekarindo.co.id" class="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-600 px-5 py-3 text-sm font-semibold text-white shadow-md shadow-brand-600/30 transition-all hover:bg-brand-700 hover:shadow-lg">
+            <svg class="size-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            hello@motekarindo.co.id
+          </a>
+          <a href="/portfolio" class="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-brand-600 bg-white px-5 py-3 text-sm font-semibold text-brand-700 transition-all hover:bg-brand-50 hover:text-brand-600">
+            Lihat Portfolio
+          </a>
+        </div>
+      </article>
+
+      <article class="rounded-xl border-2 border-brand-200 bg-brand-50 p-8 shadow-sm">
+        <div class="mb-6 grid size-12 place-items-center rounded-xl bg-brand-600 text-2xl text-white">📋</div>
+        <h2 class="font-heading text-2xl font-extrabold text-ink">Informasi yang Membantu</h2>
+        <ul class="mt-5 grid gap-3 text-sm leading-7 text-muted">
+          <li class="flex items-start gap-2.5">
+            <svg class="mt-1.5 size-4 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span><strong class="text-ink">Jenis:</strong> website, OJS, ePrints, server, troubleshooting.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <svg class="mt-1.5 size-4 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span><strong class="text-ink">Kondisi:</strong> sudah ada sistem atau mulai dari nol.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <svg class="mt-1.5 size-4 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span><strong class="text-ink">Target:</strong> kapan sistem perlu siap.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <svg class="mt-1.5 size-4 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span><strong class="text-ink">Kendala:</strong> error, downtime, migrasi, performa, fitur.</span>
+          </li>
+        </ul>
+      </article>
+    </section>
+  </main>
+</BaseLayout>

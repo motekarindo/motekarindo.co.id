@@ -1,36 +1,60 @@
-@import "tailwindcss";
+@import "tailwindcss" source("../");
 
 @theme {
-  --color-brand-50: #e8f5ed;
-  --color-brand-100: #d1eadb;
-  --color-brand-500: #22a455;
-  --color-brand-700: #15803d;
-  --color-brand-900: #102016;
-  --color-ink: #102016;
-  --color-muted: #5f6f66;
-  --color-line: #dbe7df;
+  --color-brand-50: #f2faf7;
+  --color-brand-100: #daf0e8;
+  --color-brand-200: #b5e1d2;
+  --color-brand-300: #8fd2bc;
+  --color-brand-400: #6fcf97;
+  --color-brand-500: #4fbf8e;
+  --color-brand-600: #2fa084;
+  --color-brand-700: #278873;
+  --color-brand-800: #1f6f5f;
+  --color-brand-900: #175346;
+  --color-ink: #171717;
+  --color-muted: #525252;
+  --color-soft: #a3a3a3;
+  --color-line: #e5e7eb;
   --color-surface: #ffffff;
-  --color-surface-alt: #f0f7f2;
-  --color-teal: #0f766e;
-  --color-amber: #c77803;
-  --font-heading: Sora, ui-sans-serif, system-ui, sans-serif;
+  --color-surface-alt: #eeeeee;
+  --color-asphalt: #1f6f5f;
+  --color-accent: #6fcf97;
+  --color-accent-hover: #2fa084;
+  --font-heading: "Sora", ui-sans-serif, system-ui, sans-serif;
   --font-body: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
   --radius-card: 0.75rem;
+  --radius-btn: 0.5rem;
 }
 
-html {
-  background: #f8fbf8;
-  color: #102016;
-  font-family: var(--font-body);
-  text-rendering: optimizeLegibility;
+@layer base {
+  html {
+    background: #fff;
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body { min-height: 100vh; margin: 0; }
+  ::selection { background: #b5e1d2; color: #175346; }
+  a { text-underline-offset: 0.2em; }
+  :focus-visible { outline: 2.5px solid var(--color-brand-600); outline-offset: 3px; border-radius: 2px; }
 }
 
-body {
-  min-height: 100vh;
-  margin: 0;
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-::selection {
-  background: #d1eadb;
-  color: #102016;
+.animate-fade-up { animation: fade-up 0.6s ease-out both; }
+.stagger-1 { animation-delay: 0.06s; }
+.stagger-2 { animation-delay: 0.12s; }
+.stagger-3 { animation-delay: 0.18s; }
+.stagger-4 { animation-delay: 0.24s; }
+.stagger-5 { animation-delay: 0.3s; }
+
+.bg-dots {
+  background-image: radial-gradient(circle, #b5e1d2 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
 }

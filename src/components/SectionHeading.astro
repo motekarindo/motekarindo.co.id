@@ -1,0 +1,13 @@
+---
+interface Props { eyebrow?: string; title: string; description?: string; align?: "left" | "center"; }
+const { eyebrow, title, description, align = "left" } = Astro.props;
+const centered = align === "center";
+---
+
+<div class={centered ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
+  {eyebrow && (
+    <span class="inline-block rounded-full bg-brand-600 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-white shadow-sm">{eyebrow}</span>
+  )}
+  <h2 class="mt-5 font-heading text-3xl font-extrabold leading-tight text-ink sm:text-4xl">{title}</h2>
+  {description && <p class="mt-4 text-base leading-8 text-muted">{description}</p>}
+</div>
