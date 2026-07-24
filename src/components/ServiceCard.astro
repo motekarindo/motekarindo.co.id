@@ -9,7 +9,7 @@ const iconMap: Record<string, string> = {
 const emoji = icon ? (iconMap[icon] ?? "⚡") : "⚡";
 ---
 
-<article class="group rounded-xl py-7 px-5 transition-all duration-300 hover:bg-brand-50/60">
+<article class="group rounded-xl py-7 px-5 transition-all duration-300 bg-brand-50 hover:bg-brand-100">
   <span class="inline-flex text-4xl transition-transform duration-300 group-hover:scale-110" aria-hidden="true">{emoji}</span>
   <h3 class="mt-5 font-heading text-lg font-bold text-ink transition-colors group-hover:text-brand-600">{title}</h3>
   <p class="mt-2.5 text-sm leading-7 text-muted">{summary}</p>
