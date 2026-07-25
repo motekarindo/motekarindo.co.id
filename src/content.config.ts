@@ -1,6 +1,6 @@
 import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
-import { z } from "astro/zod";
+import { z } from "astro:schema";
 
 const services = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/layanan" }),
@@ -52,6 +52,14 @@ const products = defineCollection({
     order: z.number(),
     is_published: z.boolean().default(true),
     image: z.object({ file: z.string(), alt: z.string() }).optional(),
+    gallery: z
+      .array(
+        z.object({
+          image: z.string(),
+          caption: z.string().optional(),
+        })
+      )
+      .default([]),
     link: z.string().optional(),
   }),
 });

@@ -11,9 +11,16 @@ featured: true
 order: 2
 is_published: true
 image:
-  file: "pdf-tools.webp"
+  file: "pdf-wildanisme/pdf-home.webp"
   alt: "Tampilan antarmuka Privacy PDF dengan berbagai tools pengolah PDF"
 link: "https://pdf.wildanisme.com"
+gallery:
+  - image: "../../assets/images/produk/pdf-wildanisme/pdf-homepage.webp"
+    caption: "Tampilan antarmuka Privacy PDF"
+  - image: "../../assets/images/produk/pdf-wildanisme/pdf-homepage-tools-catalog.webp"
+    caption: "Katalog tool PDF"
+  - image: "../../assets/images/produk/pdf-wildanisme/pdf-merge-tool.webp"
+    caption: "Tool merge PDF"
 ---
 
 ## Kerjakan Semua Urusan PDF Tanpa Khawatir Data Bocor

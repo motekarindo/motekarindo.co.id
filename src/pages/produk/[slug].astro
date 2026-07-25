@@ -3,6 +3,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 import { byOrder } from "@/lib/content";
 import ServiceIllustration from "@/components/ServiceIllustration.astro";
+import ImageGallery from "@/components/ImageGallery.astro";
 
 export async function getStaticPaths() {
   const mdFiles = import.meta.glob("/src/content/produk/*.md");
@@ -128,6 +129,10 @@ const statusLabel = fm.status === "in-development" ? "Dalam Pengembangan" : fm.s
         ">
           <Content />
         </article>
+
+        {fm.gallery && fm.gallery.length > 0 && (
+          <ImageGallery gallery={fm.gallery} />
+        )}
 
         {related.length > 0 && (
           <section class="mt-16 border-t-2 border-brand-100 pt-10">

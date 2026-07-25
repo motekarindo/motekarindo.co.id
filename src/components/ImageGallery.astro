@@ -1,0 +1,154 @@
+---
+interface Props {
+  gallery: { image: string; caption?: string }[];
+}
+
+const { gallery } = Astro.props;
+
+const images = import.meta.glob<{ default: { src: string; width: number; height: number } }>(
+  "/src/assets/images/**/*.{jpg,jpeg,png,webp,avif}"
+);
+
+interface ResolvedItem {
+  src: string;
+  width: number;
+  height: number;
+  caption: string;
+}
+
+const resolved: ResolvedItem[] = [];
+for (const item of gallery) {
+  const filename = item.image.split("/").pop()!;
+  const match = Object.entries(images).find(([path]) => path.endsWith("/" + filename));
+  if (match) {
+    const mod = await match[1]();
+    resolved.push({ ...mod.default, caption: item.caption ?? "" });
+  }
+}
+
+if (resolved.length === 0) return null;
+
+const id = "gallery_" + Math.random().toString(36).slice(2, 8);
+const galleryJson = JSON.stringify(resolved.map(({ src, caption }) => ({ src, alt: caption, caption })));
+---
+
+<section class="mt-16 border-t-2 border-brand-100 pt-10" id={`${id}-section`}>
+  <h3 class="font-heading text-lg font-bold text-ink mb-6">Galeri Produk</h3>
+
+  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" id={`${id}-grid`}>
+    {resolved.map((item, i) => (
+      <button
+        type="button"
+        class="group relative aspect-[4/3] overflow-hidden rounded-xl border-2 border-line bg-brand-50 transition-all hover:border-brand-400 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
+        data-index={String(i)}
+        onclick={`window.__gallery_${id}(${i})`}
+        aria-label={item.caption ? `Lihat gambar: ${item.caption}` : "Lihat gambar"}
+      >
+        <img
+          src={item.src}
+          width={item.width}
+          height={item.height}
+          alt={item.caption}
+          loading="lazy"
+          class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+        {item.caption && (
+          <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-3 pt-8 opacity-0 transition-opacity group-hover:opacity-100">
+            <p class="text-xs font-medium leading-tight text-white line-clamp-2">{item.caption}</p>
+          </div>
+        )}
+      </button>
+    ))}
+  </div>
+</section>
+
+<!-- Modal -->
+<dialog id={`${id}-modal`} class="fixed inset-0 z-50 m-0 h-full w-full max-w-none bg-transparent p-0 backdrop:bg-black/90 open:flex open:items-center open:justify-center">
+  <div class="relative flex max-h-[92vh] max-w-[92vw] flex-col items-center">
+    <button
+      type="button"
+      class="absolute -top-12 right-0 rounded-full p-2 text-white/70 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+      aria-label="Tutup"
+      id={`${id}-close`}
+    >
+      <svg class="size-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+
+    <button
+      type="button"
+      class="absolute left-0 top-1/2 -translate-x-16 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white/70 backdrop-blur-sm transition-colors hover:bg-white/20 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 sm:-translate-x-20"
+      aria-label="Sebelumnya"
+      id={`${id}-prev`}
+    >
+      <svg class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+    </button>
+
+    <button
+      type="button"
+      class="absolute right-0 top-1/2 translate-x-16 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white/70 backdrop-blur-sm transition-colors hover:bg-white/20 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 sm:translate-x-20"
+      aria-label="Selanjutnya"
+      id={`${id}-next`}
+    >
+      <svg class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+    </button>
+
+    <img
+      id={`${id}-img`}
+      src=""
+      alt=""
+      class="max-h-[80vh] max-w-full rounded-2xl object-contain shadow-2xl"
+    />
+
+    <p id={`${id}-caption`} class="mt-4 text-center text-sm font-medium text-white/80"></p>
+  </div>
+</dialog>
+
+<script set:html={`window.__gallery_${id} = (function() {
+  var data = ${galleryJson};
+  var modalId = "${id}";
+  var current = 0;
+  var img = document.getElementById(modalId + "-img");
+  var caption = document.getElementById(modalId + "-caption");
+  var modal = document.getElementById(modalId + "-modal");
+  var prevBtn = document.getElementById(modalId + "-prev");
+  var nextBtn = document.getElementById(modalId + "-next");
+  var closeBtn = document.getElementById(modalId + "-close");
+
+  function show(index) {
+    current = index;
+    var item = data[current];
+    if (img) { img.src = item.src; img.alt = item.alt; }
+    if (caption) caption.textContent = item.caption;
+    if (data.length <= 1) {
+      if (prevBtn) prevBtn.style.display = "none";
+      if (nextBtn) nextBtn.style.display = "none";
+    }
+    if (modal) modal.showModal();
+  }
+
+  function next() {
+    if (data.length <= 1) return;
+    current = (current + 1) % data.length;
+    show(current);
+  }
+
+  function prev() {
+    if (data.length <= 1) return;
+    current = (current - 1 + data.length) % data.length;
+    show(current);
+  }
+
+  if (closeBtn) closeBtn.addEventListener("click", function() { if (modal) modal.close(); });
+  if (modal) modal.addEventListener("click", function(e) { if (e.target === modal) modal.close(); });
+  if (prevBtn) prevBtn.addEventListener("click", prev);
+  if (nextBtn) nextBtn.addEventListener("click", next);
+
+  document.addEventListener("keydown", function(e) {
+    if (!modal || !modal.open) return;
+    if (e.key === "Escape") modal.close();
+    if (e.key === "ArrowLeft") prev();
+    if (e.key === "ArrowRight") next();
+  });
+
+  return show;
+})();`}></script>
