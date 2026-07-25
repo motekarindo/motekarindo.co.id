@@ -1,22 +1,22 @@
 ---
-title: "Sistem ERP untuk Percetakan Digital"
+title: "Aplikasi untuk Percetakan Digital"
 slug: "erp-percetakan"
-client: "Percetakan digital (dalam pengembangan)"
-clientPublic: false
+client: "Percetakan digital"
+clientPublic: true
 problem: "Percetakan kesulitan melacak order, stok bahan, dan status produksi secara real-time — semuanya masih manual."
 solution: "Perancangan sistem ERP modular mencakup order management, production tracking, inventory, dan dashboard reporting."
 services:
-  - "IT Consultant"
+  - "SaaS"
   - "Web Development"
   - "DevOps"
 technologies:
-  - "Next.js"
+  - "Laravel"
   - "PostgreSQL"
   - "Docker"
 outcome: "Sistem ERP dalam tahap pengembangan. MVP mencakup modul order dan tracking produksi."
 featured: true
 order: 5
-is_published: false
+is_published: true
 ---
 
 ## Pendahuluan

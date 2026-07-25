@@ -13,6 +13,7 @@ is_published: true
 image:
   file: "pos-percetakan.webp"
   alt: "Dashboard aplikasi POS Percetakan menampilkan ringkasan order dan produksi"
+link: "https://pospercetakan.com"
 ---
 
 ## Kelola Operasional Percetakan Lebih Cepat dengan Satu Dashboard
@@ -30,7 +31,6 @@ Mengelola order masuk, stok bahan, antrian produksi, dan laporan keuangan secara
 ### Fitur Utama POS Percetakan
 
 1. **Point Sales (POS) & Manajemen Order** — Semua pesanan masuk ke satu sistem. Buat quotation dan invoice otomatis. Dukung pembayaran tunai, transfer, dan QRIS dengan metode cicilan.
-
 2. **Kalkulasi Harga Otomatis** — Atur kategori produk, variasi bahan, ukuran, dan finishing. Harga jual terhitung otomatis — konsisten untuk semua staf.
 
 3. **Manajemen Stok Real-Time** — Stok bahan keluar otomatis dari order ke produksi. Pantau saldo stok kapan saja. Transfer stok antar cabang (coming soon).

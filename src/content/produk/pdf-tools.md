@@ -13,6 +13,7 @@ is_published: true
 image:
   file: "pdf-tools.webp"
   alt: "Tampilan antarmuka Privacy PDF dengan berbagai tools pengolah PDF"
+link: "https://pdf.wildanisme.com"
 ---
 
 ## Kerjakan Semua Urusan PDF Tanpa Khawatir Data Bocor

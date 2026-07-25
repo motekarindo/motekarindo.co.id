@@ -52,6 +52,7 @@ const products = defineCollection({
     order: z.number(),
     is_published: z.boolean().default(true),
     image: z.object({ file: z.string(), alt: z.string() }).optional(),
+    link: z.string().optional(),
   }),
 });
 
@@ -59,6 +60,7 @@ const clients = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/klien" }),
   schema: z.object({
     name: z.string(),
+    slug: z.string(),
     category: z.string(),
     description: z.string(),
     public: z.boolean().default(false),
@@ -70,6 +72,7 @@ const clients = defineCollection({
     testimonial: z.string().optional(),
     image: z.object({ file: z.string(), alt: z.string() }).optional(),
     icon: z.string().optional(),
+    website: z.string().optional(),
   }),
 });
 
