@@ -6,7 +6,7 @@ category: "Aplikasi Akademik"
 icon: "repository"
 featured: true
 order: 5
-is_published: true
+is_published: false
 ---
 
 Implementasi ePrints mencakup setup aplikasi, konfigurasi dasar repository, dan penyesuaian awal agar siap dikelola.

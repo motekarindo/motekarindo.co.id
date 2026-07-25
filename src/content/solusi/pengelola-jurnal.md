@@ -10,6 +10,7 @@ services:
 outcome: "Platform jurnal siap mendukung editor, reviewer, author, dan administrator."
 featured: true
 order: 2
+is_published: false
 ---
 
 Kami membantu pengelola jurnal fokus pada proses editorial, sementara fondasi teknisnya ditangani dengan rapi.

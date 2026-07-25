@@ -10,6 +10,7 @@ services:
 outcome: "Repository lebih siap dipakai untuk publikasi, pencarian, dan pengarsipan dokumen digital."
 featured: true
 order: 3
+is_published: false
 ---
 
 Solusi ini menyiapkan pondasi repository agar dapat dikembangkan sesuai kebijakan pengelolaan koleksi institusi.

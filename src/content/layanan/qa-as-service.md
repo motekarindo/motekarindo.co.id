@@ -7,7 +7,7 @@ category: "QA"
 icon: "troubleshoot"
 featured: true
 order: 8
-is_published: true
+is_published: false
 ---
 
 ## Jasa Quality Assurance: Produk Bebas Bug, Pengguna Puas

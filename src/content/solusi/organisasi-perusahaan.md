@@ -9,7 +9,8 @@ services:
   - "QA dan testing"
 outcome: "Organisasi memiliki kanal digital dan infrastruktur web yang tertata, teruji, dan mudah dikelola."
 featured: true
-order: 3
+order: 1
+is_published: false
 ---
 
 Solusi ini menyesuaikan ruang lingkup dengan kebutuhan aktual — dari startup yang baru membangun presence digital hingga perusahaan yang perlu memperkuat tim teknis.

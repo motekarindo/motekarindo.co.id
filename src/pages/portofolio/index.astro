@@ -2,11 +2,11 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import PageHero from "@/components/PageHero.astro";
-import PortfolioCard from "@/components/PortfolioCard.astro";
+import PortofolioCard from "@/components/PortofolioCard.astro";
 import { byOrder } from "@/lib/content";
 
-const portfolio = byOrder(await getCollection("portfolio"));
-const title = "Portfolio | Motekar Teknologi Indonesia";
+const portofolio = byOrder(await getCollection("portofolio")).filter((p) => p.data.is_published !== false);
+const title = "Portofolio | Motekar Teknologi Indonesia";
 const description = "Portfolio project: web development, OJS, ePrints, ERP, DevOps, maintenance server, dan troubleshooting.";
 ---
 
@@ -15,8 +15,8 @@ const description = "Portfolio project: web development, OJS, ePrints, ERP, DevO
     <PageHero eyebrow="Portfolio" title="Project yang menunjukkan kualitas kerja" description="Setiap portfolio menjelaskan masalah, solusi yang dikerjakan, teknologi, dan hasil. Identitas klien mengikuti izin publikasi." />
     <section class="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:px-8 lg:py-24">
       <div class="grid gap-6 lg:grid-cols-2">
-        {portfolio.map((item) => (
-          <PortfolioCard title={item.data.title} client={item.data.client} problem={item.data.problem} solution={item.data.solution} technologies={item.data.technologies} outcome={item.data.outcome} />
+        {portofolio.map((item) => (
+          <PortofolioCard title={item.data.title} client={item.data.client} problem={item.data.problem} solution={item.data.solution} technologies={item.data.technologies} outcome={item.data.outcome} href={`/portofolio/${item.data.slug}`} />
         ))}
       </div>
     </section>

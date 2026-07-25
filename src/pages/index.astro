@@ -1,16 +1,16 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import PortfolioCard from "@/components/PortfolioCard.astro";
+import PortofolioCard from "@/components/PortofolioCard.astro";
 import SectionHeading from "@/components/SectionHeading.astro";
 import ServiceCard from "@/components/ServiceCard.astro";
 import SolutionCard from "@/components/SolutionCard.astro";
 import { byOrder, featured } from "@/lib/content";
 
-const services = featured(await getCollection("layanan")).slice(0, 6);
+const services = featured(await getCollection("layanan")).slice(0, 6).filter((p) => p.data.is_published !== false);
 const solutions = featured(await getCollection("solutions"));
 const clients = featured(await getCollection("clients"));
-const portfolio = featured(await getCollection("portfolio")).slice(0, 4);
+const portfolio = featured(await getCollection("portofolio")).slice(0, 4);
 
 const title = "Motekar Teknologi Indonesia \u2014 IT Consultant, Web Development, DevOps & QA";
 const description = "Motekar Teknologi Indonesia menyediakan layanan IT consultant, web development, DevOps, QA, dan solusi digital untuk bisnis dan organisasi.";
@@ -222,8 +222,8 @@ const skills = [
           description="Setiap portfolio menjelaskan masalah, solusi yang dikerjakan, teknologi, dan hasil."
         />
         <div class="mt-14 grid gap-6 lg:grid-cols-2">
-          {portfolio.map((item) => (
-            <PortfolioCard
+          {portofolio.map((item) => (
+            <PortofolioCard
               title={item.data.title}
               client={item.data.client}
               problem={item.data.problem}
@@ -234,8 +234,8 @@ const skills = [
           ))}
         </div>
         <div class="mt-12 text-center">
-          <a href="/portfolio" class="inline-flex items-center gap-2 rounded-lg border-2 border-brand-600 bg-white px-5 py-2.5 text-sm font-semibold text-brand-700 transition-all hover:bg-brand-50 hover:text-brand-600">
-            Semua Portfolio <svg class="size-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <a href="/portofolio" class="inline-flex items-center gap-2 rounded-lg border-2 border-brand-600 bg-white px-5 py-2.5 text-sm font-semibold text-brand-700 transition-all hover:bg-brand-50 hover:text-brand-600">
+            Semua Portofolio <svg class="size-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
       </div>

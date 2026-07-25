@@ -5,7 +5,7 @@ import PageHero from "@/components/PageHero.astro";
 import ServiceCard from "@/components/ServiceCard.astro";
 import { byOrder } from "@/lib/content";
 
-const services = byOrder(await getCollection("layanan")).filter((s) => s.data.is_published !== false);
+const services = byOrder(await getCollection("services")).filter((s) => s.data.is_published !== false);
 const title = "Layanan | Motekar Teknologi Indonesia";
 const description = "Layanan IT consultant, web development, DevOps, QA, instalasi aplikasi, dan maintenance server.";
 ---

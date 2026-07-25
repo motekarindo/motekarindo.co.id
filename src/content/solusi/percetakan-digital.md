@@ -10,6 +10,7 @@ services:
 outcome: "Proses bisnis percetakan lebih terdigitalisasi, pelacakan order lebih jelas, dan operasional lebih efisien."
 featured: true
 order: 2
+is_published: false
 ---
 
 Solusi ini dirancang untuk percetakan digital yang ingin mengotomatisasi alur kerja — mencakup modul order management, tracking produksi, dan reporting.

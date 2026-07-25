@@ -5,7 +5,7 @@ import PageHero from "@/components/PageHero.astro";
 import SolutionCard from "@/components/SolutionCard.astro";
 import { byOrder } from "@/lib/content";
 
-const solutions = byOrder(await getCollection("solutions"));
+const solutions = byOrder(await getCollection("solutions")).filter((p) => p.data.is_published !== false);
 const title = "Solusi | Motekar Teknologi Indonesia";
 const description = "Solusi Motekar menggabungkan layanan IT untuk percetakan digital, institusi pendidikan, perusahaan, dan organisasi.";
 ---

@@ -9,7 +9,7 @@ status: "coming-soon"
 audience: "Organisasi dan bisnis yang membutuhkan aplikasi khusus."
 featured: false
 order: 2
-is_published: true
+is_published: false
 ---
 
 Motekar dapat membantu merancang scope, arsitektur, dan tahapan pengembangan aplikasi kustom secara bertahap — mulai dari MVP hingga production-ready.

@@ -7,7 +7,7 @@ category: "Konsultasi"
 icon: "consult"
 featured: true
 order: 1
-is_published: true
+is_published: false
 image:
   file: "konsultasi-it.jpg"
   alt: "Tim konsultan IT sedang berdiskusi di depan papan tulis"

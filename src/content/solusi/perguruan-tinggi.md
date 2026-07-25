@@ -10,6 +10,7 @@ services:
 outcome: "Sistem akademik berbasis web siap digunakan oleh tim internal, pengelola jurnal, dan pengguna institusi."
 featured: true
 order: 1
+is_published: false
 ---
 
 Salah satu sektor dengan pengalaman paling banyak. Solusi ini cocok untuk kampus yang ingin menata layanan digital tanpa membangun dari nol.

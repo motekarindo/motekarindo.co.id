@@ -1,5 +1,6 @@
 ---
 title: "Instalasi ePrints Repository"
+slug: "instalasi-eprints"
 client: "Unit repository institusi"
 clientPublic: false
 problem: "Institusi membutuhkan repository digital untuk mengelola dan mempublikasikan dokumen akademik."
@@ -15,6 +16,7 @@ technologies:
 outcome: "Repository siap digunakan sebagai fondasi pengelolaan dokumen digital institusi."
 featured: true
 order: 2
+is_published: false
 ---
 
 Implementasi ePrints disiapkan agar dapat dikembangkan lebih lanjut sesuai kebijakan metadata dan koleksi institusi.

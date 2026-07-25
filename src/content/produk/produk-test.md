@@ -9,7 +9,7 @@ status: "coming-soon"
 audience: "Internal — dokumentasi."
 featured: false
 order: 99
-is_published: false
+is_published: true
 
 # ── OPSIONAL: gambar hero ──────────────
 # Upload file .jpg/.png/.webp ke src/assets/images/produk/

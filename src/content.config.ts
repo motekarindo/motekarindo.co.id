@@ -2,7 +2,7 @@ import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
 import { z } from "astro/zod";
 
-const layanan = defineCollection({
+const services = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/layanan" }),
   schema: z.object({
     title: z.string(),
@@ -12,13 +12,13 @@ const layanan = defineCollection({
     icon: z.string(),
     featured: z.boolean().default(false),
     order: z.number(),
-    is_published: z.boolean().default(true),
+    is_published: z.boolean().default(false),
     image: z.object({ file: z.string(), alt: z.string() }).optional(),
   }),
 });
 
 const solutions = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/solutions" }),
+  loader: glob({ pattern: "**/*.md", base: "./src/content/solusi" }),
   schema: z.object({
     title: z.string(),
     eyebrow: z.string(),
@@ -27,11 +27,11 @@ const solutions = defineCollection({
     outcome: z.string(),
     featured: z.boolean().default(false),
     order: z.number(),
-    is_published: z.boolean().default(true),
+    is_published: z.boolean().default(false),
   }),
 });
 
-const produk = defineCollection({
+const products = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/produk" }),
   schema: z.object({
     slug: z.string(),
@@ -50,7 +50,7 @@ const produk = defineCollection({
 });
 
 const clients = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/clients" }),
+  loader: glob({ pattern: "**/*.md", base: "./src/content/klien" }),
   schema: z.object({
     name: z.string(),
     category: z.string(),
@@ -58,14 +58,15 @@ const clients = defineCollection({
     public: z.boolean().default(false),
     featured: z.boolean().default(false),
     order: z.number(),
-    is_published: z.boolean().default(true),
+    is_published: z.boolean().default(false),
   }),
 });
 
-const portfolio = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/portfolio" }),
+const portofolio = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/portofolio" }),
   schema: z.object({
     title: z.string(),
+    slug: z.string(),
     client: z.string(),
     clientPublic: z.boolean().default(false),
     problem: z.string(),
@@ -76,13 +77,15 @@ const portfolio = defineCollection({
     featured: z.boolean().default(false),
     order: z.number(),
     is_published: z.boolean().default(true),
+    image: z.object({ file: z.string(), alt: z.string() }).optional(),
+    icon: z.string().optional(),
   }),
 });
 
 export const collections = {
-  layanan,
+  services,
   solutions,
-  produk,
+  products,
   clients,
-  portfolio,
+  portofolio,
 };

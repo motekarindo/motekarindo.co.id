@@ -9,7 +9,7 @@ status: "in-development"
 audience: "Percetakan digital, percetakan offset, dan jasa cetak custom."
 featured: true
 order: 1
-is_published: true
+is_published: false
 image:
   file: "test-produk.webp"       
   alt: "Deskripsi gambar"

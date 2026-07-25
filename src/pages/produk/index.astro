@@ -5,7 +5,7 @@ import PageHero from "@/components/PageHero.astro";
 import ServiceCard from "@/components/ServiceCard.astro";
 import { byOrder, statusLabel } from "@/lib/content";
 
-const products = byOrder(await getCollection("produk")).filter((p) => p.data.is_published !== false);
+const products = byOrder(await getCollection("products")).filter((p) => p.data.is_published !== false);
 const title = "Produk | Motekar Teknologi Indonesia";
 const description = "Produk digital dari Motekar: ERP percetakan, custom application, dan solusi bisnis.";
 ---

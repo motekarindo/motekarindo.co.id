@@ -1,5 +1,6 @@
 ---
 title: "Implementasi OJS untuk Jurnal Ilmiah"
+slug: "implementasi-ojs"
 client: "Pengelola jurnal perguruan tinggi"
 clientPublic: false
 problem: "Pengelola jurnal membutuhkan platform OJS yang siap digunakan untuk alur editorial."
@@ -15,6 +16,7 @@ technologies:
 outcome: "Platform jurnal siap dipakai untuk pengelolaan artikel, peran pengguna, dan proses editorial awal."
 featured: true
 order: 1
+is_published: false
 ---
 
 Project ini menjadi dasar layanan implementasi OJS untuk pengelola jurnal yang membutuhkan setup teknis cepat dan rapi.

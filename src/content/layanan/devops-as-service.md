@@ -7,7 +7,7 @@ category: "DevOps"
 icon: "server"
 featured: true
 order: 7
-is_published: true
+is_published: false
 ---
 
 ## Jasa DevOps & SysAdmin: Infrastruktur Andal, Bisnis Tenang

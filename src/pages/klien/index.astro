@@ -4,7 +4,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import PageHero from "@/components/PageHero.astro";
 import { byOrder } from "@/lib/content";
 
-const clients = byOrder(await getCollection("clients"));
+const clients = byOrder(await getCollection("clients")).filter((p) => p.data.is_published !== false);
 const title = "Client | Motekar Teknologi Indonesia";
 const description = "Klien dan sektor yang menjadi fokus layanan Motekar Teknologi Indonesia — dari pendidikan hingga percetakan digital.";
 ---
