@@ -10,7 +10,7 @@ services:
 outcome: "Organisasi memiliki kanal digital dan infrastruktur web yang tertata, teruji, dan mudah dikelola."
 featured: true
 order: 1
-is_published: false
+is_published: true
 ---
 
 Solusi ini menyesuaikan ruang lingkup dengan kebutuhan aktual — dari startup yang baru membangun presence digital hingga perusahaan yang perlu memperkuat tim teknis.

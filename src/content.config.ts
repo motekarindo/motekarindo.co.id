@@ -13,6 +13,9 @@ const services = defineCollection({
     featured: z.boolean().default(false),
     order: z.number(),
     is_published: z.boolean().default(false),
+    logo: z.string().optional(),
+    location: z.string().optional(),
+    testimonial: z.string().optional(),
     image: z.object({ file: z.string(), alt: z.string() }).optional(),
   }),
 });
@@ -28,6 +31,9 @@ const solutions = defineCollection({
     featured: z.boolean().default(false),
     order: z.number(),
     is_published: z.boolean().default(false),
+    logo: z.string().optional(),
+    location: z.string().optional(),
+    testimonial: z.string().optional(),
   }),
 });
 
@@ -59,6 +65,11 @@ const clients = defineCollection({
     featured: z.boolean().default(false),
     order: z.number(),
     is_published: z.boolean().default(false),
+    logo: z.string().optional(),
+    location: z.string().optional(),
+    testimonial: z.string().optional(),
+    image: z.object({ file: z.string(), alt: z.string() }).optional(),
+    icon: z.string().optional(),
   }),
 });
 

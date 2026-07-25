@@ -2,9 +2,16 @@
 interface Props { title: string; summary: string; category?: string; icon?: string; href?: string; }
 const { title, summary, category, icon, href } = Astro.props;
 const iconMap: Record<string, string> = {
-  consult: "💡", web: "🌐", apps: "⚙️",
-  journal: "📰", repository: "📚", server: "🖥️",
-  migrate: "📦", troubleshoot: "🔧", backup: "🛡️"
+  consult: "💡",
+  web: "🌐",
+  apps: "⚙️",
+  journal: "📰",
+  repository: "📚", server: "🖥️",
+  install: "📥",
+  support: "🔧",
+  migrate: "📦",
+  troubleshoot: "🔧",
+  backup: "🛡️"
 };
 const emoji = icon ? (iconMap[icon] ?? "⚡") : "⚡";
 ---

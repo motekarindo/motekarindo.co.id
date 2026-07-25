@@ -1,24 +1,47 @@
 ---
-interface Props { title: string; eyebrow: string; summary: string; services: string[]; outcome: string; }
-const { title, eyebrow, summary, services, outcome } = Astro.props;
+export interface Props { title: string; eyebrow: string; summary: string; services: string[]; outcome: string; href?: string; }
+const { title, eyebrow, summary, services, outcome, href } = Astro.props;
 ---
 
-<article class="group grid overflow-hidden rounded-xl border border-line bg-white shadow-sm transition-all duration-300 hover:shadow-md hover:border-brand-400 md:grid-cols-[0.45fr_0.55fr]">
-  <div class="flex flex-col justify-center border-b border-line bg-brand-600 p-6 md:border-b-0 md:border-r md:p-10">
-    <p class="text-xs font-bold uppercase tracking-[0.14em] text-brand-100">{eyebrow}</p>
-    <h3 class="mt-3 font-heading text-2xl font-extrabold leading-tight text-white transition-colors">{title}</h3>
-    <p class="mt-3 text-sm leading-7 text-brand-100">{summary}</p>
-  </div>
-  <div class="p-6 md:p-10">
-    <p class="text-xs font-bold uppercase tracking-[0.12em] text-soft">Ruang Lingkup</p>
-    <ul class="mt-4 grid gap-3">
-      {services.map((service) => (
-        <li class="flex items-start gap-3 text-sm text-ink">
-          <svg class="mt-1 size-4 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-          <span>{service}</span>
-        </li>
-      ))}
-    </ul>
-    <div class="mt-6 rounded-lg bg-brand-100 p-4 text-sm font-semibold leading-7 text-brand-800">{outcome}</div>
-  </div>
-</article>
+{href ? (
+  <a href={href} class="group grid overflow-hidden rounded-xl border border-line bg-white shadow-sm transition-all duration-300 hover:shadow-md hover:border-brand-400 md:grid-cols-[0.45fr_0.55fr] block relative">
+    <div class="flex flex-col justify-center border-b border-line bg-brand-600 p-6 md:border-b-0 md:border-r md:p-10">
+      <p class="text-xs font-bold uppercase tracking-[0.14em] text-brand-100">{eyebrow}</p>
+      <h3 class="mt-3 font-heading text-2xl font-extrabold leading-tight text-white transition-colors group-hover:text-brand-100">{title}</h3>
+      <p class="mt-3 text-sm leading-7 text-brand-100">{summary}</p>
+    </div>
+    <div class="p-6 md:p-10">
+      <p class="text-xs font-bold uppercase tracking-[0.12em] text-soft">Ruang Lingkup</p>
+      <ul class="mt-4 grid gap-3">
+        {services.map((service) => (
+          <li class="flex items-start gap-3 text-sm text-ink">
+            <svg class="mt-1 size-4 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span>{service}</span>
+          </li>
+        ))}
+      </ul>
+      <div class="mt-6 rounded-lg bg-brand-100 p-4 text-sm font-semibold leading-7 text-brand-800">{outcome}</div>
+    </div>
+    <span class="absolute bottom-4 right-4 font-heading text-sm font-semibold text-brand-200 opacity-0 group-hover:opacity-100 transition-opacity">Lihat detail &rarr;</span>
+  </a>
+) : (
+  <article class="group grid overflow-hidden rounded-xl border border-line bg-white shadow-sm transition-all duration-300 hover:shadow-md hover:border-brand-400 md:grid-cols-[0.45fr_0.55fr]">
+    <div class="flex flex-col justify-center border-b border-line bg-brand-600 p-6 md:border-b-0 md:border-r md:p-10">
+      <p class="text-xs font-bold uppercase tracking-[0.14em] text-brand-100">{eyebrow}</p>
+      <h3 class="mt-3 font-heading text-2xl font-extrabold leading-tight text-white transition-colors">{title}</h3>
+      <p class="mt-3 text-sm leading-7 text-brand-100">{summary}</p>
+    </div>
+    <div class="p-6 md:p-10">
+      <p class="text-xs font-bold uppercase tracking-[0.12em] text-soft">Ruang Lingkup</p>
+      <ul class="mt-4 grid gap-3">
+        {services.map((service) => (
+          <li class="flex items-start gap-3 text-sm text-ink">
+            <svg class="mt-1 size-4 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span>{service}</span>
+          </li>
+        ))}
+      </ul>
+      <div class="mt-6 rounded-lg bg-brand-100 p-4 text-sm font-semibold leading-7 text-brand-800">{outcome}</div>
+    </div>
+  </article>
+)}

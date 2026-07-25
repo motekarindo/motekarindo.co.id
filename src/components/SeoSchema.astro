@@ -109,7 +109,7 @@ if (path === "/") {
       breadcrumbs([{ name: "Home", url: "https://motekarindo.co.id" }]),
     ],
   });
-} else if (path.startsWith("/layanan")) {
+} else if (path === "/layanan") {
   schema = JSON.stringify({
     "@graph": [
       org,
@@ -120,7 +120,20 @@ if (path === "/") {
       ]),
     ],
   });
-} else if (path.startsWith("/solusi")) {
+} else if (path.startsWith("/layanan/")) {
+  const slug = path.replace("/layanan/", "").replace(/\/$/, "");
+  schema = JSON.stringify({
+    "@graph": [
+      org,
+      website,
+      breadcrumbs([
+        { name: "Home", url: "https://motekarindo.co.id" },
+        { name: "Layanan", url: "https://motekarindo.co.id/layanan" },
+        { name: slug, url: `https://motekarindo.co.id${path}` },
+      ]),
+    ],
+  });
+} else if (path === "/solusi") {
   schema = JSON.stringify({
     "@graph": [
       org,
@@ -128,6 +141,87 @@ if (path === "/") {
       breadcrumbs([
         { name: "Home", url: "https://motekarindo.co.id" },
         { name: "Solusi", url: "https://motekarindo.co.id/solusi" },
+      ]),
+    ],
+  });
+} else if (path === "/produk") {
+  schema = JSON.stringify({
+    "@graph": [
+      org,
+      website,
+      breadcrumbs([
+        { name: "Home", url: "https://motekarindo.co.id" },
+        { name: "Produk", url: "https://motekarindo.co.id/produk" },
+      ]),
+    ],
+  });
+} else if (path.startsWith("/produk/")) {
+  const slug = path.replace("/produk/", "").replace(/\/$/, "");
+  schema = JSON.stringify({
+    "@graph": [
+      org,
+      website,
+      breadcrumbs([
+        { name: "Home", url: "https://motekarindo.co.id" },
+        { name: "Produk", url: "https://motekarindo.co.id/produk" },
+        { name: slug, url: `https://motekarindo.co.id${path}` },
+      ]),
+    ],
+  });
+} else if (path === "/portofolio") {
+  schema = JSON.stringify({
+    "@graph": [
+      org,
+      website,
+      breadcrumbs([
+        { name: "Home", url: "https://motekarindo.co.id" },
+        { name: "Portofolio", url: "https://motekarindo.co.id/portofolio" },
+      ]),
+    ],
+  });
+} else if (path.startsWith("/portofolio/")) {
+  const slug = path.replace("/portofolio/", "").replace(/\/$/, "");
+  schema = JSON.stringify({
+    "@graph": [
+      org,
+      website,
+      breadcrumbs([
+        { name: "Home", url: "https://motekarindo.co.id" },
+        { name: "Portofolio", url: "https://motekarindo.co.id/portofolio" },
+        { name: slug, url: `https://motekarindo.co.id${path}` },
+      ]),
+    ],
+  });
+} else if (path === "/tentang") {
+  schema = JSON.stringify({
+    "@graph": [
+      org,
+      website,
+      breadcrumbs([
+        { name: "Home", url: "https://motekarindo.co.id" },
+        { name: "Tentang", url: "https://motekarindo.co.id/tentang" },
+      ]),
+    ],
+  });
+} else if (path === "/kontak") {
+  schema = JSON.stringify({
+    "@graph": [
+      org,
+      website,
+      breadcrumbs([
+        { name: "Home", url: "https://motekarindo.co.id" },
+        { name: "Kontak", url: "https://motekarindo.co.id/kontak" },
+      ]),
+    ],
+  });
+} else if (path === "/klien") {
+  schema = JSON.stringify({
+    "@graph": [
+      org,
+      website,
+      breadcrumbs([
+        { name: "Home", url: "https://motekarindo.co.id" },
+        { name: "Klien", url: "https://motekarindo.co.id/klien" },
       ]),
     ],
   });

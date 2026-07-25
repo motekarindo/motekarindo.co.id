@@ -13,7 +13,7 @@ category: "Kategori"          # Label badge di hero (bebas, string pendek)
 icon: "consult"               # Kunci ilustrasi (lihat daftar bawah)
 featured: true                # Tampil di halaman depan? true/false
 order: 10                     # Urutan di list (1,2,3...)
-is_published: false            # true = muncul di list, false = hidden + redirect /layanan
+is_published: true            # true = muncul di list, false = hidden + redirect /layanan
 
 # ── OPSIONAL: gambar hero ──────────────
 # Upload file .jpg/.png/.webp ke src/assets/images/layanan/

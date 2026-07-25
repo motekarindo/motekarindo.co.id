@@ -7,7 +7,7 @@ import ServiceCard from "@/components/ServiceCard.astro";
 import SolutionCard from "@/components/SolutionCard.astro";
 import { byOrder, featured } from "@/lib/content";
 
-const services = featured(await getCollection("layanan")).slice(0, 6).filter((p) => p.data.is_published !== false);
+const services = featured(await getCollection("services")).slice(0, 6).filter((p) => p.data.is_published !== false);
 const solutions = featured(await getCollection("solutions"));
 const clients = featured(await getCollection("clients"));
 const portfolio = featured(await getCollection("portofolio")).slice(0, 4);

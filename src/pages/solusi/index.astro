@@ -15,7 +15,7 @@ const description = "Solusi Motekar menggabungkan layanan IT untuk percetakan di
     <PageHero eyebrow="Solusi" title="Solusi berdasarkan kebutuhan bisnis Anda" description="Gabungan layanan IT yang disesuaikan dengan konteks bisnis Anda — dari percetakan digital hingga institusi pendidikan." />
     <section class="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:px-8 lg:py-24">
       <div class="grid gap-8">
-        {solutions.map((sol) => (<SolutionCard title={sol.data.title} eyebrow={sol.data.eyebrow} summary={sol.data.summary} services={sol.data.services} outcome={sol.data.outcome} />))}
+        {solutions.map((sol) => (<SolutionCard title={sol.data.title} eyebrow={sol.data.eyebrow} summary={sol.data.summary} services={sol.data.services} outcome={sol.data.outcome} href={`/solusi/${sol.id}`} />))}
       </div>
     </section>
   </main>
