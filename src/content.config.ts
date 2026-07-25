@@ -31,16 +31,21 @@ const solutions = defineCollection({
   }),
 });
 
-const products = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/products" }),
+const produk = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/produk" }),
   schema: z.object({
+    slug: z.string(),
     title: z.string(),
-    status: z.enum(["in-development", "coming-soon", "available"]),
     summary: z.string(),
+    description: z.string().optional(),
+    category: z.string(),
+    icon: z.string(),
+    status: z.enum(["in-development", "coming-soon", "available"]).default("coming-soon"),
     audience: z.string(),
     featured: z.boolean().default(false),
     order: z.number(),
     is_published: z.boolean().default(true),
+    image: z.object({ file: z.string(), alt: z.string() }).optional(),
   }),
 });
 
@@ -77,7 +82,7 @@ const portfolio = defineCollection({
 export const collections = {
   layanan,
   solutions,
-  products,
+  produk,
   clients,
   portfolio,
 };

@@ -1,0 +1,40 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHero from "@/components/PageHero.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
+import { byOrder, statusLabel } from "@/lib/content";
+
+const products = byOrder(await getCollection("produk")).filter((p) => p.data.is_published !== false);
+const title = "Produk | Motekar Teknologi Indonesia";
+const description = "Produk digital dari Motekar: ERP percetakan, custom application, dan solusi bisnis.";
+---
+
+<!-- <BaseLayout title={title} description={description}>
+  <main>
+    <PageHero eyebrow="Produk" title="Produk digital untuk bisnis Anda" description="Solusi siap pakai dan custom application yang dibangun berdasarkan kebutuhan nyata." />
+    <section class="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:px-8 lg:py-24">
+      <div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+        {products.map((p) => (<ServiceCard title={p.data.title} summary={p.data.summary ?? ""} category={p.data.status === "in-development" ? "Dalam Pengembangan" : p.data.status === "coming-soon" ? "Segera Hadir" : "Tersedia"} icon={p.data.icon} href={`/produk/${p.data.slug}`} />))}
+      </div>
+    </section>
+  </main>
+</BaseLayout> -->
+
+<BaseLayout title={title} description={description}>
+  <main>
+    <PageHero eyebrow="Product" title="Produk digital untuk operasional bisnis" description="Produk dikembangkan berdasarkan kebutuhan nyata — dimulai dari ERP untuk operasional percetakan digital." />
+    <section class="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:px-8 lg:py-24">
+      <div class="grid gap-6 lg:grid-cols-2">
+        {products.map((p) => (
+          <a href={`/produk/${p.data.slug}`} class="block group rounded-xl border-2 border-line bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-brand-500">
+            <span class="inline-block rounded-full bg-brand-600 px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] text-white shadow-sm">{statusLabel(p.data.status)}</span>
+            <h2 class="mt-5 font-heading text-2xl font-bold text-ink group-hover:text-brand-600 transition-colors">{p.data.title}</h2>
+            <p class="mt-3 text-sm leading-7 text-muted">{p.data.summary}</p>
+            <p class="mt-5 rounded-lg bg-brand-50 p-4 text-sm font-semibold leading-7 text-brand-800">Untuk: {p.data.audience}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</BaseLayout>
