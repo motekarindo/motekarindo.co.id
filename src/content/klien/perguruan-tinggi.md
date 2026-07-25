@@ -8,7 +8,7 @@ location: "Bandung, Jawa Barat"
 testimonial: "Tim Motekar sangat responsif. Website kampus kami yang sempat down berhasil dipulihkan dalam waktu kurang dari 2 jam. Support mereka layaknya tim internal."
 featured: true
 order: 1
-is_published: true
+is_published: false
 ---
 
 Perguruan tinggi swasta di Bandung yang menggunakan layanan Motekar untuk web development, maintenance server, dan konsultasi IT. Nama institusi dapat ditampilkan setelah mendapatkan persetujuan publikasi.
