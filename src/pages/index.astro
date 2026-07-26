@@ -7,10 +7,10 @@ import ServiceCard from "@/components/ServiceCard.astro";
 import SolutionCard from "@/components/SolutionCard.astro";
 import { byOrder, featured } from "@/lib/content";
 
-const services = featured(await getCollection("services")).slice(0, 6).filter((p) => p.data.is_published !== false);
-const solutions = featured(await getCollection("solutions"));
-const clients = featured(await getCollection("clients"));
-const portfolio = featured(await getCollection("portofolio")).slice(0, 4);
+const services = featured(await getCollection("services")).slice(0, 6).filter((p) => p.data.is_published === true);
+const solutions = featured(await getCollection("solutions")).filter((p) => p.data.is_published === true);
+const clients = featured(await getCollection("clients")).filter((p) => p.data.is_published === true);
+const portofolio = featured(await getCollection("portofolio")).slice(0, 4).filter((p) => p.data.is_published === true);
 
 const title = "Motekar Teknologi Indonesia \u2014 Sistem Digital Transparan & Terdokumentasi";
 const description = "Jasa IT dengan dokumentasi lengkap: web development, DevOps, QA, dan maintenance server. Transparan, terdokumentasi, bisa dirawat sendiri.";
@@ -162,7 +162,7 @@ const skills = [
     </section>
 
     <!-- ===== SOLUSI ===== -->
-    <!-- <section class="border-y-2 border-brand-600 bg-surface py-24">
+    <section class="border-y-2 border-brand-600 bg-surface py-24">
       <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Solusi"
@@ -186,10 +186,10 @@ const skills = [
           </a>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <!-- ===== KLIEN ===== -->
-    <!-- <section class="bg-brand-100 py-24">
+    <section class="bg-brand-100 py-24">
       <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <div class="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] items-start">
           <SectionHeading
@@ -211,10 +211,10 @@ const skills = [
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <!-- ===== PORTFOLIO ===== -->
-    <!-- <section class="bg-white py-24">
+    <section class="bg-white py-24">
       <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Portfolio"
@@ -239,7 +239,7 @@ const skills = [
           </a>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <!-- ===== CARA KERJA ===== -->
     <section class="border-y-2 border-brand-600 bg-brand-50 py-24">
