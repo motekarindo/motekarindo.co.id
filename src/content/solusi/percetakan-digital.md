@@ -1,5 +1,6 @@
 ---
 title: "Solusi Percetakan Digital"
+slug: "percetakan-digital"
 eyebrow: "ERP & sistem operasional"
 summary: "Sistem ERP untuk mengelola alur kerja percetakan digital — dari pemesanan, produksi, hingga pengiriman."
 services:

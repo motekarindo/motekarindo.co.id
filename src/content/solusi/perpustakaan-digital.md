@@ -1,5 +1,6 @@
 ---
 title: "Solusi Perpustakaan Digital"
+slug: "perpustakaan-digital"
 eyebrow: "Untuk repository institusi"
 summary: "Implementasi repository digital menggunakan ePrints untuk mengelola karya ilmiah, dokumen akademik, dan arsip institusi."
 services:

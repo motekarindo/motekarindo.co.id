@@ -1,5 +1,6 @@
 ---
 title: "Solusi Perguruan Tinggi"
+slug: "perguruan-tinggi"
 eyebrow: "Untuk kampus dan unit akademik"
 summary: "Paket layanan untuk institusi pendidikan tinggi yang membutuhkan website, aplikasi akademik, dan server yang stabil."
 services:

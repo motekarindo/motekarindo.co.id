@@ -1,5 +1,6 @@
 ---
 title: "Solusi Pengelola Jurnal"
+slug: "pengelola-jurnal"
 eyebrow: "Untuk jurnal ilmiah"
 summary: "Dukungan teknis untuk pengelola jurnal yang membutuhkan OJS stabil, email terkirim, backup berjalan, dan alur editorial siap digunakan."
 services:
