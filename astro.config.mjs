@@ -9,7 +9,7 @@ export default defineConfig({
   integrations: [
     sitemap(),
     compress({
-      CSS: true,
+      CSS: false,
       HTML: true,
       Image: false,
       JavaScript: true,
@@ -42,7 +42,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
     build: {
-      cssMinify: "lightningcss",
       rollupOptions: {
         output: {
           manualChunks(id) {
