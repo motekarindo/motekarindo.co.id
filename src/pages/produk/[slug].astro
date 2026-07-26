@@ -6,19 +6,28 @@ import ServiceIllustration from "@/components/ServiceIllustration.astro";
 import ImageGallery from "@/components/ImageGallery.astro";
 
 export async function getStaticPaths() {
-  const mdFiles = import.meta.glob("/src/content/produk/*.md");
-  return Object.keys(mdFiles).map((path) => {
-    const slug = path.split("/").pop()!.replace(".md", "");
-    return { params: { slug } };
-  });
+  const items = await getCollection("products");
+  return items
+    .filter((i) => i.data.is_published !== false)
+    .map((item) => ({ params: { slug: item.data.slug } }));
 }
 
 const { slug } = Astro.params;
 const mdFiles = import.meta.glob("/src/content/produk/*.md");
-const fileKey = Object.keys(mdFiles).find(
-  (k) => k.split("/").pop()!.replace(".md", "") === slug
-);
-const mod: any = await mdFiles[fileKey!]();
+
+let mod: any;
+for (const [, loader] of Object.entries(mdFiles)) {
+  const m = await loader();
+  if (m.frontmatter.slug === slug) {
+    mod = m;
+    break;
+  }
+}
+
+if (!mod) {
+  return Astro.redirect("/produk", 302);
+}
+
 const Content = mod.Content;
 const fm = mod.frontmatter;
 

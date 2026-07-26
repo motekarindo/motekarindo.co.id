@@ -5,19 +5,28 @@ import { byOrder } from "@/lib/content";
 import ServiceIllustration from "@/components/ServiceIllustration.astro";
 
 export async function getStaticPaths() {
-  const mdFiles = import.meta.glob("/src/content/klien/*.md");
-  return Object.keys(mdFiles).map((path) => {
-    const slug = path.split("/").pop()!.replace(".md", "");
-    return { params: { slug } };
-  });
+  const items = await getCollection("clients");
+  return items
+    .filter((i) => i.data.is_published !== false)
+    .map((item) => ({ params: { slug: item.data.slug } }));
 }
 
 const { slug } = Astro.params;
 const mdFiles = import.meta.glob("/src/content/klien/*.md");
-const fileKey = Object.keys(mdFiles).find(
-  (k) => k.split("/").pop()!.replace(".md", "") === slug
-);
-const mod: any = await mdFiles[fileKey!]();
+
+let mod: any;
+for (const [, loader] of Object.entries(mdFiles)) {
+  const m = await loader();
+  if (m.frontmatter.slug === slug) {
+    mod = m;
+    break;
+  }
+}
+
+if (!mod) {
+  return Astro.redirect("/klien", 302);
+}
+
 const Content = mod.Content;
 const fm = mod.frontmatter;
 
@@ -26,7 +35,7 @@ if (fm.is_published === false) {
 }
 
 const allClients = byOrder(await getCollection("clients"));
-const related = allClients.filter((c) => c.data.is_published !== false && c.id !== slug).slice(0, 3);
+const related = allClients.filter((c) => c.data.is_published !== false && c.data.slug !== slug).slice(0, 3);
 
 const images = import.meta.glob<{ default: { src: string; width: number; height: number } }>(
   "/src/assets/images/klien/*.{jpg,jpeg,png,webp,avif}"
@@ -54,13 +63,13 @@ if (fm.logo) {
 }
 
 const whatsappBase = "https://wa.me/6281212656699?text=";
-const waHero = whatsappBase + encodeURIComponent("Halo Motekar, saya ingin konsultasi.");
-const waSidebar = whatsappBase + encodeURIComponent("Halo Motekar, saya tertarik dengan layanan serupa dengan " + fm.name);
-const waBottom = whatsappBase + encodeURIComponent("Halo Motekar, saya ingin konsultasi tentang layanan IT");
+const waHero = whatsappBase + encodeURIComponent("Halo Motekarindo, saya ingin konsultasi.");
+const waSidebar = whatsappBase + encodeURIComponent("Halo Motekarindo, saya tertarik dengan layanan serupa dengan " + fm.name);
+const waBottom = whatsappBase + encodeURIComponent("Halo Motekarindo, saya ingin konsultasi tentang layanan IT");
 ---
 
 <BaseLayout
-  title={`${fm.name} — Klien Motekar`}
+  title={`${fm.name} — Klien Motekarindo`}
   description={fm.description ?? ""}
 >
   <main>

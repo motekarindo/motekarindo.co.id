@@ -5,19 +5,28 @@ import { byOrder } from "@/lib/content";
 import ServiceIllustration from "@/components/ServiceIllustration.astro";
 
 export async function getStaticPaths() {
-  const mdFiles = import.meta.glob("/src/content/solusi/*.md");
-  return Object.keys(mdFiles).map((path) => {
-    const slug = path.split("/").pop()!.replace(".md", "");
-    return { params: { slug } };
-  });
+  const items = await getCollection("solutions");
+  return items
+    .filter((i) => i.data.is_published !== false)
+    .map((item) => ({ params: { slug: item.data.slug } }));
 }
 
 const { slug } = Astro.params;
 const mdFiles = import.meta.glob("/src/content/solusi/*.md");
-const fileKey = Object.keys(mdFiles).find(
-  (k) => k.split("/").pop()!.replace(".md", "") === slug
-);
-const mod: any = await mdFiles[fileKey!]();
+
+let mod: any;
+for (const [, loader] of Object.entries(mdFiles)) {
+  const m = await loader();
+  if (m.frontmatter.slug === slug) {
+    mod = m;
+    break;
+  }
+}
+
+if (!mod) {
+  return Astro.redirect("/solusi", 302);
+}
+
 const Content = mod.Content;
 const fm = mod.frontmatter;
 
@@ -26,7 +35,7 @@ if (fm.is_published === false) {
 }
 
 const allSolutions = byOrder(await getCollection("solutions"));
-const related = allSolutions.filter((s) => s.data.is_published !== false && s.id !== slug).slice(0, 3);
+const related = allSolutions.filter((s) => s.data.is_published !== false && s.data.slug !== slug).slice(0, 3);
 
 const raw = mod.rawContent?.() ?? "";
 const faqSection = raw.split("### FAQ")[1] ?? "";

@@ -1,60 +1,79 @@
 ---
 slug: "web-development"
 title: "Jasa Web Development Profesional"
-summary: "Pembuatan website perusahaan, landing page, aplikasi web, dan dashboard custom — cepat, responsif, dan SEO-friendly."
-description: "Butuh website profesional untuk bisnis Anda? Motekar menyediakan jasa web development dengan teknologi modern — dari company profile hingga aplikasi web kompleks."
+summary: "Pembuatan website company profile, landing page, aplikasi web, dan dashboard custom — cepat, responsif, SEO-friendly, dan terdokumentasi."
+description: "Jasa web development profesional: website company profile, landing page konversi tinggi, aplikasi web custom, dashboard internal. SEO-ready, mobile-first, dokumentasi lengkap."
 category: "Pengembangan Web"
 icon: "web"
 featured: true
 order: 2
-is_published: false
+is_published: true
 image:
   file: "test.webp"
-  alt: "Tim web developer sedang bekerja di depan monitor"
+  alt: "Tim web developer Motekarindo sedang mengerjakan tampilan website di monitor"
 ---
 
-## Jasa Pembuatan Website Profesional untuk Bisnis Anda
+## Website yang Bekerja untuk Bisnis Anda — 24 Jam, 7 Hari
 
-Website bukan sekadar halaman di internet. Website adalah aset digital yang bekerja 24/7 — menjual, meyakinkan, dan melayani pelanggan Anda. Di Motekar, kami membangun website yang tidak hanya indah secara visual, tetapi juga cepat, aman, dan mudah ditemukan di Google.
+Website bukan sekadar halaman di internet. Ia adalah aset digital yang menjual, meyakinkan, dan melayani pelanggan Anda — bahkan saat Anda tidur. Tapi website yang buruk melakukan sebaliknya: loading lambat membuat pengunjung pergi, tampilan berantakan merusak kredibilitas, kode berantakan membuat sulit dikembangkan.
 
-### Kami Membangun untuk Berbagai Kebutuhan
+Di Motekarindo, kami membangun website yang **Anda bisa kelola sendiri setelah selesai**. Tidak ada kode yang disembunyikan. Setiap project disertai dokumentasi teknis — dari struktur folder, cara deploy ulang, sampai panduan troubleshooting dasar.
 
-- **Company Profile:** Website profesional yang merepresentasikan brand dan kredibilitas perusahaan Anda.
-- **Landing Page:** Halaman konversi tinggi untuk kampanye produk, event, atau lead generation.
-- **Aplikasi Web:** Sistem internal seperti CRM, dashboard reporting, atau portal klien berbasis web.
-- **Website E-Commerce:** Toko online yang cepat, aman, dan mudah dikelola.
+### Tantangan Website yang Sering Terjadi
+
+- **Loading lambat:** Pengunjung menunggu 5+ detik — 53% user pergi jika website tidak muncul dalam 3 detik di mobile.
+- **Tidak mobile-friendly:** Tampilan berantakan di smartphone — dan Google menghukum peringkat Anda karenanya.
+- **Kode berantakan, tidak terdokumentasi:** Developer sebelumnya tidak memberikan catatan — mau tambah fitur kecil saja harus mulai dari nol.
+- **SEO teknis diabaikan:** Meta tags tidak lengkap, tidak ada sitemap, struktur heading kacau — sebagus apa pun konten Anda, Google tidak bisa membacanya.
+- **Keamanan ala kadarnya:** Tidak ada SSL, form tanpa proteksi, plugin usang — website jadi sasaran empuk peretas.
+
+### Layanan Web Development Kami
+
+1. **Website Company Profile** — Representasi profesional untuk brand dan kredibilitas bisnis Anda. Dibangun dengan fokus pada kecepatan, SEO on-page, dan kemudahan update konten. Struktur folder dan panduan deploy kami serahkan dalam dokumen tertulis.
+
+2. **Landing Page Konversi Tinggi** — Halaman tunggal yang fokus pada satu tujuan: mengubah pengunjung jadi leads. Mulai dari copywriting, struktur AIDA, sampai CTA dan tracking konversi — semua disiapkan.
+
+3. **Aplikasi Web Custom** — Butuh lebih dari sekadar website? Kami bangun dashboard internal, CRM sederhana, portal klien, atau sistem pendukung operasional. Arsitektur modular, kode terdokumentasi, unit tested.
+
+4. **Website E-Commerce** — Toko online yang cepat, aman, dan mudah dikelola. Integrasi pembayaran, manajemen produk, laporan penjualan, dan optimasi halaman produk untuk SEO.
 
 ### Teknologi yang Kami Gunakan
 
-Kami memilih teknologi berdasarkan kebutuhan proyek, bukan tren sesaat:
+Kami memilih teknologi berdasarkan kebutuhan proyek, bukan tren:
 
-- **Frontend:** Astro, Next.js, React — untuk performa dan SEO optimal.
-- **Backend:** Laravel, Node.js — untuk logika bisnis yang handal.
-- **CMS:** WordPress, Strapi — untuk kemudahan pengelolaan konten.
-- **Database:** PostgreSQL, MySQL, MongoDB.
+| Area | Teknologi |
+|:---|:---|
+| Frontend | Astro, Next.js, React — untuk performa dan SEO |
+| Backend | Laravel, Node.js — untuk logika bisnis yang handal |
+| CMS | WordPress, Strapi — untuk kemudahan pengelolaan konten |
+| Database | PostgreSQL, MySQL |
+| Deployment | VPS, shared hosting, atau cloud — sesuai kebutuhan |
 
 ### Proses Pengembangan Kami
 
-1.  **Discovery:** Memahami tujuan bisnis, target audiens, dan kebutuhan fungsional.
-2.  **Desain:** Wireframe dan mockup UI/UX yang fokus pada pengalaman pengguna.
-3.  **Development:** Pengkodean bersih, modular, dan terdokumentasi.
-4.  **Testing:** Pengujian fungsional, performa, dan keamanan sebelum rilis.
-5.  **Deploy & Maintenance:** Peluncuran ke production + dukungan teknis berkelanjutan.
+1. **Discovery & Spesifikasi** — Diskusi mendalam tentang tujuan bisnis, target audiens, kebutuhan fungsional, dan referensi desain. Hasil: dokumen spesifikasi yang disetujui kedua pihak.
 
-### Mengapa Memilih Motekar?
+2. **Wireframe & Desain** — Kami buat wireframe untuk struktur halaman, lalu mockup visual yang fokus pada user experience. Revisi dilakukan di tahap ini — sebelum coding dimulai.
 
-- **SEO-Ready:** Setiap website kami bangun dengan fondasi SEO teknis yang solid.
-- **Mobile-First:** Tampilan optimal di semua perangkat — desktop, tablet, smartphone.
-- **Keamanan Standar Industri:** Proteksi terhadap OWASP Top 10, SSL, dan proteksi DDoS.
-- **Dokumentasi Lengkap:** Anda mendapat panduan pengelolaan yang jelas.
+3. **Development & Dokumentasi** — Pengkodean bersih, modular, dan terdokumentasi. Setiap fungsi utama diuji. Anda bisa memantau progress di repositori bersama.
+
+4. **Testing & QA** — Pengujian fungsional, performa (Lighthouse audit), keamanan, dan cross-browser. Semua bug dicatat dan diperbaiki sebelum go live.
+
+5. **Deploy & Serah Terima** — Peluncuran ke production, konfigurasi domain/SSL, dan serah terima dokumentasi lengkap: struktur folder, panduan update konten, cara backup, dan kontak darurat.
 
 ### FAQ
 
-**Berapa harga pembuatan website?**
-Biaya tergantung kompleksitas fitur dan skala proyek. Hubungi kami untuk konsultasi dan estimasi gratis.
+**Berapa biaya pembuatan website?**  
+Biaya tergantung kompleksitas. Website company profile sederhana mulai dari Rp 3-8 juta. Aplikasi web custom atau e-commerce bisa Rp 15-50 juta, tergantung fitur. Semua proposal mencantumkan rincian biaya transparan — tidak ada biaya tersembunyi.
 
-**Berapa lama proses pengerjaan?**
-Website company profile biasanya 2-4 minggu. Aplikasi web kompleks bisa 2-3 bulan, tergantung scope.
+**Berapa lama proses pengerjaan?**  
+Website company profile: 2-4 minggu. Landing page: 1-2 minggu. Aplikasi web kompleks: 2-3 bulan. Timeline detail disertakan dalam proposal.
 
-**Apakah bisa revisi?**
-Ya. Kami menyediakan putaran revisi dalam setiap tahap pengembangan untuk memastikan hasil sesuai ekspektasi.
+**Apakah bisa revisi?**  
+Ya. Setiap tahap — wireframe, desain, development — memiliki putaran revisi sebelum lanjut ke tahap berikutnya. Perubahan di luar scope awal akan didiskusikan dan dihitung terpisah.
+
+**Apakah saya bisa kelola website sendiri setelah selesai?**  
+Itu standar kami. Setiap project disertai panduan tertulis: cara update konten, ganti gambar, tambah halaman, backup, dan troubleshooting dasar. Kami tidak sengaja membuat Anda tergantung.
+
+**Apakah website-nya SEO-friendly?**  
+Ya. Kami terapkan SEO teknis sejak awal: struktur heading semantik, meta tags, sitemap, robots.txt, schema markup, optimasi kecepatan, dan mobile-first design. Anda tinggal fokus ke konten.

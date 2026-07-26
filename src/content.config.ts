@@ -5,6 +5,7 @@ import { z } from "astro:schema";
 const services = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/layanan" }),
   schema: z.object({
+    slug: z.string(),
     title: z.string(),
     summary: z.string(),
     description: z.string().optional(),
@@ -23,6 +24,7 @@ const services = defineCollection({
 const solutions = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/solusi" }),
   schema: z.object({
+    slug: z.string(),
     title: z.string(),
     eyebrow: z.string(),
     summary: z.string(),

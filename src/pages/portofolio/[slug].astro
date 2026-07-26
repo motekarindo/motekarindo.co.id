@@ -7,15 +7,27 @@ import ServiceIllustration from "@/components/ServiceIllustration.astro";
 
 export async function getStaticPaths() {
   const items = await getCollection("portofolio");
-  return items.map((item) => ({ params: { slug: item.data.slug } }));
+  return items
+    .filter((i) => i.data.is_published !== false)
+    .map((item) => ({ params: { slug: item.data.slug } }));
 }
 
 const { slug } = Astro.params;
 const mdFiles = import.meta.glob("/src/content/portofolio/*.md");
-const fileKey = Object.keys(mdFiles).find(
-  (k) => k.split("/").pop()!.replace(".md", "") === slug
-);
-const mod: any = await mdFiles[fileKey!]();
+
+let mod: any;
+for (const [, loader] of Object.entries(mdFiles)) {
+  const m = await loader();
+  if (m.frontmatter.slug === slug) {
+    mod = m;
+    break;
+  }
+}
+
+if (!mod) {
+  return Astro.redirect("/portofolio", 302);
+}
+
 const Content = mod.Content;
 const fm = mod.frontmatter;
 
