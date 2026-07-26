@@ -6,8 +6,8 @@ import PortofolioCard from "@/components/PortofolioCard.astro";
 import { byOrder } from "@/lib/content";
 
 const portofolio = byOrder(await getCollection("portofolio")).filter((p) => p.data.is_published !== false);
-const title = "Portofolio | Motekar Teknologi Indonesia";
-const description = "Portfolio project: web development, OJS, ePrints, ERP, DevOps, maintenance server, dan troubleshooting.";
+const title = "Portofolio \u2014 Studi Kasus & Hasil Nyata | Motekar";
+const description = "Studi kasus nyata dari project yang kami kerjakan \u2014 lengkap dengan masalah, solusi, teknologi, dan hasil terukur.";
 ---
 
 <BaseLayout title={title} description={description}>

@@ -5,7 +5,7 @@ import PageHero from "@/components/PageHero.astro";
 import { byOrder } from "@/lib/content";
 
 const clients = byOrder(await getCollection("clients")).filter((p) => p.data.is_published !== false);
-const title = "Client | Motekar Teknologi Indonesia";
+const title = "Klien \u2014 Dipercaya oleh Institusi & Bisnis | Motekar";
 const description = "Klien dan sektor yang menjadi fokus layanan Motekar Teknologi Indonesia — dari pendidikan hingga percetakan digital.";
 
 const logoImages = import.meta.glob<{ default: { src: string; width: number; height: number } }>(
