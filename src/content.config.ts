@@ -18,6 +18,7 @@ const services = defineCollection({
     location: z.string().optional(),
     testimonial: z.string().optional(),
     image: z.object({ file: z.string(), alt: z.string() }).optional(),
+    is_localization: z.boolean().default(false),
   }),
 });
 

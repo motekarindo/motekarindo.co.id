@@ -1,0 +1,137 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import { cities } from "@/lib/cities";
+
+export async function getStaticPaths() {
+  const items = await getCollection("services");
+  const localized = items.filter(
+    (i) => i.data.is_localization && i.data.is_published !== false
+  );
+
+  const paths: { params: { service: string; city: string } }[] = [];
+  for (const item of localized) {
+    for (const c of cities) {
+      paths.push({ params: { service: item.data.slug, city: c.slug } });
+    }
+  }
+  return paths;
+}
+
+const { service, city } = Astro.params;
+const cityData = cities.find((c) => c.slug === city);
+const cityName = cityData?.name ?? city;
+
+const services = await getCollection("services");
+const item = services.find(
+  (s) => s.data.slug === service && s.data.is_localization
+);
+if (!item) return Astro.redirect("/layanan");
+
+const fmTitle = item.data.title;
+const title = `${fmTitle} di ${cityName} | Motekar`;
+const description = `Jasa ${fmTitle.toLowerCase()} profesional di ${cityName} dan sekitarnya. Gratis konsultasi awal, tanpa komitmen.`;
+
+const whatsappBase = "https://wa.me/6281212656699?text=";
+const waText = whatsappBase + encodeURIComponent(`Halo Motekarindo, saya butuh ${fmTitle.toLowerCase()} di ${cityName}`);
+---
+
+<BaseLayout title={title} description={description}>
+  <main>
+    <nav class="border-b border-line bg-white" aria-label="Breadcrumb">
+      <ol class="mx-auto flex max-w-7xl items-center gap-1.5 px-5 py-3 text-sm text-soft sm:px-6 lg:px-8">
+        <li><a href="/" class="transition-colors hover:text-brand-600">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li><a href="/layanan" class="transition-colors hover:text-brand-600">Layanan</a></li>
+        <li aria-hidden="true">/</li>
+        <li><a href={`/layanan/${service}`} class="transition-colors hover:text-brand-600">{fmTitle}</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="truncate text-ink" aria-current="page">{cityName}</li>
+      </ol>
+    </nav>
+
+    <section class="relative overflow-hidden border-b-2 border-brand-200 bg-white">
+      <div class="absolute inset-0 bg-dots opacity-40" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-7xl px-5 py-16 sm:px-6 sm:py-22 lg:py-20">
+        <span class="inline-block rounded-full bg-brand-600 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-white shadow-sm">
+          {item.data.category ?? "Layanan"}
+        </span>
+        <h1 class="mt-6 max-w-3xl font-heading text-4xl font-extrabold leading-tight text-ink sm:text-5xl">
+          {fmTitle} di {cityName}
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-muted">{description}</p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href={waText} target="_blank" class="inline-flex items-center gap-2 rounded-full bg-brand-600 px-6 py-3 font-heading text-base font-semibold text-white shadow-sm transition-all hover:bg-brand-700 hover:shadow-md">
+            <svg class="size-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat WhatsApp
+          </a>
+          <a href={`/layanan/${service}`} class="inline-flex items-center gap-2 rounded-full border-2 border-brand-200 px-6 py-3 font-heading text-base font-semibold text-brand-700 transition-all hover:border-brand-600 hover:bg-brand-50">
+            Info Layanan
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-4xl px-5 py-20 sm:px-6 lg:px-8 lg:py-24">
+      <article class="prose prose-lg max-w-none
+        prose-headings:font-heading prose-headings:font-bold prose-headings:text-ink prose-headings:scroll-mt-24
+        prose-p:text-muted prose-p:leading-8 prose-li:text-muted prose-li:leading-7 prose-li:marker:text-brand-500
+        prose-strong:text-ink prose-strong:font-semibold prose-a:text-brand-600 prose-a:no-underline hover:prose-a:underline
+      ">
+        <h2>{fmTitle} di {cityName} dan Sekitarnya</h2>
+
+        <p>Membutuhkan <strong>{fmTitle.toLowerCase()}</strong> di <strong>{cityName}</strong>? Kami menyediakan layanan profesional dengan standar yang sama di setiap project: terukur, terdokumentasi, bisa dirawat.</p>
+
+        <p>Kami melayani klien di {cityName} dan wilayah sekitarnya. Tim kami siap membantu — dari konsultasi awal hingga serah terima. Proses bisa dilakukan remote maupun onsite sesuai kebutuhan.</p>
+
+        <h3>Mengapa Memilih Kami untuk {fmTitle} di {cityName}?</h3>
+        <ul>
+          <li><strong>Konsultasi awal gratis</strong> — ceritakan kebutuhan Anda, kami bantu arahkan solusi yang paling masuk akal.</li>
+          <li><strong>Dokumentasi lengkap</strong> — setiap setup, konfigurasi, dan perubahan tercatat rapi.</li>
+          <li><strong>Hasil terukur</strong> — setiap project memiliki tolok ukur yang diverifikasi sebelum serah terima.</li>
+          <li><strong>Sistem bisa dirawat sendiri</strong> — setelah selesai, sistem jadi milik Anda, bukan ketergantungan.</li>
+        </ul>
+
+        <p>
+          Ingin tahu lebih detail tentang layanan ini?
+          <a href={`/layanan/${service}`}>Baca selengkapnya di halaman layanan {fmTitle.toLowerCase()} &rarr;</a>
+        </p>
+
+        <h3>FAQ</h3>
+
+        <p><strong>Apakah melayani {fmTitle.toLowerCase()} di {cityName}?</strong><br />
+        Ya. Kami melayani klien di {cityName} dan sekitarnya. Proses konsultasi dan koordinasi bisa dilakukan secara remote, sementara instalasi dan maintenance bisa dilakukan onsite jika diperlukan.</p>
+
+        <p><strong>Berapa biaya {fmTitle.toLowerCase()} di {cityName}?</strong><br />
+        Biaya tergantung pada kompleksitas dan skala proyek. Sesi konsultasi awal gratis — setelah itu kami kirim proposal transparan dengan rincian biaya dan deliverable sebelum Anda commit.</p>
+
+        <p><strong>Berapa lama proses pengerjaan di {cityName}?</strong><br />
+        Tergantung pada jenis dan kompleksitas layanan. Estimasi detail akan diberikan setelah sesi konsultasi awal. Kami selalu berusaha memberikan timeline yang realistis dan transparan.</p>
+
+        <p><strong>Apakah ada garansi untuk hasil pekerjaan?</strong><br />
+        Ya. Setiap proyek disertai masa garansi untuk perbaikan bug terkait pekerjaan kami. Setelah itu, Anda bisa melanjutkan dengan paket maintenance bulanan jika diperlukan.</p>
+      </article>
+    </section>
+
+    <section class="bg-brand-50 border-t-2 border-brand-100 py-16 sm:py-20">
+      <div class="mx-auto max-w-3xl px-5 text-center sm:px-6 lg:px-8">
+        <h2 class="font-heading text-3xl font-bold text-ink sm:text-4xl">Butuh {fmTitle} di {cityName}?</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-lg leading-8 text-muted">Konsultasi awal gratis, tanpa komitmen. Ceritakan kebutuhan Anda — kami bantu tentukan langkah teknis yang paling masuk akal.</p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href={waText} target="_blank" class="inline-flex items-center gap-2 rounded-full bg-brand-600 px-8 py-4 font-heading text-base font-semibold text-white shadow-sm transition-all hover:bg-brand-700 hover:shadow-md">
+            <svg class="size-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat WhatsApp
+          </a>
+          <a href="/kontak" class="inline-flex items-center gap-2 rounded-full border-2 border-brand-200 px-8 py-4 font-heading text-base font-semibold text-brand-700 transition-all hover:border-brand-600 hover:bg-brand-50">Form Kontak</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="pointer-events-none fixed inset-x-0 bottom-0 z-40 flex justify-center pb-6 lg:hidden">
+      <a href={waText} target="_blank" class="pointer-events-auto inline-flex items-center gap-2 rounded-full bg-brand-600 px-6 py-3.5 font-heading text-sm font-semibold text-white shadow-lg transition-all hover:bg-brand-700 active:scale-95">
+        <svg class="size-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Konsultasi via WA
+      </a>
+    </div>
+  </main>
+</BaseLayout>
