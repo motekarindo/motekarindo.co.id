@@ -3,6 +3,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 import { byOrder } from "@/lib/content";
 import ServiceIllustration from "@/components/ServiceIllustration.astro";
+import { site } from "@/lib/site.data";
 
 export async function getStaticPaths() {
   const items = await getCollection("solutions");
@@ -49,7 +50,7 @@ if (faqSection) {
 }
 const faqSchema = faqItems.length > 0 ? JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqItems.map((q) => ({ "@type": "Question", name: q.question, acceptedAnswer: { "@type": "Answer", text: q.answer } })) }) : "";
 
-const whatsappBase = "https://wa.me/6281212656699?text=";
+const whatsappBase = `https://wa.me/${site.whatsApp}?text=`;
 const waHero = whatsappBase + encodeURIComponent("Halo Motekar, saya tertarik dengan solusi " + fm.title);
 const waSidebar = whatsappBase + encodeURIComponent("Halo Motekar, saya tertarik dengan solusi " + fm.title);
 const waBottom = whatsappBase + encodeURIComponent("Halo Motekar, saya ingin konsultasi tentang " + fm.title);

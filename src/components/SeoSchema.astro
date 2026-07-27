@@ -1,4 +1,6 @@
 ---
+import { site } from "@/lib/site.data";
+
 interface Props {
   type: "Organization" | "Service" | "Product" | "Article" | "WebSite";
   data: Record<string, any>;
@@ -12,13 +14,13 @@ const org = {
   logo: "https://motekarindo.co.id/favicon.svg",
   description:
     "IT consultant, web development, DevOps, QA, dan solusi digital untuk institusi pendidikan, bisnis dan organisasi.",
-  telephone: "+6281212656699",
-  email: "halo@motekarindo.co.id",
+  telephone: `${site.whatsApp}`,
+  email: `${site.email}`,
   address: {
     "@type": "PostalAddress",
     addressCountry: "ID",
   },
-  sameAs: ["https://wa.me/6281212656699"],
+  sameAs: [`https://wa.me/${site.whatsApp}`],
   areaServed: {
     "@type": "Country",
     name: "Indonesia",

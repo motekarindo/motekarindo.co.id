@@ -1,4 +1,4 @@
 export const site = {
   email: "halo@motekarindo.co.id",
-  whatsApp: "081212656699",
+  whatsApp: "6281212656699",
 };

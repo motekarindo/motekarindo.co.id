@@ -3,6 +3,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 import { byOrder } from "@/lib/content";
 import ServiceIllustration from "@/components/ServiceIllustration.astro";
+import { site } from "@/lib/site.data";
 
 
 export async function getStaticPaths() {
@@ -52,7 +53,7 @@ if (fm.image?.file) {
 }
 const heroAlt = fm.image?.alt ?? fm.title;
 
-const whatsappBase = "https://wa.me/6281212656999?text=";
+const whatsappBase = `https://wa.me/${site.whatsApp}?text=`;
 const waHero = whatsappBase + encodeURIComponent("Halo Motekar, saya tertarik dengan portofolio " + fm.title);
 const waSidebar = whatsappBase + encodeURIComponent("Halo Motekar, saya tertarik dengan portofolio " + fm.title);
 const waBottom = whatsappBase + encodeURIComponent("Halo Motekar, saya ingin info lebih lanjut tentang " + fm.title);

@@ -5,6 +5,7 @@ import PortofolioCard from "@/components/PortofolioCard.astro";
 import SectionHeading from "@/components/SectionHeading.astro";
 import ServiceCard from "@/components/ServiceCard.astro";
 import { byOrder, featured } from "@/lib/content";
+import { site } from "@/lib/site.data";
 
 const services = featured(await getCollection("services")).slice(0, 6).filter((p) => p.data.is_published === true);
 const clients = featured(await getCollection("clients")).filter((p) => p.data.is_published === true);
@@ -31,7 +32,7 @@ const products = (await getCollection("products")).filter((p) => p.data.is_publi
 
 const title = "Motekar Teknologi Indonesia \u2014 Sistem Digital Terukur & Terdokumentasi";
 const description = "Jasa IT dengan dokumentasi lengkap: web development, DevOps, QA, dan maintenance server. Transparan, terdokumentasi, bisa dirawat sendiri.";
-const whatsApp = "https://wa.me/6281212656699?text=Halo%20*Motekarindo*.%20Saya%20ingin%20konsultasi.";
+const whatsApp = `https://wa.me/${site.whatsApp}?text=Halo%20*Motekarindo*.%20Saya%20ingin%20konsultasi.`;
 const skills = [
   {
     label: "Konsultasi IT",
