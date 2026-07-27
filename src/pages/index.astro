@@ -10,7 +10,7 @@ import { site } from "@/lib/site.data";
 const services = featured(await getCollection("services")).slice(0, 6).filter((p) => p.data.is_published === true);
 const clients = featured(await getCollection("clients")).filter((p) => p.data.is_published === true);
 
-const logoList = import.meta.glob("/src/assets/images/klien/*.{jpg,jpeg,png,webp,avif}");
+const logoList = import.meta.glob("/src/assets/images/klien/**/*.{jpg,jpeg,png,webp,avif}");
 
 const clientCards: { data: (typeof clients)[number]["data"]; logoSrc?: string }[] = [];
 for (const client of byOrder(clients)) {

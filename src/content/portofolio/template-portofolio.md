@@ -26,6 +26,18 @@ icon: "apps"
 image:
   file: "screenshot.webp"
   alt: "Deskripsi gambar"
+metrics:
+  - label: "Impresi"
+    value: "74.000"
+  - label: "Sebelum"
+    value: "34.000"
+  - label: "Periode"
+    value: "3 bln → 1 bln"
+  - label: "Kenaikan"
+    value: "2,2x"
+coverImage:
+  file: "iuqi-seo-jurnal/iuqi-seo-jurnal-sebelum.webp"
+  alt: "Impresi jurnal sebelum optimasi"
 ---
 
 Project website profil dibuat dengan pendekatan ringan, cepat, dan mudah dirawat.

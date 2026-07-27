@@ -39,7 +39,7 @@ const allServices = byOrder(await getCollection("services"));
 const related = allServices.filter((s) => s.data.is_published !== false && s.data.slug !== slug).slice(0, 3);
 
 const images = import.meta.glob<{ default: { src: string; width: number; height: number } }>(
-  "/src/assets/images/layanan/*.{jpg,jpeg,png,webp,avif}"
+  "/src/assets/images/layanan/**/*.{jpg,jpeg,png,webp,avif}"
 );
 
 let heroImage: { src: string; width: number; height: number } | undefined;

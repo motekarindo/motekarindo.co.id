@@ -9,7 +9,7 @@ featured: true
 order: 1
 is_published: true
 image:
-  file: "konsultasi-it.jpg"
+  file: "konsultan-it/test.webp"
   alt: "Tim konsultan IT Motekarindo sedang berdiskusi dan mencatat di papan tulis"
 ---
 
@@ -63,3 +63,8 @@ Tentu. Dokumen rekomendasi adalah milik Anda. Anda bisa menggunakannya untuk men
 
 **Konsultan IT itu bedanya apa dengan developer biasa?**  
 Developer menulis kode. Konsultan IT merancang strategi: apa yang perlu dibangun, teknologi apa yang dipakai, berapa biayanya, apa risikonya — sebelum satu baris kode pun ditulis.
+
+### Mulai dari mana?
+
+> [!tip] Konsultasi awal gratis
+> Tidak yakin butuh konsultan atau langsung eksekusi? Ceritakan dulu kebutuhan Anda — kami bantu arahkan tanpa biaya, tanpa komitmen. [Hubungi kami →](/kontak)

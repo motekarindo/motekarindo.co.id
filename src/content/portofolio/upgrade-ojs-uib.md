@@ -1,16 +1,33 @@
 ---
-name: "Universitas Islam Bogor"
-slug: "universitas-islam-bogor"
-category: "Pendidikan"
-description: "Motekar menangani maintenance OJS 3, maintenance server, dan monitoring uptime untuk jurnal Universitas Islam Bogor."
-public: true
-logo: "universitas-islam-bogor/universitas-islam-bogor.webp"
-location: "Bogor, Jawa Barat"
-testimonial: "Upgrade adalah mimpi buruk bagi kami. Motekar menyelesaikan migrasi ribuan artikel tanpa satu pun data hilang. Sekarang tampilan jurnal lebih modern dan traffic naik signifikan. Sehingga kami bisa fokus pada operasional harian."
+title: "Migrasi OJS 2 ke 3 — Universitas Islam Bogor"
+slug: "upgrade-ojs-uib"
+client: "Universitas Islam Bogor"
+clientPublic: true
+problem: "Jurnal terakreditasi SINTA 2 masih berjalan di OJS 2 — tampilan usang, tidak mobile-friendly, traffic organik menurun drastis."
+solution: "Upgrade ke OJS 3 dengan staging environment, migrasi data SHA-256 verified, hardening server LEMP stack, tema responsif, dan optimasi SEO on-page."
+services:
+  - "Instalasi OJS"
+  - "Maintenance Server"
+  - "Optimasi SEO Jurnal"
+technologies:
+  - "OJS 3"
+  - "PHP"
+  - "MariaDB"
+  - "Nginx"
+  - "LEMP Stack"
+outcome: "Traffic organik naik 4x, bounce rate turun ke 41%, waktu muat halaman <2 detik, 0 downtime, submission artikel naik 3x."
 featured: true
-order: 2
+order: 1
 is_published: false
-website: "https://uibogor.ac.id"
+metrics:
+  - label: "Traffic"
+    value: "3.200+"
+  - label: "Downtime"
+    value: "0"
+  - label: "Bounce"
+    value: "41%"
+  - label: "Submisi"
+    value: "25-30"
 ---
 
 ## Sebelum: Terjebak OJS 2, traffic menurun
@@ -19,7 +36,7 @@ Universitas Islam Bogor memiliki jurnal terakreditasi **Sinta 2** yang masih ber
 
 Tim editor ingin upgrade ke OJS 3 tapi khawatir: ribuan artikel, ratusan user, dan plugin kustom — bagaimana kalau data hilang?
 
-## Solusi: Upgrade OJS + maintenance berkelanjutan
+## Solusi: Upgrade bertahap + maintenance berkelanjutan
 
 Motekar mengeksekusi upgrade secara bertahap:
 
@@ -27,6 +44,7 @@ Motekar mengeksekusi upgrade secara bertahap:
 - **Migrasi data penuh** — Artikel, reviewer, issue, plugin settings. Verifikasi hash SHA-256 per batch untuk memastikan integritas data. Nol artikel hilang.
 - **Hardening server** — Konfigurasi VPS dengan LEMP stack teroptimasi, firewall, rate limiting, dan proteksi DDoS. Server aman dari serangan brute-force.
 - **Tampilan modern & mobile-friendly** — Tema OJS 3 responsif dengan optimasi kecepatan dan SEO on-page.
+- **Dokumentasi lengkap** — Semua konfigurasi, kredensial, dan prosedur maintenance diserahkan dalam dokumen terstruktur.
 
 ## Hasil
 

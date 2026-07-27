@@ -2,6 +2,8 @@ import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import compress from "@playform/compress";
 import tailwindcss from "@tailwindcss/vite";
+import rehypeCallouts from "rehype-callouts";
+import rehypeImageCaption from "./src/plugins/rehype-image-caption";
 
 export default defineConfig({
   site: "https://motekarindo.co.id",
@@ -37,6 +39,10 @@ export default defineConfig({
   prefetch: {
     defaultStrategy: "hover",
     prefetchAll: false,
+  },
+
+  markdown: {
+    rehypePlugins: [rehypeImageCaption, rehypeCallouts],
   },
 
   vite: {

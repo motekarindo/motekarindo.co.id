@@ -9,7 +9,7 @@ featured: true
 order: 2
 is_published: true
 image:
-  file: "test.webp"
+  file: "web-development/test.webp"
   alt: "Tim web developer Motekarindo sedang mengerjakan tampilan website di monitor"
 ---
 

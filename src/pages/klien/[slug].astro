@@ -39,7 +39,7 @@ const allClients = byOrder(await getCollection("clients"));
 const related = allClients.filter((c) => c.data.is_published !== false && c.data.slug !== slug).slice(0, 3);
 
 const images = import.meta.glob<{ default: { src: string; width: number; height: number } }>(
-  "/src/assets/images/klien/*.{jpg,jpeg,png,webp,avif}"
+  "/src/assets/images/klien/**/*.{jpg,jpeg,png,webp,avif}"
 );
 let heroImage: { src: string; width: number; height: number } | undefined;
 if (fm.image?.file) {
@@ -52,7 +52,7 @@ if (fm.image?.file) {
 const heroAlt = fm.image?.alt ?? fm.name;
 
 const logoImages = import.meta.glob<{ default: { src: string; width: number; height: number } }>(
-  "/src/assets/images/klien/*.{jpg,jpeg,png,webp,avif}"
+  "/src/assets/images/klien/**/*.{jpg,jpeg,png,webp,avif}"
 );
 let logo: { src: string; width: number; height: number } | undefined;
 if (fm.logo) {

@@ -1,5 +1,6 @@
 @import "tailwindcss" source("../");
 @plugin "@tailwindcss/typography";
+@import "rehype-callouts/theme/github";
 
 @theme {
   /* brand: hijau ColorHunt, 50=paling terang, 900=paling gelap */
@@ -64,4 +65,35 @@
 .bg-dots {
   background-image: radial-gradient(circle, #b5e1d2 1.5px, transparent 1.5px);
   background-size: 24px 24px;
+}
+
+/* Callout alignment fix */
+.callout-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.callout-title-icon,
+.callout-title-icon svg {
+  display: flex;
+  align-items: center;
+}
+
+/* Image caption */
+.md-figure {
+  margin: 24px 0;
+}
+
+.md-figure img {
+  border-radius: 12px;
+  width: 100%;
+}
+
+.md-figure figcaption {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-ink);
+  line-height: 1.6;
 }

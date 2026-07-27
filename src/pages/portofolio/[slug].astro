@@ -40,18 +40,18 @@ const allPortfolio = byOrder(await getCollection("portofolio"));
 const related = allPortfolio.filter((p) => p.data.is_published !== false && p.data.slug !== slug).slice(0, 3);
 
 const images = import.meta.glob<{ default: { src: string; width: number; height: number } }>(
-  "/src/assets/images/portofolio/*.{jpg,jpeg,png,webp,avif}"
+  "/src/assets/images/portofolio/**/*.{jpg,jpeg,png,webp,avif}"
 );
 
 let heroImage: { src: string; width: number; height: number } | undefined;
-if (fm.image?.file) {
-  const match = Object.entries(images).find(([path]) => path.endsWith("/" + fm.image.file));
+if (fm.coverImage?.file) {
+  const match = Object.entries(images).find(([path]) => path.endsWith("/" + fm.coverImage.file));
   if (match) {
     const resolved = await match[1]();
     heroImage = resolved.default;
   }
 }
-const heroAlt = fm.image?.alt ?? fm.title;
+const heroAlt = fm.coverImage?.alt ?? fm.title;
 
 const whatsappBase = `https://wa.me/${site.whatsApp}?text=`;
 const waHero = whatsappBase + encodeURIComponent("Halo Motekar, saya tertarik dengan portofolio " + fm.title);

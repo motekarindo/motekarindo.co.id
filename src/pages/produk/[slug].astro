@@ -42,7 +42,7 @@ const related = allProducts.filter((p) => p.data.is_published !== false && p.dat
 const bodyImages = import.meta.glob("/src/assets/images/produk/**/*.{jpg,jpeg,png,webp,avif}");
 
 const images = import.meta.glob<{ default: { src: string; width: number; height: number } }>(
-  "/src/assets/images/produk/*.{jpg,jpeg,png,webp,avif}"
+  "/src/assets/images/produk/**/*.{jpg,jpeg,png,webp,avif}"
 );
 
 let heroImage: { src: string; width: number; height: number } | undefined;

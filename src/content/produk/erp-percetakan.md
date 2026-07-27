@@ -11,15 +11,15 @@ featured: true
 order: 1
 is_published: true
 image:
-  file: "pos-percetakan.webp"
+  file: "erp-percetakan/pos-percetakan.webp"
   alt: "Dashboard aplikasi POS Percetakan menampilkan ringkasan order dan produksi"
 link: "https://pospercetakan.com"
 gallery:
-  - image: "../../assets/images/produk/pos-percetakan/erp-pos-dashboard.webp"
+  - image: "../../assets/images/produk/erp-percetakan/erp-pos-dashboard.webp"
     caption: "Dashboard utama POS Percetakan — ringkasan order, produksi, dan omzet harian"
-  - image: "../../assets/images/produk/pos-percetakan/erp-pos-order.webp"
+  - image: "../../assets/images/produk/erp-percetakan/erp-pos-order.webp"
     caption: "Form input order dengan kalkulasi harga otomatis berdasarkan bahan dan ukuran"
-  - image: "../../assets/images/produk/pos-percetakan/erp-pos-laporan.webp"
+  - image: "../../assets/images/produk/erp-percetakan/erp-pos-laporan.webp"
     caption: "Laporan penjualan dan laba rugi real-time, siap ekspor kapan saja"
 ---
 
