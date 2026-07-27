@@ -17,7 +17,7 @@ const emoji = icon ? (iconMap[icon] ?? "⚡") : "⚡";
 ---
 
 <article class="group relative rounded-xl py-7 px-5 transition-all duration-300 bg-brand-50 hover:bg-brand-100">
-  <span class="inline-flex text-4xl transition-transform duration-300 group-hover:scale-110" aria-hidden="true">{emoji}</span>
+  <span class="flex justify-center text-4xl transition-transform duration-300 group-hover:scale-110" aria-hidden="true">{emoji}</span>
   <h3 class="mt-5 font-heading text-lg font-bold text-ink transition-colors group-hover:text-brand-600">
     {href ? <a href={href} class="after:absolute after:inset-0">{title}</a> : title}
   </h3>
