@@ -122,9 +122,9 @@ const waBottom = whatsappBase + encodeURIComponent("Halo Motekarindo, saya ingin
             </a>
           </div>
         </div>
-        <div class="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-xl lg:aspect-auto lg:h-full lg:min-h-[400px]">
+        <div class="lg:min-h-[400px]">
           {heroImage ? (
-            <img src={heroImage.src} width={heroImage.width} height={heroImage.height} alt={heroAlt} class="h-full w-full object-cover" loading="eager" />
+            <img src={heroImage.src} width={heroImage.width} height={heroImage.height} alt={heroAlt} sizes="(max-width: 1024px) 100vw, 624px" class="h-auto w-full rounded-2xl shadow-xl" loading="eager" />
           ) : (
             <div class="flex h-full w-full items-center justify-center bg-brand-50 p-12">
               <ServiceIllustration icon={fm.icon} class="max-h-64 w-full max-w-xs" />

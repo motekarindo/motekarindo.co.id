@@ -45,10 +45,12 @@ const images = import.meta.glob<{ default: { src: string; width: number; height:
 
 let heroImage: { src: string; width: number; height: number } | undefined;
 if (fm.coverImage?.file) {
-  const match = Object.entries(images).find(([path]) => path.endsWith("/" + fm.coverImage.file));
-  if (match) {
-    const resolved = await match[1]();
-    heroImage = resolved.default;
+  for (const [path, loader] of Object.entries(images)) {
+    if (path.endsWith("/" + fm.coverImage.file)) {
+      const mod = await loader();
+      heroImage = mod.default;
+      break;
+    }
   }
 }
 const heroAlt = fm.coverImage?.alt ?? fm.title;
@@ -104,9 +106,17 @@ const waBottom = whatsappBase + encodeURIComponent("Halo Motekar, saya ingin inf
                 </a>
               </div>
           </div>
-        <div class="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-xl lg:aspect-auto lg:h-full lg:min-h-[400px]">
+        <div class="lg:min-h-[400px]">
           {heroImage ? (
-            <img src={heroImage.src} width={heroImage.width} height={heroImage.height} alt={heroAlt} class="h-full w-full object-cover" loading="eager" />
+            <img
+              src={heroImage.src}
+              width={heroImage.width}
+              height={heroImage.height}
+              alt={heroAlt}
+              sizes="(max-width: 1024px) 100vw, 624px"
+              class="h-auto w-full rounded-2xl shadow-xl"
+              loading="eager"
+            />
           ) : (
             <div class="flex h-full w-full items-center justify-center bg-brand-50 p-12">
               <ServiceIllustration icon={fm.icon} class="max-h-64 w-full max-w-xs" />
