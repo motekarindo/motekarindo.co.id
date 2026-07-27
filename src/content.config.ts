@@ -103,6 +103,9 @@ const portofolio = defineCollection({
     is_published: z.boolean().default(true),
     image: z.object({ file: z.string(), alt: z.string() }).optional(),
     icon: z.string().optional(),
+    metrics: z
+      .array(z.object({ label: z.string(), value: z.string() }))
+      .default([]),
   }),
 });
 

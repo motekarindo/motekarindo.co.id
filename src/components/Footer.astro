@@ -3,17 +3,18 @@ import { site } from "../lib/site.data.ts"
 const currentYear = new Date().getFullYear();
 const navLinks = [
   { href: "/layanan", label: "Layanan" },
-  { href: "/solusi", label: "Solusi" },
-  { href: "/product", label: "Product" },
-  { href: "/portofolio", label: "Portfolio" },
+  // { href: "/solusi", label: "Solusi" },
+  { href: "/produk", label: "Produk" },
+  { href: "/klien", label: "Klien" },
+  { href: "/portofolio", label: "Portofolio" },
   { href: "/tentang", label: "Tentang Kami" },
 ];
 const serviceLinks = [
-  { href: "/layanan", label: "IT Consultant" },
-  { href: "/layanan", label: "Web Development" },
-  { href: "/layanan", label: "Instalasi OJS" },
-  { href: "/layanan", label: "Instalasi ePrints" },
-  { href: "/layanan", label: "Maintenance Server" },
+  { href: "/layanan/konsultan-it", label: "Konsultan IT" },
+  { href: "/layanan/web-development", label: "Web Development" },
+  { href: "/layanan/devops-sysadmin", label: "DevOps & SysAdmin" },
+  { href: "/layanan/qa-testing", label: "QA & Testing" },
+  { href: "/layanan/maintenance-server", label: "Maintenance Server" },
 ];
 
 const whatsApp = "https://wa.me/6281212656699?text=Halo%20*Motekarindo*.";
@@ -27,15 +28,16 @@ const whatsApp = "https://wa.me/6281212656699?text=Halo%20*Motekarindo*.";
           <span class="grid size-12 shrink-0 place-items-center rounded-lg bg-white font-heading text-sm font-bold text-brand-600 mt-1">M</span>
           <div>
             <p class="font-heading text-base sm:text-lg font-bold text-white">PT Motekar Teknologi Indonesia</p>
-            <p class="mt-0 text-base font-bold text-neutral-50">--- Your All In One IT Consultant ---</p>
+            <p class="mt-0 text-base font-bold text-neutral-50">Terukur. Terdokumentasi. Bisa Dirawat.</p>
           </div>
         </div>
         <p class="mt-5 max-w-sm text-lg leading-7 text-neutral-50 font-semibold">
-          Membantu institusi dan organisasi membangun, mengelola, serta merawat aplikasi web dan server pendukungnya.
+          Membantu bisnis dan institusi membangun sistem digital dengan standar yang sama: setiap proyek didokumentasikan, setiap hasil terukur, setiap sistem bisa dikelola sendiri.
         </p>
         <div class="mt-2">
-          <a href="https://linkedin.com/company/motekar-teknologi-indonesia" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-800">
-            <svg class="size-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></svg>
+            <a href="https://linkedin.com/company/motekar-teknologi-indonesia" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-800">
+              <svg class="size-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></svg>
+              LinkedIn
           </a>
         </div>
       </div>
@@ -56,7 +58,7 @@ const whatsApp = "https://wa.me/6281212656699?text=Halo%20*Motekarindo*.";
         </div>
 
         <div>
-          <h2 class="font-heading text-base font-bold uppercase tracking-[0.15em] text-white">Kontak</h2>
+          <h2 class="font-heading text-base font-bold uppercase tracking-[0.15em] text-white">Hubungi Kami</h2>
           <ul class="mt-4 grid gap-3 text-sm">
             <li>
                 <a href={`mailto:${site.email}`} class="inline-flex items-center gap-2 text-base font-semibold text-neutral-200 transition-colors hover:text-white">
