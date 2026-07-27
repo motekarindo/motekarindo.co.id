@@ -2,9 +2,10 @@
 import { site } from "@/lib/site.data";
 
 interface Props {
-  type: "Organization" | "Service" | "Product" | "Article" | "WebSite";
-  data: Record<string, any>;
+  pageTitle?: string;
 }
+
+const { pageTitle } = Astro.props;
 
 const org = {
   "@context": "https://schema.org",
@@ -13,7 +14,7 @@ const org = {
   url: "https://motekarindo.co.id",
   logo: "https://motekarindo.co.id/favicon.svg",
   description:
-    "IT consultant, web development, DevOps, QA, dan solusi digital untuk institusi pendidikan, bisnis dan organisasi.",
+    "Jasa IT profesional: konsultasi, web development, DevOps, QA, instalasi aplikasi, dan maintenance server. Terukur, terdokumentasi, bisa dirawat.",
   telephone: `${site.whatsApp}`,
   email: `${site.email}`,
   address: {
@@ -26,16 +27,17 @@ const org = {
     name: "Indonesia",
   },
   knowsAbout: [
+    "Konsultan IT",
     "IT Consulting",
     "Web Development",
     "DevOps",
     "Quality Assurance",
     "Server Maintenance",
+    "Instalasi Aplikasi",
     "OJS",
     "ePrints",
     "ERP Percetakan Digital",
   ],
-  priceRange: "$$",
 };
 
 const website = {
@@ -45,12 +47,7 @@ const website = {
   url: "https://motekarindo.co.id",
   inLanguage: "id",
   description:
-    "IT consultant, web development, DevOps, QA, dan solusi digital.",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: "https://motekarindo.co.id/search?q={search_term_string}",
-    "query-input": "required name=search_term_string",
-  },
+    "Jasa IT profesional: konsultasi, web development, DevOps, QA, instalasi aplikasi, dan maintenance server.",
 };
 
 const breadcrumbs = (items: { name: string; url: string }[]) => ({
@@ -124,6 +121,7 @@ if (path === "/") {
   });
 } else if (path.startsWith("/layanan/")) {
   const slug = path.replace("/layanan/", "").replace(/\/$/, "");
+  const name = pageTitle || slug;
   schema = JSON.stringify({
     "@graph": [
       org,
@@ -131,7 +129,7 @@ if (path === "/") {
       breadcrumbs([
         { name: "Home", url: "https://motekarindo.co.id" },
         { name: "Layanan", url: "https://motekarindo.co.id/layanan" },
-        { name: slug, url: `https://motekarindo.co.id${path}` },
+        { name, url: `https://motekarindo.co.id${path}` },
       ]),
     ],
   });
@@ -159,6 +157,7 @@ if (path === "/") {
   });
 } else if (path.startsWith("/produk/")) {
   const slug = path.replace("/produk/", "").replace(/\/$/, "");
+  const name = pageTitle || slug;
   schema = JSON.stringify({
     "@graph": [
       org,
@@ -166,7 +165,7 @@ if (path === "/") {
       breadcrumbs([
         { name: "Home", url: "https://motekarindo.co.id" },
         { name: "Produk", url: "https://motekarindo.co.id/produk" },
-        { name: slug, url: `https://motekarindo.co.id${path}` },
+        { name, url: `https://motekarindo.co.id${path}` },
       ]),
     ],
   });
@@ -183,6 +182,7 @@ if (path === "/") {
   });
 } else if (path.startsWith("/portofolio/")) {
   const slug = path.replace("/portofolio/", "").replace(/\/$/, "");
+  const name = pageTitle || slug;
   schema = JSON.stringify({
     "@graph": [
       org,
@@ -190,7 +190,7 @@ if (path === "/") {
       breadcrumbs([
         { name: "Home", url: "https://motekarindo.co.id" },
         { name: "Portofolio", url: "https://motekarindo.co.id/portofolio" },
-        { name: slug, url: `https://motekarindo.co.id${path}` },
+        { name, url: `https://motekarindo.co.id${path}` },
       ]),
     ],
   });

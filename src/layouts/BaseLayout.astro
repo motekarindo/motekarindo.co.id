@@ -51,7 +51,7 @@ const ogImage = image ?? "https://motekarindo.co.id/og-default.png";
     <title>{title}</title>
   </head>
   <body class="bg-surface text-ink antialiased">
-    <SeoSchema />
+    <SeoSchema pageTitle={title} />
     <Header />
     <slot />
     <Footer />
