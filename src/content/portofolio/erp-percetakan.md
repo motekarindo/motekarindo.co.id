@@ -16,7 +16,7 @@ technologies:
 outcome: "Sistem ERP dalam tahap pengembangan. MVP mencakup modul order dan tracking produksi."
 featured: true
 order: 5
-is_published: true
+is_published: false
 ---
 
 ## Pendahuluan
