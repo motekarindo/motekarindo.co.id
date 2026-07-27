@@ -16,7 +16,7 @@ const description = "Studi kasus nyata dari project yang kami kerjakan \u2014 le
     <section class="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:px-8 lg:py-24">
       <div class="grid gap-6 lg:grid-cols-2">
         {portofolio.map((item) => (
-          <PortofolioCard title={item.data.title} client={item.data.client} problem={item.data.problem} solution={item.data.solution} technologies={item.data.technologies} outcome={item.data.outcome} href={`/portofolio/${item.data.slug}`} />
+          <PortofolioCard title={item.data.title} client={item.data.client} problem={item.data.problem} solution={item.data.solution} technologies={item.data.technologies} outcome={item.data.outcome} metrics={item.data.metrics} href={`/portofolio/${item.data.slug}`} />
         ))}
       </div>
     </section>
