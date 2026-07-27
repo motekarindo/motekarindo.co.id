@@ -12,7 +12,7 @@ const description = "Layanan IT consultant, web development, DevOps, QA, instala
 
 <BaseLayout title={title} description={description}>
   <main>
-    <PageHero eyebrow="Layanan" title="Layanan teknis untuk website, aplikasi, dan infrastruktur" description="Pilih layanan sesuai kebutuhan — atau gabungkan menjadi solusi lengkap untuk bisnis Anda." />
+    <PageHero eyebrow="Layanan" title="Setiap layanan, standar yang sama — terukur, terdokumentasi, bisa dirawat." description="Dari konsultasi strategi sampai maintenance rutin. Pilih sesuai kebutuhan Anda — semua dikerjakan dengan proses yang transparan dan dokumentasi lengkap." />
     <section class="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:px-8 lg:py-24">
       <div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3 items">
         {services.map((s) => (<ServiceCard title={s.data.title} summary={s.data.summary ?? ""} category={s.data.category} icon={s.data.icon} href={`/layanan/${s.id}`} />))}

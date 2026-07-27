@@ -27,6 +27,7 @@ for (const client of byOrder(clients)) {
 }
 
 const portofolio = featured(await getCollection("portofolio")).slice(0, 4).filter((p) => p.data.is_published === true);
+const products = (await getCollection("products")).filter((p) => p.data.is_published === true);
 
 const title = "Motekar Teknologi Indonesia \u2014 Sistem Digital Terukur & Terdokumentasi";
 const description = "Jasa IT dengan dokumentasi lengkap: web development, DevOps, QA, dan maintenance server. Transparan, terdokumentasi, bisa dirawat sendiri.";
@@ -351,6 +352,34 @@ const skills = [
         </div>
       </div>
     </section>
+
+    <!-- ===== PRODUK ===== -->
+    {products.length > 0 && (
+      <section class="bg-white py-20">
+        <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+          <div class="mx-auto max-w-3xl text-center">
+            <span class="inline-block rounded-full bg-brand-600 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-white shadow-sm">Juga Produk Kami</span>
+            <h2 class="mt-5 font-heading text-3xl font-extrabold leading-tight text-ink sm:text-4xl">Tools & aplikasi yang bisa langsung Anda pakai</h2>
+            <p class="mt-4 text-base leading-8 text-muted">Dikembangkan berdasarkan kebutuhan nyata — bukan sekadar portofolio, tapi produk yang berjalan di production.</p>
+          </div>
+          <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {products.map((p) => (
+              <a href={`/produk/${p.data.slug}`} class="group block rounded-xl border-2 border-line bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-brand-500">
+                <span class="inline-block rounded-full bg-brand-600 px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] text-white shadow-sm">{p.data.status === "available" ? "Tersedia" : "Segera Hadir"}</span>
+                <h3 class="mt-4 font-heading text-xl font-bold text-ink group-hover:text-brand-600 transition-colors">{p.data.title}</h3>
+                <p class="mt-3 text-sm leading-7 text-muted line-clamp-2">{p.data.summary}</p>
+                <span class="mt-3 inline-block text-sm font-semibold text-brand-600">Lihat detail &rarr;</span>
+              </a>
+            ))}
+          </div>
+          <div class="mt-10 text-center">
+            <a href="/produk" class="inline-flex items-center gap-2 rounded-lg border-2 border-brand-600 bg-white px-5 py-2.5 text-sm font-semibold text-brand-700 transition-all hover:bg-brand-50 hover:text-brand-600">
+              Lihat Semua Produk <svg class="size-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    )}
 
     <!-- ===== CTA ===== -->
     <section class="bg-asphalt px-5 py-24 sm:px-6 lg:px-8">

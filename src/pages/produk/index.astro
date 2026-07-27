@@ -7,23 +7,12 @@ import { byOrder, statusLabel } from "@/lib/content";
 
 const products = byOrder(await getCollection("products")).filter((p) => p.data.is_published !== false);
 const title = "Produk \u2014 Tools & Aplikasi Bisnis | Motekar";
-const description = "Produk digital dari Motekar: ERP percetakan, custom application, dan solusi bisnis.";
+const description = "Produk digital dari Motekar: POS Percetakan untuk manajemen operasional, Privacy PDF untuk tools dokumen gratis, dan aplikasi bisnis custom.";
 ---
-
-<!-- <BaseLayout title={title} description={description}>
-  <main>
-    <PageHero eyebrow="Produk" title="Produk digital untuk bisnis Anda" description="Solusi siap pakai dan custom application yang dibangun berdasarkan kebutuhan nyata." />
-    <section class="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:px-8 lg:py-24">
-      <div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-        {products.map((p) => (<ServiceCard title={p.data.title} summary={p.data.summary ?? ""} category={p.data.status === "in-development" ? "Dalam Pengembangan" : p.data.status === "coming-soon" ? "Segera Hadir" : "Tersedia"} icon={p.data.icon} href={`/produk/${p.data.slug}`} />))}
-      </div>
-    </section>
-  </main>
-</BaseLayout> -->
 
 <BaseLayout title={title} description={description}>
   <main>
-    <PageHero eyebrow="Product" title="Produk digital untuk operasional bisnis" description="Produk dikembangkan berdasarkan kebutuhan nyata — dimulai dari ERP untuk operasional percetakan digital." />
+    <PageHero eyebrow="Produk" title="Produk digital untuk operasional bisnis" description="Produk dikembangkan berdasarkan kebutuhan nyata — dimulai dari ERP untuk operasional percetakan digital." />
     <section class="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:px-8 lg:py-24">
       <div class="grid gap-6 lg:grid-cols-2">
         {products.map((p) => (
