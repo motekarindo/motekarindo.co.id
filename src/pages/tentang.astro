@@ -3,27 +3,40 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import PageHero from "@/components/PageHero.astro";
 
 const title = "Tentang Motekar \u2014 Dari Tim Internal, untuk Organisasi Tanpa Tim IT";
-const description = "Berangkat dari pengalaman sebagai tim internal \u2014 Motekarindo paham kebutuhan sistem yang rapi, terdokumentasi, dan mudah dikelola.";
+const description = "Berangkat dari pengalaman sebagai tim internal \u2014 Motekar paham kebutuhan sistem yang rapi, terdokumentasi, dan bisa dirawat.";
 
 const values = [
-  { label: "Jelas", desc: "Komunikasi teknis dalam bahasa yang dipahami klien." },
-  { label: "Terukur", desc: "Hasil pekerjaan memiliki tolok ukur yang diverifikasi." },
-  { label: "Dapat Dirawat", desc: "Sistem dirancang agar mudah dikelola pasca proyek." },
+  { label: "Terdokumentasi", desc: "Setiap setup, konfigurasi, dan keputusan teknis tercatat rapi \u2014 bisa dicek kapan saja." },
+  { label: "Terukur", desc: "Hasil pekerjaan memiliki tolok ukur yang diverifikasi sebelum serah terima." },
+  { label: "Bisa Dirawat", desc: "Sistem dirancang agar Anda bisa mengelolanya sendiri \u2014 bukan dikunci." },
+];
+
+const diffs = [
+  { label: "Bekas tim internal", desc: "Kami paham apa yang klien butuhkan, bukan apa yang vendor ingin jual." },
+  { label: "Dokumentasi standar", desc: "Setiap proyek disertai catatan teknis lengkap \u2014 dari setup sampai troubleshooting." },
+  { label: "Anda tidak dikunci", desc: "Setelah proyek selesai, sistem jadi milik Anda sepenuhnya. Tidak ada ketergantungan." },
+];
+
+const faqs = [
+  { q: "Apakah Motekar hanya melayani klien di area tertentu?", a: "Tidak. Kami melayani klien di seluruh Indonesia. Komunikasi dan pengerjaan bisa dilakukan secara remote \u2014 termasuk instalasi, konfigurasi, dan maintenance server." },
+  { q: "Bagaimana cara memulai kerja sama dengan Motekar?", a: "Mudah. Hubungi kami via WhatsApp atau email, ceritakan kebutuhan Anda. Kami akan beri rekomendasi awal gratis. Setelah sepakat scope, kami kirim proposal transparan \u2014 tanpa biaya tersembunyi." },
+  { q: "Apakah ada garansi untuk hasil pekerjaan?", a: "Ya. Setiap proyek disertai masa garansi 1-2 minggu untuk perbaikan bug terkait pekerjaan kami. Setelah itu, Anda bisa melanjutkan dengan paket maintenance bulanan jika diperlukan." },
 ];
 ---
 
 <BaseLayout title={title} description={description}>
   <main>
     <PageHero eyebrow="Tentang Kami" title="Dari tim internal, untuk organisasi yang belum punya tim IT." description="Kami tahu rasanya mewarisi sistem tanpa dokumentasi, server down tanpa ada yang bisa dihubungi, developer yang hilang tanpa jejak. Dari pengalaman itu, Motekar lahir — dengan standar yang berbeda." />
+
     <section class="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:px-8 lg:py-24">
       <div class="grid gap-14 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
-          <span class="inline-block rounded-full bg-brand-600 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-white shadow-sm">Fokus</span>
-          <h2 class="mt-5 font-heading text-3xl font-extrabold leading-tight text-ink sm:text-4xl">Sistem yang rapi, stabil, dan mudah dikelola.</h2>
+          <span class="inline-block rounded-full bg-brand-600 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-white shadow-sm">Nilai Kami</span>
+          <h2 class="mt-5 font-heading text-3xl font-extrabold leading-tight text-ink sm:text-4xl">Terukur, terdokumentasi, bisa dirawat.</h2>
         </div>
         <div class="grid gap-6 text-base leading-8 text-muted">
-          <p>Motekar membantu bisnis dan institusi merencanakan serta menjalankan pekerjaan teknis: website, aplikasi, DevOps, QA, setup server, dan migrasi.</p>
-          <p>Setiap pekerjaan dimulai dari pemahaman kebutuhan, kondisi sistem, dan prioritas risiko — hasilnya sistem yang lebih mudah dijelaskan, diuji, dan dikelola.</p>
+          <p>Motekar lahir dari pengalaman sebagai tim IT internal. Kami tahu bagaimana rasanya: sistem yang diwariskan tanpa dokumentasi, server yang tiba-tiba down, developer eksternal yang tidak bisa dihubungi setelah proyek selesai.</p>
+          <p>Dari pengalaman itu kami memutuskan: setiap proyek yang kami kerjakan harus meninggalkan sistem yang lebih baik dari sebelumnya. Terukur hasilnya, terdokumentasi prosesnya, dan bisa dirawat tanpa ketergantungan pada kami. Bukan sekadar selesai — tapi selesai dengan baik.</p>
           <div class="mt-4 grid gap-4 sm:grid-cols-3">
             {values.map(({ label, desc }) => (
               <div class="rounded-xl border-2 border-brand-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md hover:border-brand-500">
@@ -33,6 +46,47 @@ const values = [
             ))}
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="border-y-2 border-brand-600 bg-brand-50 py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center">
+          <span class="inline-block rounded-full bg-brand-600 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-white shadow-sm">Kenapa Motekar</span>
+          <h2 class="mt-5 font-heading text-3xl font-extrabold leading-tight text-ink sm:text-4xl">Bukan vendor IT biasa.</h2>
+          <p class="mt-4 text-base leading-8 text-muted">Kami dibangun berdasarkan pengalaman menjadi klien — bukan sekadar pengalaman menjual jasa.</p>
+        </div>
+        <div class="mt-14 grid gap-6 sm:grid-cols-3">
+          {diffs.map(({ label, desc }) => (
+            <div class="rounded-xl border-2 border-brand-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md hover:border-brand-500 text-center">
+              <p class="font-heading text-lg font-bold text-brand-700">{label}</p>
+              <p class="mt-3 text-sm leading-7 text-muted">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-4xl px-5 py-20 sm:px-6 lg:px-8 lg:py-24">
+      <h2 class="font-heading text-3xl font-extrabold text-ink sm:text-4xl text-center">Yang sering ditanyakan</h2>
+      <div class="mt-12 grid gap-6">
+        {faqs.map(({ q, a }) => (
+          <div class="rounded-xl border-2 border-line bg-white p-6 shadow-sm">
+            <h3 class="font-heading text-lg font-bold text-ink">{q}</h3>
+            <p class="mt-3 text-sm leading-7 text-muted">{a}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="bg-asphalt px-5 py-20 sm:px-6 lg:px-8">
+      <div class="mx-auto flex max-w-3xl flex-col items-center text-center gap-6">
+        <h2 class="font-heading text-3xl font-extrabold text-white sm:text-4xl">Siap bekerja sama?</h2>
+        <p class="text-lg leading-8 text-white">Ceritakan kebutuhan teknis Anda — kami bantu arahkan solusi yang paling masuk akal, tanpa biaya konsultasi awal.</p>
+        <a href="/kontak" class="inline-flex items-center gap-2 rounded-lg bg-accent px-8 py-4 text-base font-bold text-ink shadow-lg shadow-accent/30 transition-all hover:bg-surface-alt hover:text-emerald-800 hover:shadow-xl hover:shadow-accent/50">
+          Ceritakan Kebutuhan Anda
+          <svg class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </section>
   </main>
