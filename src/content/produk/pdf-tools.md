@@ -80,17 +80,17 @@ Privacy PDF menggunakan **WebAssembly (Wasm)** untuk memproses PDF secara native
 
 ### FAQ
 
-**Apakah benar file saya tidak diunggah ke server?**
-Ya. Semua pemrosesan berjalan di browser Anda sendiri. Privacy PDF tidak mengirim file Anda ke server manapun — kami tidak bisa melihatnya.
+> [!tip]+ **Apakah benar file saya tidak diunggah ke server?**
+> Ya. Semua pemrosesan berjalan di browser Anda sendiri. Privacy PDF tidak mengirim file Anda ke server manapun — kami tidak bisa melihatnya.
 
-**Apa bedanya dengan tools PDF online lainnya?**
+> [!tip]- **Apa bedanya dengan tools PDF online lainnya?**
 Tools konvensional mengunggah file ke server, memproses, lalu mengirim hasilnya kembali. Privacy PDF memproses semuanya secara lokal — lebih cepat dan lebih privat.
 
-**Apakah ada batasan ukuran file?**
-Tidak ada batasan dari sisi aplikasi. Performa tergantung pada kapasitas perangkat Anda. Untuk file sangat besar (500MB+), browser mungkin memerlukan memori lebih.
+> [!tip]- **Apakah ada batasan ukuran file?**
+> Tidak ada batasan dari sisi aplikasi. Performa tergantung pada kapasitas perangkat Anda. Untuk file sangat besar (500MB+), browser mungkin memerlukan memori lebih.
 
-**Apakah bisa digunakan di semua browser?**
-Privacy PDF bekerja di semua browser modern: Chrome, Firefox, Safari, dan Edge versi terbaru.
+> [!tip]- **Apakah bisa digunakan di semua browser?**
+> Privacy PDF bekerja di semua browser modern: Chrome, Firefox, Safari, dan Edge versi terbaru.
 
-**Apakah butuh koneksi internet?**
-Hanya untuk membuka halaman pertama kali. Setelah itu, aplikasi berjalan sepenuhnya secara offline.
+> [!tip]- **Apakah butuh koneksi internet?**
+> Hanya untuk membuka halaman pertama kali. Setelah itu, aplikasi berjalan sepenuhnya secara offline.

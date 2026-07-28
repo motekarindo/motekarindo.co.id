@@ -51,20 +51,20 @@ Kami sudah menginstal dan mengelola OJS untuk beberapa jurnal terakreditasi SINT
 
 ### FAQ
 
-**Berapa lama sampai jurnal siap?**  
-Instalasi standar: 2-3 hari kerja. Kalau server sudah siap, bisa lebih cepat. Untuk instalasi dengan custom theme, plugin khusus, atau migrasi dari OJS 2: 1-2 minggu. Estimasi detail diberikan setelah cek kebutuhan.
+> [!tip]+ **Berapa lama sampai jurnal siap?**  
+> Instalasi standar: 2-3 hari kerja. Kalau server sudah siap, bisa lebih cepat. Untuk instalasi dengan custom theme, plugin khusus, atau migrasi dari OJS 2: 1-2 minggu. Estimasi detail diberikan setelah cek kebutuhan.
 
-**Apakah bisa instalasi di server kampus yang sudah ada?**  
-Ya. Kami install langsung di server Anda — VPS kampus, cloud, atau dedicated server. Syarat: akses SSH dan memenuhi spesifikasi teknis OJS. Kalau server belum ada, kami bantu siapkan.
+> [!tip]- **Apakah bisa instalasi di server kampus yang sudah ada?**  
+> Ya. Kami install langsung di server Anda — VPS kampus, cloud, atau dedicated server. Syarat: akses SSH dan memenuhi spesifikasi teknis OJS. Kalau server belum ada, kami bantu siapkan.
 
-**Apakah termasuk training untuk editor dan reviewer?**  
-Dokumentasi pengelolaan selalu disertakan. Untuk training tim editor/ reviewer yang lebih mendalam (cara submit, cara review, cara publish), tersedia sebagai sesi terpisah — bisa via Zoom atau onsite.
+> [!tip]- **Apakah termasuk training untuk editor dan reviewer?**  
+> Dokumentasi pengelolaan selalu disertakan. Untuk training tim editor/ reviewer yang lebih mendalam (cara submit, cara review, cara publish), tersedia sebagai sesi terpisah — bisa via Zoom atau onsite.
 
-**Bagaimana jika ingin upgrade dari OJS 2 ke OJS 3?**  
+> [!tip]- **Bagaimana jika ingin upgrade dari OJS 2 ke OJS 3?**  
 Kami berpengalaman melakukan migrasi OJS 2 ke 3 — termasuk untuk jurnal dengan ribuan artikel. Semua dilakukan di staging environment dulu (server terpisah, 100% kloningan jurnal asli). Upgrade baru dijalankan ke production setelah semua dicek: artikel lengkap, user bisa login, plugin berfungsi. **Nol data hilang.**
 
-**Apakah ada garansi setelah instalasi?**  
-Masa garansi 2 minggu untuk perbaikan bug terkait instalasi. Setelah itu, tersedia paket maintenance bulanan — sudah termasuk monitoring uptime, backup harian, dan update keamanan. Dengan maintenance, Anda tinggal fokus ke substansi artikel — kami urus teknisnya.
+> [!tip]- **Apakah ada garansi setelah instalasi?**  
+> Masa garansi 2 minggu untuk perbaikan bug terkait instalasi. Setelah itu, tersedia paket maintenance bulanan — sudah termasuk monitoring uptime, backup harian, dan update keamanan. Dengan maintenance, Anda tinggal fokus ke substansi artikel — kami urus teknisnya.
 
-**Apakah Anda juga bisa bantu optimasi SEO jurnal?**  
-Ya, termasuk dalam instalasi. Kami setup sitemap XML, meta tags Dublin Core, OAI-PMH, dan optimasi kecepatan halaman — semua fondasi teknis yang dibutuhkan jurnal untuk terindeks di Google Scholar, SINTA, dan DOAJ.
+> [!tip]- **Apakah Anda juga bisa bantu optimasi SEO jurnal?**  
+> Ya, termasuk dalam instalasi. Kami setup sitemap XML, meta tags Dublin Core, OAI-PMH, dan optimasi kecepatan halaman — semua fondasi teknis yang dibutuhkan jurnal untuk terindeks di Google Scholar, SINTA, dan DOAJ.

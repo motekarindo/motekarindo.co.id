@@ -9,7 +9,7 @@ featured: true
 order: 1
 is_published: true
 image:
-  file: "konsultan-it/test.webp"
+  file: ""
   alt: "Tim konsultan IT Motekarindo sedang berdiskusi dan mencatat di papan tulis"
 ---
 
@@ -49,20 +49,20 @@ Layanan **konsultasi IT** dari Motekarindo memberi Anda peta jalan berbasis data
 
 ### FAQ
 
-**Berapa biaya jasa konsultan IT di Motekarindo?**  
-Biaya tergantung pada kompleksitas dan durasi proyek. Sesi **discovery awal gratis** — setelah itu kami kirim proposal transparan dengan rincian biaya dan deliverable sebelum Anda commit.
+> [!tip]+ **Berapa biaya jasa konsultan IT di Motekarindo?**  
+> Biaya tergantung pada kompleksitas dan durasi proyek. Sesi **discovery awal gratis** — setelah itu kami kirim proposal transparan dengan rincian biaya dan deliverable sebelum Anda commit.
 
-**Apakah konsultasi bisa dilakukan remote?**  
-Ya. Seluruh proses — dari discovery, analisis, hingga presentasi — bisa dilakukan secara remote via Zoom atau Google Meet. Untuk audit server, kami perlu akses remote yang Anda berikan.
+> [!tip]- **Apakah konsultasi bisa dilakukan remote?**  
+> Ya. Seluruh proses — dari discovery, analisis, hingga presentasi — bisa dilakukan secara remote via Zoom atau Google Meet. Untuk audit server, kami perlu akses remote yang Anda berikan.
 
-**Berapa lama satu siklus konsultasi?**  
-Untuk audit dan rekomendasi awal: 2-4 minggu. Untuk pendampingan proyek jangka panjang: durasi menyesuaikan kompleksitas.
+> [!tip]- **Berapa lama satu siklus konsultasi?**  
+> Untuk audit dan rekomendasi awal: 2-4 minggu. Untuk pendampingan proyek jangka panjang: durasi menyesuaikan kompleksitas.
 
-**Apakah hasil konsultasi bisa saya pakai untuk vendor lain?**  
-Tentu. Dokumen rekomendasi adalah milik Anda. Anda bisa menggunakannya untuk mencari vendor eksekusi lain, atau sebagai bahan presentasi ke manajemen. Kami tidak mengunci Anda.
+> [!tip]- **Apakah hasil konsultasi bisa saya pakai untuk vendor lain?**  
+> Tentu. Dokumen rekomendasi adalah milik Anda. Anda bisa menggunakannya untuk mencari vendor eksekusi lain, atau sebagai bahan presentasi ke manajemen. Kami tidak mengunci Anda.
 
-**Konsultan IT itu bedanya apa dengan developer biasa?**  
-Developer menulis kode. Konsultan IT merancang strategi: apa yang perlu dibangun, teknologi apa yang dipakai, berapa biayanya, apa risikonya — sebelum satu baris kode pun ditulis.
+> [!tip]- **Konsultan IT itu bedanya apa dengan developer biasa?**  
+> Developer menulis kode. Konsultan IT merancang strategi: apa yang perlu dibangun, teknologi apa yang dipakai, berapa biayanya, apa risikonya — sebelum satu baris kode pun ditulis.
 
 ### Mulai dari mana?
 

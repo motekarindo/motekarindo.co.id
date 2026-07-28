@@ -59,17 +59,17 @@ Mengelola order masuk, stok bahan, antrian produksi, dan laporan keuangan secara
 
 ### FAQ
 
-**Apakah POS Percetakan cocok untuk semua jenis percetakan?**
-Ya. Cocok untuk percetakan digital, offset, outdoor, indoor, merchandise, dan kombinasi di antaranya.
+> [!tip]+ **Apakah POS Percetakan cocok untuk semua jenis percetakan?**
+> Ya. Cocok untuk percetakan digital, offset, outdoor, indoor, merchandise, dan kombinasi di antaranya.
 
-**Berapa lama implementasi awal?**
-Konfigurasi awal membutuhkan 1-2 hari kerja hingga aplikasi siap digunakan oleh tim Anda.
+> [!tip]- **Berapa lama implementasi awal?**
+> Konfigurasi awal membutuhkan 1-2 hari kerja hingga aplikasi siap digunakan oleh tim Anda.
 
-**Apakah bisa dipakai untuk lebih dari satu outlet?**
-Bisa. Kelola beberapa outlet dalam satu akun dengan laporan terpisah maupun gabungan.
+> [!tip]- **Apakah bisa dipakai untuk lebih dari satu outlet?**
+> Bisa. Kelola beberapa outlet dalam satu akun dengan laporan terpisah maupun gabungan.
 
-**Apakah sistem mendukung pembayaran DP dan pelunasan?**
-Ya. Dukungan skema pembayaran bertahap: DP, pelunasan, dan catatan jatuh tempo.
+> [!tip]- **Apakah sistem mendukung pembayaran DP dan pelunasan?**
+> Ya. Dukungan skema pembayaran bertahap: DP, pelunasan, dan catatan jatuh tempo.
 
-**Bagaimana keamanan data bisnis saya?**
-Data disimpan dengan praktik keamanan standar industri, termasuk kontrol akses pengguna dan backup berkala.
+> [!tip]- **Bagaimana keamanan data bisnis saya?**
+> Data disimpan dengan praktik keamanan standar industri, termasuk kontrol akses pengguna dan backup berkala.

@@ -61,17 +61,17 @@ Layanan **DevOps as a Service** dari Motekarindo memberi Anda keahlian infrastru
 
 ### FAQ
 
-**Apakah layanan ini cocok untuk startup kecil?**  
-Sangat cocok. Anda mendapat keahlian DevOps tanpa biaya rekrutmen. Paket fleksibel — bisa per jam, per proyek, atau retainer bulanan mulai dari Rp 2 juta.
+> [!tip]+ **Apakah layanan ini cocok untuk startup kecil?**  
+> Sangat cocok. Anda mendapat keahlian DevOps tanpa biaya rekrutmen. Paket fleksibel — bisa per jam, per proyek, atau retainer bulanan mulai dari Rp 2 juta.
 
-**Bagaimana jika server sudah ada dan sedang berjalan?**  
-Kami bisa mengaudit dan mengoptimalkan setup existing Anda. Semua perubahan dilakukan di staging dulu — tidak ada downtime yang mengganggu operasional.
+> [!tip]- **Bagaimana jika server sudah ada dan sedang berjalan?**  
+> Kami bisa mengaudit dan mengoptimalkan setup existing Anda. Semua perubahan dilakukan di staging dulu — tidak ada downtime yang mengganggu operasional.
 
-**Apakah ada dukungan darurat 24/7?**  
-Untuk klien retainer: ya. Kami menyediakan saluran prioritas WhatsApp dengan response time target di bawah 15 menit untuk insiden kritis.
+> [!tip]- **Apakah ada dukungan darurat 24/7?**  
+> Untuk klien retainer: ya. Kami menyediakan saluran prioritas WhatsApp dengan response time target di bawah 15 menit untuk insiden kritis.
 
-**Apakah kami bisa mengelola server sendiri setelah setup?**  
-Bisa. Seluruh konfigurasi dan panduan operasional kami dokumentasikan dan serahkan ke Anda. Jika suatu saat Anda merekrut DevOps internal, transisinya mulus karena semua sudah tercatat.
+> [!tip]- **Apakah kami bisa mengelola server sendiri setelah setup?**  
+> Bisa. Seluruh konfigurasi dan panduan operasional kami dokumentasikan dan serahkan ke Anda. Jika suatu saat Anda merekrut DevOps internal, transisinya mulus karena semua sudah tercatat.
 
-**Apa yang terjadi jika kami ingin berhenti berlangganan?**  
-Semua kredensial, konfigurasi, dan akses server adalah milik Anda sejak awal. Kami bantu proses transisi — serah terima dokumen lengkap, briefing ke tim baru Anda jika diperlukan. Tidak ada lock-in.
+> [!tip]- **Apa yang terjadi jika kami ingin berhenti berlangganan?**  
+> Semua kredensial, konfigurasi, dan akses server adalah milik Anda sejak awal. Kami bantu proses transisi — serah terima dokumen lengkap, briefing ke tim baru Anda jika diperlukan. Tidak ada lock-in.

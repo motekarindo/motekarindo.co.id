@@ -63,17 +63,17 @@ Kami memilih teknologi berdasarkan kebutuhan proyek, bukan tren:
 
 ### FAQ
 
-**Berapa biaya pembuatan website?**  
-Biaya tergantung kompleksitas. Website company profile sederhana mulai dari Rp 3-8 juta. Aplikasi web custom atau e-commerce bisa Rp 15-50 juta, tergantung fitur. Semua proposal mencantumkan rincian biaya transparan — tidak ada biaya tersembunyi.
+> [!tip]+ **Berapa biaya pembuatan website?**  
+> Biaya tergantung kompleksitas. Website company profile sederhana mulai dari Rp 3-8 juta. Aplikasi web custom atau e-commerce bisa Rp 15-50 juta, tergantung fitur. Semua proposal mencantumkan rincian biaya transparan — tidak ada biaya tersembunyi.
 
-**Berapa lama proses pengerjaan?**  
-Website company profile: 2-4 minggu. Landing page: 1-2 minggu. Aplikasi web kompleks: 2-3 bulan. Timeline detail disertakan dalam proposal.
+> [!tip]- **Berapa lama proses pengerjaan?**  
+> Website company profile: 2-4 minggu. Landing page: 1-2 minggu. Aplikasi web kompleks: 2-3 bulan. Timeline detail disertakan dalam proposal.
 
-**Apakah bisa revisi?**  
-Ya. Setiap tahap — wireframe, desain, development — memiliki putaran revisi sebelum lanjut ke tahap berikutnya. Perubahan di luar scope awal akan didiskusikan dan dihitung terpisah.
+> [!tip]- **Apakah bisa revisi?**  
+> Ya. Setiap tahap — wireframe, desain, development — memiliki putaran revisi sebelum lanjut ke tahap berikutnya. Perubahan di luar scope awal akan didiskusikan dan dihitung terpisah.
 
-**Apakah saya bisa kelola website sendiri setelah selesai?**  
-Itu standar kami. Setiap project disertai panduan tertulis: cara update konten, ganti gambar, tambah halaman, backup, dan troubleshooting dasar. Kami tidak sengaja membuat Anda tergantung.
+> [!tip]- **Apakah saya bisa kelola website sendiri setelah selesai?**  
+> Itu standar kami. Setiap project disertai panduan tertulis: cara update konten, ganti gambar, tambah halaman, backup, dan troubleshooting dasar. Kami tidak sengaja membuat Anda tergantung.
 
-**Apakah website-nya SEO-friendly?**  
-Ya. Kami terapkan SEO teknis sejak awal: struktur heading semantik, meta tags, sitemap, robots.txt, schema markup, optimasi kecepatan, dan mobile-first design. Anda tinggal fokus ke konten.
+> [!tip]- **Apakah website-nya SEO-friendly?**  
+> Ya. Kami terapkan SEO teknis sejak awal: struktur heading semantik, meta tags, sitemap, robots.txt, schema markup, optimasi kecepatan, dan mobile-first design. Anda tinggal fokus ke konten.

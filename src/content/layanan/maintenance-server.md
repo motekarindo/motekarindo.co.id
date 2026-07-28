@@ -58,17 +58,17 @@ Layanan **maintenance & dukungan teknis** dari Motekarindo memastikan sistem And
 
 ### FAQ
 
-**Apakah paket maintenance bisa dikustomisasi?**  
-Ya. Setiap kebutuhan berbeda — kami bisa sesuaikan cakupan layanan, frekuensi backup, response time, dan SLA. Hubungi kami untuk diskusi kebutuhan Anda.
+> [!tip]+ **Apakah paket maintenance bisa dikustomisasi?**  
+> Ya. Setiap kebutuhan berbeda — kami bisa sesuaikan cakupan layanan, frekuensi backup, response time, dan SLA. Hubungi kami untuk diskusi kebutuhan Anda.
 
-**Apakah ada biaya setup awal?**  
-Untuk server yang belum pernah kami kelola, ada biaya audit awal (one-time) untuk mengecek kondisi existing. Audit ini menghasilkan laporan yang bisa Anda pakai — bahkan jika Anda memutuskan tidak lanjut dengan kami.
+> [!tip]- **Apakah ada biaya setup awal?**  
+> Untuk server yang belum pernah kami kelola, ada biaya audit awal (one-time) untuk mengecek kondisi existing. Audit ini menghasilkan laporan yang bisa Anda pakai — bahkan jika Anda memutuskan tidak lanjut dengan kami.
 
-**Berapa minimal kontrak?**  
-Tidak ada kontrak minimal. Bisa bulanan — berhenti kapan saja. Untuk paket Professional dan Enterprise, kami rekomendasikan minimal 3 bulan agar transisi dan dokumentasi berjalan optimal.
+> [!tip]- **Berapa minimal kontrak?**  
+> Tidak ada kontrak minimal. Bisa bulanan — berhenti kapan saja. Untuk paket Professional dan Enterprise, kami rekomendasikan minimal 3 bulan agar transisi dan dokumentasi berjalan optimal.
 
-**Apakah bisa menangani server yang bukan di-install oleh Motekarindo?**  
-Ya. Justru ini salah satu kasus paling umum. Kami ambil alih server yang sudah berjalan, audit kondisinya, susun dokumentasi dari awal, lalu kelola sesuai standar kami.
+> [!tip]- **Apakah bisa menangani server yang bukan di-install oleh Motekarindo?**  
+> Ya. Justru ini salah satu kasus paling umum. Kami ambil alih server yang sudah berjalan, audit kondisinya, susun dokumentasi dari awal, lalu kelola sesuai standar kami.
 
-**Apakah dukungan teknis hanya via chat?**  
-Via WhatsApp untuk komunikasi harian dan insiden. Untuk troubleshooting yang butuh screen sharing, kami bisa via Google Meet atau Zoom. Semua komunikasi penting kami dokumentasikan.
+> [!tip]- **Apakah dukungan teknis hanya via chat?**  
+> Via WhatsApp untuk komunikasi harian dan insiden. Untuk troubleshooting yang butuh screen sharing, kami bisa via Google Meet atau Zoom. Semua komunikasi penting kami dokumentasikan.

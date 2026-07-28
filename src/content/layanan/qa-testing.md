@@ -55,17 +55,17 @@ Layanan **QA as a Service** dari Motekarindo memberi Anda tim penguji profesiona
 
 ### FAQ
 
-**Apakah QA as a Service cocok jika kami sudah punya developer?**  
-Sangat cocok. Developer fokus menulis kode — tim kami fokus menguji. Perspektif pihak ketiga sering menemukan bug yang terlewat karena developer terlalu dekat dengan kodenya.
+> [!tip]+ **Apakah QA as a Service cocok jika kami sudah punya developer?**  
+> Sangat cocok. Developer fokus menulis kode — tim kami fokus menguji. Perspektif pihak ketiga sering menemukan bug yang terlewat karena developer terlalu dekat dengan kodenya.
 
-**Berapa lama satu siklus pengujian?**  
-Functional + regression testing untuk web app skala menengah: 1-2 minggu. Untuk aplikasi besar dengan banyak modul: 2-4 minggu. Timeline detail disertakan dalam test plan.
+> [!tip]- **Berapa lama satu siklus pengujian?**  
+> Functional + regression testing untuk web app skala menengah: 1-2 minggu. Untuk aplikasi besar dengan banyak modul: 2-4 minggu. Timeline detail disertakan dalam test plan.
 
-**Apakah bisa integrasi dengan workflow kami?**  
-Ya. Kami bisa berkolaborasi via GitHub Issues, GitLab, Trello, Jira, ClickUp, atau tools manajemen proyek yang Anda gunakan. Bug report langsung masuk ke board Anda.
+> [!tip]- **Apakah bisa integrasi dengan workflow kami?**  
+> Ya. Kami bisa berkolaborasi via GitHub Issues, GitLab, Trello, Jira, ClickUp, atau tools manajemen proyek yang Anda gunakan. Bug report langsung masuk ke board Anda.
 
-**Apakah Anda juga bisa membuat automated test?**  
-Ya. Untuk regression test yang berulang, kami bisa menulis automated test script menggunakan Playwright, Cypress, atau Selenium — diserahkan lengkap dengan dokumentasi cara menjalankannya. Anda bisa pakai script ini untuk CI/CD pipeline setelah project selesai.
+> [!tip]- **Apakah Anda juga bisa membuat automated test?**  
+> Ya. Untuk regression test yang berulang, kami bisa menulis automated test script menggunakan Playwright, Cypress, atau Selenium — diserahkan lengkap dengan dokumentasi cara menjalankannya. Anda bisa pakai script ini untuk CI/CD pipeline setelah project selesai.
 
-**Bagaimana dengan kerahasiaan aplikasi kami?**  
-NDA bisa ditandatangani sebelum project dimulai. Seluruh data pengujian, kredensial, dan akses hanya digunakan selama masa kontrak dan dihapus setelah selesai — dengan konfirmasi tertulis.
+> [!tip]- **Bagaimana dengan kerahasiaan aplikasi kami?**  
+> NDA bisa ditandatangani sebelum project dimulai. Seluruh data pengujian, kredensial, dan akses hanya digunakan selama masa kontrak dan dihapus setelah selesai — dengan konfirmasi tertulis.

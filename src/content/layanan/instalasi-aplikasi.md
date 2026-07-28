@@ -45,17 +45,17 @@ Kami tidak sekadar install dan pergi. Setiap instalasi disertai **dokumentasi ko
 
 ### FAQ
 
-**Berapa lama proses instalasi?**  
-Instalasi OJS/ePrints standar: 1-3 hari kerja. Instalasi dengan custom theme atau konfigurasi khusus: 3-7 hari kerja. Estimasi detail diberikan setelah cek kebutuhan.
+> [!tip]+ **Berapa lama proses instalasi?**  
+> Instalasi OJS/ePrints standar: 1-3 hari kerja. Instalasi dengan custom theme atau konfigurasi khusus: 3-7 hari kerja. Estimasi detail diberikan setelah cek kebutuhan.
 
-**Apakah bisa instalasi di server yang sudah ada?**  
-Ya. Kami bisa install di server Anda sendiri, atau bantu siapkan VPS baru jika diperlukan. Yang penting server memenuhi persyaratan teknis aplikasi.
+> [!tip]- **Apakah bisa instalasi di server yang sudah ada?**  
+> Ya. Kami bisa install di server Anda sendiri, atau bantu siapkan VPS baru jika diperlukan. Yang penting server memenuhi persyaratan teknis aplikasi.
 
-**Apakah termasuk training penggunaan?**  
-Dokumentasi pengelolaan dasar selalu disertakan. Untuk training tim yang lebih mendalam (misalnya: melatih editor OJS atau admin ePrints), tersedia sebagai layanan terpisah.
+> [!tip]- **Apakah termasuk training penggunaan?**  
+> Dokumentasi pengelolaan dasar selalu disertakan. Untuk training tim yang lebih mendalam (misalnya: melatih editor OJS atau admin ePrints), tersedia sebagai layanan terpisah.
 
-**Apakah bisa upgrade versi aplikasi?**  
-Ya. Kami bisa bantu upgrade OJS dari versi 2 ke 3, atau ePrints ke versi terbaru — termasuk migrasi data. Semua dilakukan di staging dulu, diuji, baru diterapkan ke production.
+> [!tip]- **Apakah bisa upgrade versi aplikasi?**  
+> Ya. Kami bisa bantu upgrade OJS dari versi 2 ke 3, atau ePrints ke versi terbaru — termasuk migrasi data. Semua dilakukan di staging dulu, diuji, baru diterapkan ke production.
 
-**Bagaimana jika aplikasi error setelah instalasi?**  
-Kami beri masa garansi 1-2 minggu pasca instalasi untuk perbaikan bug terkait instalasi. Di luar itu, tersedia layanan maintenance terpisah dengan response time yang disepakati.
+> [!tip]- **Bagaimana jika aplikasi error setelah instalasi?**  
+> Kami beri masa garansi 1-2 minggu pasca instalasi untuk perbaikan bug terkait instalasi. Di luar itu, tersedia layanan maintenance terpisah dengan response time yang disepakati.

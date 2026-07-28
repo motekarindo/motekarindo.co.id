@@ -61,11 +61,11 @@ Motekar mengambil alih seluruh aspek teknis infrastruktur jurnal IUQI:
 
 ## FAQ
 
-> [!important]+ **Apakah proses maintenance berisiko mengganggu operasional jurnal?**
+> [!tip]+ **Apakah proses maintenance berisiko mengganggu operasional jurnal?**
 > Tidak. Semua update dan perubahan dilakukan di jam sepi traffic. Maintenance rutin dijadwalkan dan dikomunikasikan sebelumnya. Jika ada insiden mendesak, kami bertindak cepat — response time rata-rata di bawah 15 menit.
 
-> [!important]- **Apakah kami bisa mengakses dashboard monitoring sendiri?**
+> [!tip]- **Apakah kami bisa mengakses dashboard monitoring sendiri?**
 > Ya. Dashboard Grafana bisa Anda akses kapan saja. Anda bisa melihat kondisi server secara real-time tanpa harus bertanya ke kami. Ini bagian dari standar kami: **Anda tidak terkunci**.
 
-> [!important]- **Berapa biaya maintenance bulanan?**
+> [!tip]- **Berapa biaya maintenance bulanan?**
 > Biaya bisa bervariasi, Tergantung skala, dan permintaan. Sudah termasuk monitoring, backup harian, update keamanan, dan dukungan prioritas.
