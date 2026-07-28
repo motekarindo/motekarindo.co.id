@@ -44,7 +44,7 @@ Jurnal ilmiah IUQI sudah memiliki konten berkualitas — tapi tidak dioptimasi u
 
 ## Solusi: Fondasi SEO teknis yang solid
 
-Motekar menerapkan optimasi SEO teknis menyeluruh:
+Motekarindo menerapkan optimasi SEO teknis menyeluruh:
 
 - **Metadata Dublin Core** — Setiap artikel dilengkapi metadata author, title, abstract, date, dan identifier. Google Scholar bisa membaca dan mengindeks artikel dengan akurat.
 - **OAI-PMH** — Protokol standar untuk harvesting metadata. Jurnal IUQI kini kompatibel dengan agregator dan repositori akademik global.

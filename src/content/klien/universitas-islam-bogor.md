@@ -2,11 +2,11 @@
 name: "Universitas Islam Bogor"
 slug: "universitas-islam-bogor"
 category: "Pendidikan"
-description: "Motekar menangani maintenance OJS 3, maintenance server, dan monitoring uptime untuk jurnal Universitas Islam Bogor."
+description: "Motekarindo menangani maintenance OJS 3, maintenance server, dan monitoring uptime untuk jurnal Universitas Islam Bogor."
 public: true
 logo: "universitas-islam-bogor/universitas-islam-bogor.webp"
 location: "Bogor, Jawa Barat"
-testimonial: "Upgrade adalah mimpi buruk bagi kami. Motekar menyelesaikan migrasi ribuan artikel tanpa satu pun data hilang. Sekarang tampilan jurnal lebih modern dan traffic naik signifikan. Sehingga kami bisa fokus pada operasional harian."
+testimonial: "Upgrade adalah mimpi buruk bagi kami. Motekarindo menyelesaikan migrasi ribuan artikel tanpa satu pun data hilang. Sekarang tampilan jurnal lebih modern dan traffic naik signifikan. Sehingga kami bisa fokus pada operasional harian."
 featured: true
 order: 2
 is_published: false
@@ -21,7 +21,7 @@ Tim editor ingin upgrade ke OJS 3 tapi khawatir: ribuan artikel, ratusan user, d
 
 ## Solusi: Upgrade OJS + maintenance berkelanjutan
 
-Motekar mengeksekusi upgrade secara bertahap:
+Motekarindo mengeksekusi upgrade secara bertahap:
 
 - **Staging environment** — Duplikasi jurnal ke server staging, upgrade di sana, uji semua fitur sebelum menyentuh production.
 - **Migrasi data penuh** — Artikel, reviewer, issue, plugin settings. Verifikasi hash SHA-256 per batch untuk memastikan integritas data. Nol artikel hilang.

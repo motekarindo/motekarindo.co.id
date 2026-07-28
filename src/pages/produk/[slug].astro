@@ -68,15 +68,15 @@ if (faqSection) {
 const faqSchema = faqItems.length > 0 ? JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqItems.map((q) => ({ "@type": "Question", name: q.question, acceptedAnswer: { "@type": "Answer", text: q.answer } })) }) : "";
 
 const whatsappBase = `https://wa.me/${site.whatsApp}?text=`;
-const waHero = whatsappBase + encodeURIComponent("Halo Motekar, saya tertarik dengan produk " + fm.title);
-const waSidebar = whatsappBase + encodeURIComponent("Halo Motekar, saya tertarik dengan produk " + fm.title);
-const waBottom = whatsappBase + encodeURIComponent("Halo Motekar, saya ingin info lebih lanjut tentang " + fm.title);
+const waHero = whatsappBase + encodeURIComponent("Halo Motekarindo, saya tertarik dengan produk " + fm.title);
+const waSidebar = whatsappBase + encodeURIComponent("Halo Motekarindo, saya tertarik dengan produk " + fm.title);
+const waBottom = whatsappBase + encodeURIComponent("Halo Motekarindo, saya ingin info lebih lanjut tentang " + fm.title);
 
 const statusLabel = fm.status === "in-development" ? "Dalam Pengembangan" : fm.status === "coming-soon" ? "Segera Hadir" : fm.status === "available" ? "Tersedia" : fm.status;
 ---
 
 <BaseLayout
-  title={`${fm.title} | Motekar`}
+  title={`${fm.title} | Motekarindo`}
   description={fm.description ?? fm.summary ?? ""}
 >
   <main>

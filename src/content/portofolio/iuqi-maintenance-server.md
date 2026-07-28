@@ -42,7 +42,7 @@ Institut Ummul Quro Al-Islami (IUQI) mengelola beberapa jurnal ilmiah menggunaka
 
 ## Solusi: Infrastruktur andal dengan monitoring real-time
 
-Motekar mengambil alih seluruh aspek teknis infrastruktur jurnal IUQI:
+Motekarindo mengambil alih seluruh aspek teknis infrastruktur jurnal IUQI:
 
 - **Maintenance VPS** — Hardening server dengan konfigurasi LEMP teroptimasi, firewall ketat, rate limiting, dan proteksi DDoS. Update rutin OS dan aplikasi. Server kini stabil — **0 downtime** sejak dikelola.
 - **Perbaikan sistem email** — Konfigurasi SMTP via layanan relay profesional. Seluruh notifikasi OJS (submission, review, editorial decision) kini terkirim dengan andal. Ditambah alert otomatis jika terjadi kegagalan pengiriman.

@@ -2,7 +2,7 @@
 slug: "custom-application"
 title: "Custom Application by Request"
 summary: "Pengembangan aplikasi berbasis kebutuhan spesifik — dashboard internal, sistem pendukung operasional, atau tools bisnis."
-description: "Butuh aplikasi khusus? Motekar kembangkan custom application sesuai kebutuhan bisnis Anda — dari MVP hingga production-ready."
+description: "Butuh aplikasi khusus? Motekarindo kembangkan custom application sesuai kebutuhan bisnis Anda — dari MVP hingga production-ready."
 category: "Produk"
 icon: "web"
 status: "coming-soon"
@@ -12,4 +12,4 @@ order: 2
 is_published: false
 ---
 
-Motekar dapat membantu merancang scope, arsitektur, dan tahapan pengembangan aplikasi kustom secara bertahap — mulai dari MVP hingga production-ready.
+Motekarindo dapat membantu merancang scope, arsitektur, dan tahapan pengembangan aplikasi kustom secara bertahap — mulai dari MVP hingga production-ready.

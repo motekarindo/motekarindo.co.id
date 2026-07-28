@@ -6,8 +6,8 @@ import SolutionCard from "@/components/SolutionCard.astro";
 import { byOrder } from "@/lib/content";
 
 const solutions = byOrder(await getCollection("solutions")).filter((p) => p.data.is_published !== false);
-const title = "Solusi IT \u2014 Paket Layanan untuk Bisnis & Institusi | Motekar";
-const description = "Solusi Motekar menggabungkan layanan IT untuk percetakan digital, institusi pendidikan, perusahaan, dan organisasi.";
+const title = "Solusi IT \u2014 Paket Layanan untuk Bisnis & Institusi | Motekarindo";
+const description = "Solusi Motekarindo menggabungkan layanan IT untuk percetakan digital, institusi pendidikan, perusahaan, dan organisasi.";
 ---
 
 <BaseLayout title={title} description={description}>

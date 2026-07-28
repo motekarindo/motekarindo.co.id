@@ -5,7 +5,7 @@ title: "Template File Portofolio"
 client: "Nama Klien"
 clientPublic: false            # false = nama klien dirahasiakan
 problem: "Uraian masalah yang dihadapi klien."
-solution: "Uraian solusi yang dikerjakan Motekar."
+solution: "Uraian solusi yang dikerjakan Motekarindo."
 services:                      # wajib, array
   - "Web Development"
   - "Content structure"

@@ -2,7 +2,7 @@
 slug: "erp-percetakan"
 title: "POS Percetakan — Aplikasi Manajemen Percetakan Digital"
 summary: "Satu dashboard untuk Point Sales, input order, kalkulasi harga, antrian produksi, stok, dan laporan penjualan percetakan Anda."
-description: "POS Percetakan oleh Motekar: aplikasi manajemen operasional percetakan digital — POS, order, stok, produksi, keuangan, multi cabang. Gratis demo."
+description: "POS Percetakan oleh Motekarindo: aplikasi manajemen operasional percetakan digital — POS, order, stok, produksi, keuangan, multi cabang. Gratis demo."
 category: "Aplikasi Bisnis"
 icon: "apps"
 status: "available"

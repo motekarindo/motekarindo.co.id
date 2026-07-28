@@ -38,7 +38,7 @@ Tim editor ingin upgrade ke OJS 3 tapi khawatir: ribuan artikel, ratusan user, d
 
 ## Solusi: Upgrade bertahap + maintenance berkelanjutan
 
-Motekar mengeksekusi upgrade secara bertahap:
+Motekarindo mengeksekusi upgrade secara bertahap:
 
 - **Staging environment** — Duplikasi jurnal ke server staging, upgrade di sana, uji semua fitur sebelum menyentuh production.
 - **Migrasi data penuh** — Artikel, reviewer, issue, plugin settings. Verifikasi hash SHA-256 per batch untuk memastikan integritas data. Nol artikel hilang.

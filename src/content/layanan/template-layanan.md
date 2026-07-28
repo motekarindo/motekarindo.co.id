@@ -48,7 +48,7 @@ Paragraf pembuka: jelaskan value proposition layanan ini. Kenapa penting, apa ma
 - **Tantangan 2:** Satu baris yang relateable bagi target audience.
 - **Tantangan 3:** Minimal 3-4 pain points untuk bangun urgency.
 
-### Solusi dari Motekar
+### Solusi dari Motekarindo
 
 1. **Solusi 1** — Penjelasan satu paragraf. Detail apa yang kami lakukan, bagaimana caranya, apa hasilnya.
 
