@@ -11,6 +11,7 @@ is_published: true
 image:
   file: ""
   alt: "Tim konsultan IT Motekarindo sedang berdiskusi dan mencatat di papan tulis"
+is_localization: true
 ---
 
 ## Dari Kebingungan Teknologi ke Peta Jalan yang Jelas

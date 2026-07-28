@@ -22,6 +22,8 @@ is_published: false            # true = muncul di list, false = hidden + redirec
 image:
   file: "test.webp"   # nama file (harus ada di src/assets/images/layanan/)
   alt: "Deskripsi gambar untuk aksesibilitas & SEO"
+is_localization: false
+
 
 # ── DAFTAR ICON ────────────────────────
 # consult      → diskusi/strategi

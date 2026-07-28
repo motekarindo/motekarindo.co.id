@@ -11,6 +11,7 @@ is_published: true
 image:
   file: "web-development/test.webp"
   alt: "Tim web developer Motekarindo sedang mengerjakan tampilan website di monitor"
+is_localization: true
 ---
 
 ## Website yang Bekerja untuk Bisnis Anda — 24 Jam, 7 Hari
