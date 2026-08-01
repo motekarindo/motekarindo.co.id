@@ -27,7 +27,7 @@ for (const client of byOrder(clients)) {
   clientCards.push({ data: client.data, logoSrc });
 }
 
-const portofolio = featured(await getCollection("portofolio")).slice(0, 4).filter((p) => p.data.is_published === true);
+const portofolio = featured(await getCollection("portofolio")).filter((p) => p.data.is_published === true).slice(0, 4);
 const products = (await getCollection("products")).filter((p) => p.data.is_published === true);
 
 const title = "Motekar Teknologi Indonesia \u2014 Sistem Digital Terukur & Terdokumentasi";

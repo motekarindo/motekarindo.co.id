@@ -16,7 +16,7 @@ technologies:
   - "Schema.org"
 outcome: "Impresi naik dari 34 ribu (3 bulan) menjadi 74 ribu (1 bulan). Artikel mulai terindeks lebih cepat di Google Scholar."
 featured: true
-order: 2
+order: 4
 is_published: true
 icon: "apps"
 metrics:

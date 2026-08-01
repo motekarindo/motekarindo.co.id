@@ -4,11 +4,11 @@ slug: "kementerian-pendidikan-dasar-dan-menengah"
 category: "Pemerintah"
 description: "Motekarindo berkontribusi dalam pengembangan fullstack aplikasi Layanan Kursus — platform terpadu untuk penyaluran bantuan pemerintah ke lembaga kursus dan pelatihan di seluruh Indonesia."
 public: true
-logo: ""
+logo: "kemendikdasmen/kemendikdasmen.webp"
 location: "Jakarta"
 testimonial: ""
 featured: true
-order: 3
+order: 1
 is_published: true
 website: "https://layanankursus.kemendikdasmen.go.id"
 ---

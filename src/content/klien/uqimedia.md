@@ -1,23 +1,26 @@
 ---
 name: "UQIMEDIA Digital Printing"
-slug: uqimedia-media-digital-printing"
+slug: "uqimedia-digital-printing"
 category: "Percetakan"
-description: "Motekarindo menangani maintenance OJS, optimasi SEO jurnal, perbaikan notifikasi email, setup monitoring Grafana, dan maintenance VPS untuk jurnal ilmiah IUQI."
+description: "Motekarindo mengembangkan aplikasi manajemen aset dan point of sales (POS) untuk mendukung operasional percetakan digital UQIMEDIA."
 public: true
 logo: "uqimedia/uqimedia.webp"
 location: "Bogor"
-testimonial: "Impresi jurnal kami naik dari 34 ribu menjadi 74 ribu dalam satu bulan. Notifikasi email yang tadinya sering gagal sekarang stabil. Tim editor bisa fokus ke substansi artikel."
+testimonial: "Dulu semua serba manual — aset dicatat di Excel, order ditulis di kertas. Sekarang dua sistem ini memangkas banyak waktu. Invoice langsung cetak, aset ketahuan kapan harus maintenance. Staf counter lebih cepat, staf gudang lebih rapi."
 featured: true
 order: 4
 is_published: true
-# website: "https://iuqibogor.ac.id"
+website: ""
 ---
 
-Institut Ummul Quro Al-Islami (IUQI) adalah institusi pendidikan tinggi di Bogor yang mengelola jurnal ilmiah melalui platform Open Journal Systems (OJS).
+UQIMEDIA adalah perusahaan percetakan digital yang memproduksi merchandise, packaging, dan material promosi untuk klien korporat dan retail.
 
-Motekarindo menangani maintenance OJS, perbaikan notifikasi email, setup monitoring server dengan Grafana, optimasi SEO jurnal, dan maintenance VPS.
+Motekarindo mengembangkan dua sistem aplikasi untuk UQIMEDIA:
 
-Hasilnya: impresi jurnal naik dari 34 ribu (dalam 3 bulan) menjadi 74 ribu (dalam 1 bulan), notifikasi email stabil, server 0 downtime, dan semua metrik server terpantau real-time melalui dashboard Grafana.
+- **Aplikasi manajemen aset** — sistem untuk mencatat, melacak, dan mengelola aset produksi (mesin cetak, peralatan finishing, hingga perlengkapan kantor). Dari pencatatan pembelian, pemeliharaan berkala, hingga riwayat perbaikan — semua tercatat dalam satu dashboard.
+- **Aplikasi point of sales (POS)** — sistem kasir dan manajemen order untuk melayani transaksi di counter. Dari input pesanan, kalkulasi harga, pembayaran, hingga cetak invoice — semuanya terintegrasi.
 
-[Lihat studi kasus infrastruktur →](/portofolio/maintenance-infra-iuqi)  
-[Lihat studi kasus SEO →](/portofolio/seo-jurnal-iuqi)
+Kedua sistem ini membantu UQIMEDIA menjalankan operasional harian dengan lebih efisien — mengurangi kesalahan pencatatan manual dan mempercepat layanan ke pelanggan.
+
+[Lihat studi kasus →](/portofolio/aset-pos-uqimedia)
+

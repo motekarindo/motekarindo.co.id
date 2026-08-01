@@ -17,7 +17,7 @@ technologies:
   - "Docker"
 outcome: "Verifikasi berkas kini bisa diajukan melalui aplikasi — tidak perlu antar fisik ke dinas lain. Proses lebih cepat, paperless, dan seluruh riwayat tercatat di sistem."
 featured: true
-order: 3
+order: 2
 is_published: true
 metrics:
   - label: "Pengajuan"

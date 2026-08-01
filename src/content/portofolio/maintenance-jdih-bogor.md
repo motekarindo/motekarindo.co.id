@@ -15,7 +15,7 @@ technologies:
   - "Linux"
 outcome: "Bug diperbaiki, server stabil, ribuan dokumen hukum tetap bisa diakses masyarakat. Total 655.000+ tampilan dan 615.000+ unduhan terlayani tanpa downtime."
 featured: true
-order: 4
+order: 3
 is_published: true
 metrics:
   - label: "Dilihat"

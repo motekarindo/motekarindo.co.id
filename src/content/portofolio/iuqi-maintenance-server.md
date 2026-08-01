@@ -17,7 +17,7 @@ technologies:
   - "Uptime Kuma"
 outcome: "0 downtime, email stabil, semua metrik server terpantau Grafana real-time, response insiden di bawah 15 menit."
 featured: true
-order: 1
+order: 4
 is_published: true
 icon: "web"
 metrics:

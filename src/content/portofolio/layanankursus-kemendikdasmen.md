@@ -17,7 +17,7 @@ technologies:
   - "Linux"
 outcome: "Aplikasi Layanan Kursus menjadi platform utama Direktorat Kursus dan Pelatihan untuk penyaluran Bantuan Pemerintah program PKK dan PKW — melayani ribuan lembaga kursus di seluruh Indonesia."
 featured: true
-order: 5
+order: 1
 is_published: true
 metrics:
   - label: "Program"
