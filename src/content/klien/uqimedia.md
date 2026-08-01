@@ -1,16 +1,16 @@
 ---
-name: "Institut Ummul Quro Al-Islami"
-slug: "institut-ummul-quro-al-islami"
-category: "Pendidikan"
+name: "UQIMEDIA Digital Printing"
+slug: uqimedia-media-digital-printing"
+category: "Percetakan"
 description: "Motekarindo menangani maintenance OJS, optimasi SEO jurnal, perbaikan notifikasi email, setup monitoring Grafana, dan maintenance VPS untuk jurnal ilmiah IUQI."
 public: true
-logo: "institut-ummul-quro-al-islami/institut-ummul-quro-al-islami.webp"
+logo: "uqimedia/uqimedia.webp"
 location: "Bogor"
 testimonial: "Impresi jurnal kami naik dari 34 ribu menjadi 74 ribu dalam satu bulan. Notifikasi email yang tadinya sering gagal sekarang stabil. Tim editor bisa fokus ke substansi artikel."
 featured: true
-order: 3
+order: 4
 is_published: true
-website: "https://iuqibogor.ac.id"
+# website: "https://iuqibogor.ac.id"
 ---
 
 Institut Ummul Quro Al-Islami (IUQI) adalah institusi pendidikan tinggi di Bogor yang mengelola jurnal ilmiah melalui platform Open Journal Systems (OJS).

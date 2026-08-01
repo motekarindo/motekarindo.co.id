@@ -26,10 +26,15 @@ The first version prioritizes clarity, trust, performance, SEO readiness, and ea
 ```text
 Home (/)
 ├── Layanan (/layanan)
+├── Layanan Detail (/layanan/{slug})
 ├── Solusi (/solusi)
+├── Solusi Detail (/solusi/{slug})
 ├── Product (/product)
+├── Product Detail (/product/{slug})
 ├── Client (/client)
+├── Client Detail (/client/{slug})
 ├── Portfolio (/portfolio)
+├── Portfolio Detail (/portfolio/{slug})
 ├── Tentang Kami (/tentang)
 └── Kontak (/kontak)
 ```
@@ -807,4 +812,3 @@ Estimated scope: Small.
 - Does Motekar already have an official logo?
 - Does the website need Indonesian only, or Indonesian plus English later?
 - Will contact form submissions use email, Netlify Forms, or WhatsApp only for version 1?
-
