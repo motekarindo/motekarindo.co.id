@@ -25,7 +25,7 @@ Layanan **maintenance & dukungan teknis** dari Motekarindo memastikan sistem And
 - **Tidak ada yang tahu kondisi server:** CPU usage, disk space, memory — semua tidak terpantau. Server mati mendadak saat storage penuh.
 - **Developer sudah tidak bisa dihubungi:** Satu-satunya orang yang paham sistem sudah pindah kerja — tidak ada dokumentasi, tidak ada yang bisa mengambil alih.
 
-### Paket Maintenance Kami
+<!--### Paket Maintenance Kami
 
 1. **Essential (Rp 500rb/bulan)** — Cocok untuk website atau aplikasi kecil dengan traffic rendah.
    - Monitoring uptime 24/7 + notifikasi WhatsApp
@@ -47,7 +47,7 @@ Layanan **maintenance & dukungan teknis** dari Motekarindo memastikan sistem And
    - Multi-server management
    - CI/CD maintenance
    - Incident post-mortem + rekomendasi perbaikan
-   - Response time: < 15 menit (24/7 untuk insiden kritis)
+   - Response time: < 15 menit (24/7 untuk insiden kritis)-->
 
 ### Yang Membuat Maintenance Kami Berbeda
 
