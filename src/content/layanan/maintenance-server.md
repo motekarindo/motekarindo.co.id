@@ -8,7 +8,7 @@ icon: "support"
 featured: true
 order: 6
 is_published: true
-is_localization: false
+is_localization: true
 ---
 
 ## Jangan Tunggu Sampai Server Down Baru Cari Bantuan
