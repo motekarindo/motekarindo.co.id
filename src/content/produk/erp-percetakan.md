@@ -1,6 +1,6 @@
 ---
-slug: "erp-percetakan"
-title: "POS Percetakan — Aplikasi Manajemen Percetakan Digital"
+slug: "aplikasi-percetakan"
+title: "POS Percetakan — Aplikasi Percetakan Digital"
 summary: "Satu dashboard untuk Point Sales, input order, kalkulasi harga, antrian produksi, stok, dan laporan penjualan percetakan Anda."
 description: "POS Percetakan oleh Motekarindo: aplikasi manajemen operasional percetakan digital — POS, order, stok, produksi, keuangan, multi cabang. Gratis demo."
 category: "Aplikasi Bisnis"
@@ -10,6 +10,7 @@ audience: "Percetakan digital, percetakan offset, merchandise, dan jasa cetak cu
 featured: true
 order: 1
 is_published: true
+is_localization: true
 image:
   file: "erp-percetakan/pos-percetakan.webp"
   alt: "Dashboard aplikasi POS Percetakan menampilkan ringkasan order dan produksi"

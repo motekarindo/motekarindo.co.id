@@ -5,6 +5,7 @@ import { byOrder } from "@/lib/content";
 import ServiceIllustration from "@/components/ServiceIllustration.astro";
 import ImageGallery from "@/components/ImageGallery.astro";
 import { site } from "@/lib/site.data";
+import { cities } from "@/lib/cities";
 
 export async function getStaticPaths() {
   const items = await getCollection("products");
@@ -73,6 +74,7 @@ const waSidebar = whatsappBase + encodeURIComponent("Halo Motekarindo, saya tert
 const waBottom = whatsappBase + encodeURIComponent("Halo Motekarindo, saya ingin info lebih lanjut tentang " + fm.title);
 
 const statusLabel = fm.status === "in-development" ? "Dalam Pengembangan" : fm.status === "coming-soon" ? "Segera Hadir" : fm.status === "available" ? "Tersedia" : fm.status;
+const featuredCities = cities.filter((city) => ["bogor", "jakarta-pusat", "bandung", "depok", "bekasi", "tangerang", "surabaya", "yogyakarta"].includes(city.slug));
 ---
 
 <BaseLayout
@@ -142,6 +144,20 @@ const statusLabel = fm.status === "in-development" ? "Dalam Pengembangan" : fm.s
 
         {fm.gallery && fm.gallery.length > 0 && (
           <ImageGallery gallery={fm.gallery} />
+        )}
+
+        {fm.is_localization && (
+          <section class="mt-16 border-t-2 border-brand-100 pt-10">
+            <h2 class="font-heading text-2xl font-bold text-ink">Demo dan implementasi di kota Anda</h2>
+            <p class="mt-3 max-w-2xl leading-7 text-muted">Tim Motekarindo melayani konsultasi, demo, konfigurasi, dan pendampingan penggunaan {fm.title.split(" — ")[0]} secara remote maupun onsite sesuai kebutuhan.</p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              {featuredCities.map((city) => (
+                <a href={`/produk/${fm.slug}/${city.slug}`} class="rounded-full border border-brand-200 bg-brand-50 px-4 py-2 text-sm font-semibold text-brand-700 transition-colors hover:border-brand-500 hover:bg-brand-100">
+                  {fm.title.split(" — ")[0]} di {city.name}
+                </a>
+              ))}
+            </div>
+          </section>
         )}
 
         {related.length > 0 && (

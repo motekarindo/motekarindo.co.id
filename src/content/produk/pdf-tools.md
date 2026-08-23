@@ -10,6 +10,7 @@ audience: "Umum — pekerja kantoran, mahasiswa, freelancer, dan siapa pun yang 
 featured: true
 order: 2
 is_published: true
+is_localization: true
 image:
   file: "pdf-tools/pdf-home.webp"
   alt: "Tampilan antarmuka Privacy PDF dengan berbagai tools pengolah PDF"

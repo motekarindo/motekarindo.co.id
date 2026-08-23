@@ -54,6 +54,7 @@ const products = defineCollection({
     featured: z.boolean().default(false),
     order: z.number(),
     is_published: z.boolean().default(true),
+    is_localization: z.boolean().default(false),
     image: z.object({ file: z.string(), alt: z.string() }).optional(),
     gallery: z
       .array(

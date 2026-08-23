@@ -1,0 +1,183 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ServiceIllustration from "@/components/ServiceIllustration.astro";
+import { getCollection } from "astro:content";
+import { byOrder } from "@/lib/content";
+import { cities } from "@/lib/cities";
+import { site } from "@/lib/site.data";
+
+export async function getStaticPaths() {
+  const products = await getCollection("products");
+  const localized = products.filter(
+    (product) => product.data.is_localization && product.data.is_published !== false
+  );
+
+  return localized.flatMap((product) =>
+    cities.map((city) => ({
+      params: { product: product.data.slug, city: city.slug },
+    }))
+  );
+}
+
+const { product, city } = Astro.params;
+const cityData = cities.find((item) => item.slug === city);
+const allProducts = byOrder(await getCollection("products"));
+const item = allProducts.find(
+  (entry) => entry.data.slug === product && entry.data.is_localization
+);
+
+if (!item || !cityData) return Astro.redirect("/produk");
+
+const fm = item.data;
+const productName = fm.title.split(" — ")[0];
+const cityName = cityData.name;
+const title = `${productName} di ${cityName} | Motekarindo`;
+const description = `${productName}  di ${cityName} dan sekitarnya. Jadwalkan demo gratis.`;
+const statusLabel = fm.status === "available" ? "Tersedia" : fm.status === "in-development" ? "Dalam Pengembangan" : "Segera Hadir";
+
+const images = import.meta.glob<{ default: { src: string; width: number; height: number } }>(
+  "/src/assets/images/produk/**/*.{jpg,jpeg,png,webp,avif}"
+);
+let heroImage: { src: string; width: number; height: number } | undefined;
+if (fm.image?.file) {
+  const match = Object.entries(images).find(([path]) => path.endsWith("/" + fm.image?.file));
+  if (match) heroImage = (await match[1]()).default;
+}
+
+const currentCityIndex = cities.findIndex((item) => item.slug === city);
+const relatedCities = Array.from({ length: 6 }, (_, index) =>
+  cities[(currentCityIndex + index + 1) % cities.length]
+);
+const relatedProducts = allProducts
+  .filter((entry) => entry.data.is_published !== false && entry.data.slug !== product)
+  .slice(0, 3);
+
+const whatsappBase = `https://wa.me/${site.whatsApp}?text=`;
+const whatsappUrl = whatsappBase + encodeURIComponent(`Halo Motekarindo, saya ingin demo ${productName} untuk bisnis di ${cityName}`);
+const productSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: `${productName} di ${cityName}`,
+  description,
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  url: `https://motekarindo.co.id/produk/${product}/${city}`,
+  provider: {
+    "@type": "Organization",
+    name: "Motekar Teknologi Indonesia",
+    url: "https://motekarindo.co.id",
+  },
+  areaServed: { "@type": "AdministrativeArea", name: cityName },
+  offers: { "@type": "Offer", availability: "https://schema.org/InStock" },
+});
+---
+
+<BaseLayout title={title} description={description}>
+  <script type="application/ld+json" set:html={productSchema} />
+  <main>
+    <nav class="border-b border-line bg-white" aria-label="Breadcrumb">
+      <ol class="mx-auto flex max-w-7xl items-center gap-1.5 px-5 py-3 text-sm text-soft sm:px-6 lg:px-8">
+        <li><a href="/" class="transition-colors hover:text-brand-600">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li><a href="/produk" class="transition-colors hover:text-brand-600">Produk</a></li>
+        <li aria-hidden="true">/</li>
+        <li><a href={`/produk/${product}`} class="transition-colors hover:text-brand-600">{productName}</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="truncate text-ink" aria-current="page">{cityName}</li>
+      </ol>
+    </nav>
+
+    <section class="relative overflow-hidden border-b-2 border-brand-200 bg-white">
+      <div class="absolute inset-0 bg-dots opacity-40" aria-hidden="true"></div>
+      <div class="relative mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-6 sm:py-16 lg:grid-cols-2 lg:items-center lg:px-8 lg:py-20">
+        <div>
+          <div class="flex flex-wrap items-center gap-3">
+            <span class="rounded-full bg-brand-600 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-white">{fm.category}</span>
+            <span class="rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700">{statusLabel}</span>
+          </div>
+          <h1 class="mt-6 font-heading text-4xl font-extrabold leading-tight text-ink sm:text-5xl lg:text-[3.25rem]">{productName} di {cityName}</h1>
+          <p class="mt-6 max-w-xl text-lg leading-8 text-muted">{fm.description ?? fm.summary}</p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href={whatsappUrl} class="inline-flex items-center rounded-full bg-brand-600 px-6 py-3 font-heading font-semibold text-white shadow-sm transition-all hover:bg-brand-700 hover:shadow-md">Jadwalkan Demo Gratis</a>
+            <a href={`/produk/${product}`} class="inline-flex items-center rounded-full border-2 border-brand-200 px-6 py-3 font-heading font-semibold text-brand-700 transition-colors hover:border-brand-600 hover:bg-brand-50">Lihat Detail Produk</a>
+          </div>
+        </div>
+        <div class="lg:min-h-[400px]">
+          {heroImage ? (
+            <img src={heroImage.src} width={heroImage.width} height={heroImage.height} alt={`${fm.image?.alt} untuk bisnis di ${cityName}`} sizes="(max-width: 1024px) 100vw, 624px" class="h-auto w-full rounded-2xl shadow-xl" loading="eager" />
+          ) : (
+            <div class="flex h-full min-h-80 w-full items-center justify-center rounded-2xl bg-brand-50 p-12">
+              <ServiceIllustration icon={fm.icon} class="max-h-64 w-full max-w-xs" />
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-7xl px-5 py-16 sm:px-6 lg:grid lg:grid-cols-12 lg:gap-12 lg:px-8 lg:py-24">
+      <article class="prose prose-lg max-w-none lg:col-span-8 prose-headings:font-heading prose-headings:font-bold prose-headings:text-ink prose-p:text-muted prose-p:leading-8 prose-li:text-muted prose-li:leading-7 prose-strong:text-ink">
+        <h2>Aplikasi manajemen percetakan untuk bisnis di {cityName}</h2>
+        <p>Operasional percetakan sering tersebar di nota, spreadsheet, dan chat. Akibatnya, order sulit dilacak, harga tidak konsisten, stok terlambat diperbarui, dan laporan membutuhkan rekap manual. <strong>{productName}</strong> menyatukan alur tersebut dalam satu aplikasi berbasis web.</p>
+
+        <h3>Yang dapat dikelola dalam satu sistem</h3>
+        <ul>
+          <li><strong>POS dan order</strong> untuk transaksi walk-in, WhatsApp, reseller, maupun pelanggan korporat.</li>
+          <li><strong>Kalkulasi harga otomatis</strong> berdasarkan bahan, ukuran, jumlah, dan finishing.</li>
+          <li><strong>Antrian produksi</strong> dari proses desain, cetak, finishing, hingga pesanan siap diambil atau dikirim.</li>
+          <li><strong>Stok dan pelanggan</strong> agar histori transaksi serta kebutuhan bahan lebih mudah dipantau.</li>
+          <li><strong>Laporan usaha</strong> untuk memantau omzet, transaksi, produk terlaris, dan performa operasional.</li>
+        </ul>
+
+        <h3>Demo dan implementasi di {cityName}</h3>
+        <p>Proses dimulai dengan demo dan pemetaan alur kerja percetakan Anda. Tim Motekarindo kemudian membantu konfigurasi produk, harga, stok awal, akun pengguna, dan pelatihan tim. Konsultasi serta pendampingan dapat dilakukan secara remote, dengan opsi onsite berdasarkan kebutuhan dan cakupan proyek.</p>
+
+        <h3>FAQ</h3>
+        <p><strong>Apakah {productName} tersedia untuk percetakan di {cityName}?</strong><br />Ya. Demo, konsultasi, konfigurasi, dan pelatihan dapat dilakukan secara remote untuk bisnis di {cityName}. Kebutuhan onsite akan dibahas saat konsultasi awal.</p>
+        <p><strong>Apakah cocok untuk percetakan digital dan offset?</strong><br />Ya. Sistem dapat digunakan oleh percetakan digital, offset, merchandise, outdoor, dan bisnis cetak custom dengan konfigurasi produk serta harga yang disesuaikan.</p>
+        <p><strong>Berapa lama implementasinya?</strong><br />Konfigurasi awal umumnya membutuhkan 1-2 hari kerja setelah data produk, harga, pengguna, dan stok awal tersedia.</p>
+        <p><strong>Apakah bisa digunakan oleh lebih dari satu outlet?</strong><br />Bisa. Sistem mendukung pengelolaan beberapa outlet dalam satu akun dengan laporan yang dapat dipantau secara terpisah maupun gabungan.</p>
+      </article>
+
+      <aside class="mt-12 lg:col-span-4 lg:mt-0">
+        <div class="space-y-8 lg:sticky lg:top-28">
+          <div class="rounded-2xl border-2 border-brand-200 bg-brand-50 p-6 shadow-sm">
+            <h2 class="font-heading text-xl font-bold text-ink">Ingin lihat cara kerjanya?</h2>
+            <p class="mt-2 text-sm leading-6 text-muted">Jadwalkan demo gratis dan diskusikan alur operasional percetakan Anda di {cityName}.</p>
+            <a href={whatsappUrl} class="mt-5 inline-flex w-full items-center justify-center rounded-full bg-brand-600 px-5 py-3 font-heading text-sm font-semibold text-white transition-colors hover:bg-brand-700">Chat via WhatsApp</a>
+          </div>
+
+          <div>
+            <h2 class="font-heading text-lg font-bold text-ink">Kota lainnya</h2>
+            <div class="mt-4 flex flex-wrap gap-2">
+              {relatedCities.map((relatedCity) => (
+                <a href={`/produk/${product}/${relatedCity.slug}`} class="rounded-full border border-line bg-white px-3 py-1.5 text-sm text-muted transition-colors hover:border-brand-300 hover:text-brand-700">{relatedCity.name}</a>
+              ))}
+            </div>
+          </div>
+
+          {relatedProducts.length > 0 && (
+            <div>
+              <h2 class="font-heading text-lg font-bold text-ink">Produk lainnya</h2>
+              <div class="mt-4 space-y-3">
+                {relatedProducts.map((relatedProduct) => (
+                  <a href={`/produk/${relatedProduct.data.slug}`} class="block rounded-xl border border-line bg-white p-4 transition-colors hover:border-brand-200 hover:bg-brand-50">
+                    <p class="font-heading text-sm font-semibold text-ink">{relatedProduct.data.title}</p>
+                    <p class="mt-1 line-clamp-2 text-xs leading-5 text-muted">{relatedProduct.data.summary}</p>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </aside>
+    </div>
+
+    <section class="border-t-2 border-brand-100 bg-brand-50 py-16 sm:py-20">
+      <div class="mx-auto max-w-4xl px-5 text-center sm:px-6">
+        <h2 class="font-heading text-3xl font-bold text-ink sm:text-4xl">Siap mencoba {productName} di {cityName}?</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-lg leading-8 text-muted">Lihat bagaimana order, produksi, stok, dan laporan bisnis Anda dapat dikelola lebih rapi dalam satu aplikasi.</p>
+        <a href={whatsappUrl} class="mt-8 inline-flex items-center rounded-full bg-brand-600 px-8 py-4 font-heading font-semibold text-white shadow-sm transition-all hover:bg-brand-700 hover:shadow-md">Jadwalkan Demo Gratis</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
