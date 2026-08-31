@@ -9,6 +9,7 @@ featured: true
 order: 6
 is_published: true
 is_localization: true
+coverage: "jabodetabek"
 ---
 
 ## Jangan Tunggu Sampai Server Down Baru Cari Bantuan
@@ -16,6 +17,9 @@ is_localization: true
 Website lambat. Email notifikasi tidak terkirim. Plugin usang jadi celah keamanan. Masalah-masalah ini tidak muncul tiba-tiba — mereka menumpuk perlahan, dan meledak di saat paling tidak tepat: saat traffic tinggi, saat deadline submission, saat tim Anda sedang libur.
 
 Layanan **maintenance & dukungan teknis** dari Motekarindo memastikan sistem Anda tetap sehat — bukan sekadar diperbaiki saat rusak. Setiap tindakan tercatat. Setiap perubahan terdokumentasi. Anda selalu tahu apa yang terjadi di server dan aplikasi Anda.
+
+> [!note] Cakupan layanan onsite
+> Kunjungan langsung ke lokasi (onsite) tersedia untuk area **Jabodetabek** — Jakarta, Bogor, Depok, Tangerang, dan Bekasi. Untuk klien di luar area tersebut, layanan maintenance tetap dapat dilakukan secara **remote**.
 
 ### Masalah yang Terjadi Tanpa Maintenance Rutin
 

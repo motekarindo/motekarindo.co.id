@@ -597,3 +597,21 @@ export const cities = [
 export function getCity(name: string) {
   return cities.find((c) => c.name === name || c.slug === name);
 }
+
+// Cakupan layanan onsite (harus datang ke lokasi) — area Jabodetabek.
+export const jabodetabekSlugs = [
+  "jakarta-pusat",
+  "jakarta-utara",
+  "jakarta-barat",
+  "jakarta-selatan",
+  "jakarta-timur",
+  "bogor",
+  "depok",
+  "bekasi",
+  "tangerang",
+  "tangerang-selatan",
+];
+
+export const jabodetabekCities = cities.filter((c) =>
+  jabodetabekSlugs.includes(c.slug)
+);

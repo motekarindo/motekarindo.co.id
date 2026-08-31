@@ -4,7 +4,7 @@ import { getCollection } from "astro:content";
 import { byOrder } from "@/lib/content";
 import ServiceIllustration from "@/components/ServiceIllustration.astro";
 import { site } from "@/lib/site.data";
-import { cities } from "@/lib/cities";
+import { cities, jabodetabekSlugs } from "@/lib/cities";
 
 export async function getStaticPaths() {
   const items = await getCollection("services");
@@ -14,7 +14,11 @@ export async function getStaticPaths() {
 
   const paths: { params: { service: string; city: string } }[] = [];
   for (const item of localized) {
-    for (const c of cities) {
+    const cityList =
+      item.data.coverage === "jabodetabek"
+        ? cities.filter((c) => jabodetabekSlugs.includes(c.slug))
+        : cities;
+    for (const c of cityList) {
       paths.push({ params: { service: item.data.slug, city: c.slug } });
     }
   }
@@ -30,6 +34,12 @@ const item = allServices.find(
   (s) => s.data.slug === service && s.data.is_localization
 );
 if (!item) return Astro.redirect("/layanan");
+if (
+  item.data.coverage === "jabodetabek" &&
+  !jabodetabekSlugs.includes(city)
+) {
+  return Astro.redirect(`/layanan/${service}`);
+}
 
 const fm = item.data;
 const fmTitle = fm.title;

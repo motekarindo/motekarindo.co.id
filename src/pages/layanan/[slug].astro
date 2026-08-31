@@ -4,6 +4,7 @@ import { getCollection } from "astro:content";
 import { byOrder } from "@/lib/content";
 import ServiceIllustration from "@/components/ServiceIllustration.astro";
 import { site } from "@/lib/site.data";
+import { jabodetabekCities } from "@/lib/cities";
 
 export async function getStaticPaths() {
   const items = await getCollection("services");
@@ -145,6 +146,20 @@ const waBottom = whatsappBase + encodeURIComponent("Halo Motekarindo, saya ingin
         ">
           <Content />
         </article>
+
+        {fm.coverage === "jabodetabek" && (
+          <section class="mt-16 border-t-2 border-brand-100 pt-10">
+            <h3 class="font-heading text-lg font-bold text-ink mb-5">Area layanan onsite</h3>
+            <p class="mb-5 text-sm leading-7 text-muted">Kunjungan onsite tersedia di area Jabodetabek. Di luar area ini, layanan tetap dapat dilakukan secara remote.</p>
+            <div class="flex flex-wrap gap-3">
+              {jabodetabekCities.map((c) => (
+                <a href={`/layanan/${slug}/${c.slug}`} class="rounded-full border border-brand-200 bg-brand-50 px-4 py-2 text-sm font-semibold text-brand-700 transition-colors hover:border-brand-500 hover:bg-brand-100">
+                  Maintenance di {c.name}
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
 
         {related.length > 0 && (
           <section class="mt-16 border-t-2 border-brand-100 pt-10">
