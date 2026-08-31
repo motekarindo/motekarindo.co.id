@@ -8,10 +8,11 @@ icon: "consult"
 featured: true
 order: 1
 is_published: true
+is_localization: true
+coverage: "nasional"
 image:
   file: ""
   alt: "Tim konsultan IT Motekarindo sedang berdiskusi dan mencatat di papan tulis"
-is_localization: true
 ---
 
 ## Dari Kebingungan Teknologi ke Peta Jalan yang Jelas

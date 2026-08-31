@@ -8,6 +8,8 @@ icon: "server"
 featured: true
 order: 3
 is_published: true
+is_localization: true 
+coverage: "nasional"
 ---
 
 ## Infrastruktur Andal, Bisnis Tenang — Tanpa Harus Rekrut Tim DevOps Sendiri

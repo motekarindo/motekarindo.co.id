@@ -8,6 +8,8 @@ icon: "troubleshoot"
 featured: true
 order: 4
 is_published: true
+is_localization: true 
+coverage: "nasional"
 ---
 
 ## Produk Bebas Bug, Rilis Tanpa Cemas

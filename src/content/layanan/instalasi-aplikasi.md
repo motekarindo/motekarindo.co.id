@@ -8,6 +8,8 @@ icon: "install"
 featured: true
 order: 5
 is_published: true
+is_localization: true
+coverage: "nasional"
 ---
 
 ## Aplikasi Terpasang, Siap Pakai — Tanpa Pusing Konfigurasi
@@ -20,9 +22,9 @@ Kami tidak sekadar install dan pergi. Setiap instalasi disertai **dokumentasi ko
 
 1. **Open Journal Systems (OJS)** — Platform manajemen jurnal ilmiah open source. Kami install, konfigurasi, setting email notifikasi, dan pastikan alur editorial berfungsi — dari submission, review, hingga publishing.
 
-2. **ePrints** — Repository digital untuk karya ilmiah, skripsi, tesis, dan dokumen akademik. Kami setup, konfigurasi metadata dasar, dan uji upload dokumen.
+2. **ePrints** — Repository digital untuk karya ilmiah, skripsi, tesis, dan dokumen akademik. Kami setup, konfigurasi metadata dasar, dan uji upload dokumen. [Lihat instalasi ePrints khusus →](/layanan/install-eprints)
 
-3. **WordPress** — CMS paling populer di dunia. Instalasi, pemilihan tema, plugin esensial (SEO, security, caching), dan optimasi dasar.
+3. **WordPress** — CMS paling populer di dunia. Instalasi, pemilihan tema, plugin esensial (SEO, security, caching), dan optimasi dasar. [Butuh perawatan rutin? Lihat maintenance WordPress →](/layanan/maintenance-wordpress)
 
 4. **Aplikasi Web Custom** — Punya aplikasi dari developer lain yang perlu di-deploy? Kami bantu: setup environment, konfigurasi database, deploy kode, dan pastikan berjalan sesuai spesifikasi.
 
