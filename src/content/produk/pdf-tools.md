@@ -73,9 +73,9 @@ Butuh gabung PDF? Tanda tangan digital? Kompres file? Biasanya Anda harus mengun
 
 ### Teknologi di Balik Privacy PDF
 
-Privacy PDF menggunakan **WebAssembly (Wasm)** untuk memproses PDF secara native di browser. Engine pemrosesan PDF berjalan seperti aplikasi desktop — tanpa ketergantungan pada server backend. Ini berarti:
+Privacy PDF menggunakan **NextJS** untuk memproses PDF secara native di browser. Engine pemrosesan PDF berjalan seperti aplikasi desktop — tanpa ketergantungan pada server backend. Ini berarti:
 
-- Performa setara aplikasi native
+- Tidak ada data yang terkirim ke server kami.
 - Tidak ada biaya server per transaksi
 - Dapat digunakan offline setelah halaman pertama dimuat
 
