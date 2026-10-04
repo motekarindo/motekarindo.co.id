@@ -169,7 +169,7 @@ const skills = [
       />
       <div class="mt-14 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((s) => (
-          <ServiceCard title={s.data.title} summary={s.data.summary} category={s.data.category} icon={s.data.icon} href={`/layanan/${s.id}`} />
+          <ServiceCard title={s.data.title} summary={s.data.summary} category={s.data.category} icon={s.data.icon} href={`/layanan/${s.data.slug}`} />
         ))}
       </div>
       <div class="mt-12 text-center">

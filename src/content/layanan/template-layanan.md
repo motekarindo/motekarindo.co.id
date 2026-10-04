@@ -23,6 +23,8 @@ image:
   file: "test.webp"   # nama file (harus ada di src/assets/images/layanan/)
   alt: "Deskripsi gambar untuk aksesibilitas & SEO"
 is_localization: false
+coverage: "nasional"              # Cakupan halaman kota: nasional/jabodetabek
+# onsite_coverage: "jabodetabek"  # Isi hanya jika layanan onsite tersedia
 
 
 # ── DAFTAR ICON ────────────────────────

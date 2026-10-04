@@ -1,8 +1,8 @@
 ---
 slug: "pdf-tools"
-title: "Privacy PDF — Tools PDF Gratis & Aman di Browser"
-summary: "16 tools PDF langsung di browser: merge, extract, sign, compress, convert. File Anda tetap di perangkat — tidak diunggah ke server manapun."
-description: "Privacy PDF: 16+ tools PDF gratis langsung di browser. Tidak ada upload. File tetap lokal. Merge, extract, compress, convert, crop, sign, watermark — semuanya aman."
+title: "PDF Tools Gratis Tanpa Upload — Privacy PDF"
+summary: "Merge, kompres, konversi, edit, dan tanda tangan PDF gratis langsung di browser. Tanpa upload ke server; file tetap tersimpan di perangkat Anda."
+description: "Gunakan 16+ PDF tools gratis untuk merge, compress, convert, crop, watermark, dan tanda tangan PDF langsung di browser tanpa upload file ke server."
 category: "Tools"
 icon: "web"
 status: "available"
@@ -10,23 +10,23 @@ audience: "Umum — pekerja kantoran, mahasiswa, freelancer, dan siapa pun yang 
 featured: true
 order: 2
 is_published: true
-is_localization: true
+is_localization: false
 image:
   file: "pdf-tools/pdf-home.webp"
-  alt: "Tampilan antarmuka Privacy PDF dengan berbagai tools pengolah PDF"
+  alt: "Privacy PDF, PDF tools gratis tanpa upload yang berjalan di browser"
 link: "https://pdf.wildanisme.com"
 gallery:
   - image: "../../assets/images/produk/pdf-tools/pdf-homepage.webp"
-    caption: "Tampilan antarmuka Privacy PDF"
+    caption: "Tampilan Privacy PDF, PDF tools gratis tanpa upload"
   - image: "../../assets/images/produk/pdf-tools/pdf-homepage-tools-catalog.webp"
-    caption: "Katalog tool PDF"
+    caption: "Katalog 16+ PDF tools gratis di browser"
   - image: "../../assets/images/produk/pdf-tools/pdf-merge-tool.webp"
-    caption: "Tool merge PDF"
+    caption: "Fitur merge PDF gratis langsung di browser"
 ---
 
-## Kerjakan Semua Urusan PDF Tanpa Khawatir Data Bocor
+## PDF Tools Gratis Tanpa Upload untuk Mengolah Dokumen dengan Aman
 
-Butuh gabung PDF? Tanda tangan digital? Kompres file? Biasanya Anda harus mengunggah dokumen ke server pihak ketiga — dan itu berarti data Anda berpindah tangan. **Privacy PDF** menyelesaikan masalah ini: semua proses berjalan langsung di browser Anda. File tidak pernah meninggalkan perangkat.
+Butuh **gabung PDF**, kompres file, konversi dokumen, atau tanda tangan PDF tanpa mengunggah data sensitif? **Privacy PDF** menyediakan PDF tools gratis yang berjalan langsung di browser. File diproses secara lokal dan tidak pernah meninggalkan perangkat Anda.
 
 ### Mengapa Privacy PDF Berbeda
 
@@ -35,7 +35,7 @@ Butuh gabung PDF? Tanda tangan digital? Kompres file? Biasanya Anda harus mengun
 - **Cepat & Ringan:** Tidak perlu menunggu upload/download. Proses instan — secepat perangkat Anda.
 - **Gratis Sepenuhnya:** Semua 16 tools tersedia tanpa biaya. Tanpa batasan ukuran file. Tanpa watermark.
 
-### 16 Tools dalam 6 Kategori
+### 16+ PDF Tools Gratis dalam 6 Kategori
 
 #### Organize
 
@@ -73,7 +73,7 @@ Butuh gabung PDF? Tanda tangan digital? Kompres file? Biasanya Anda harus mengun
 
 ### Teknologi di Balik Privacy PDF
 
-Privacy PDF menggunakan **NextJS** untuk memproses PDF secara native di browser. Engine pemrosesan PDF berjalan seperti aplikasi desktop — tanpa ketergantungan pada server backend. Ini berarti:
+Privacy PDF menggunakan teknologi pemrosesan PDF berbasis browser. Engine pemrosesan berjalan langsung di perangkat seperti aplikasi desktop — tanpa mengunggah dokumen ke server backend. Ini berarti:
 
 - Tidak ada data yang terkirim ke server kami.
 - Tidak ada biaya server per transaksi
@@ -81,10 +81,10 @@ Privacy PDF menggunakan **NextJS** untuk memproses PDF secara native di browser.
 
 ### FAQ
 
-> [!tip]+ **Apakah benar file saya tidak diunggah ke server?**
+> [!tip]+ **Apakah Privacy PDF benar-benar memproses file tanpa upload?**
 > Ya. Semua pemrosesan berjalan di browser Anda sendiri. Privacy PDF tidak mengirim file Anda ke server manapun — kami tidak bisa melihatnya.
 
-> [!tip]- **Apa bedanya dengan tools PDF online lainnya?**
+> [!tip]- **Apa bedanya dengan PDF tools online lainnya?**
 Tools konvensional mengunggah file ke server, memproses, lalu mengirim hasilnya kembali. Privacy PDF memproses semuanya secara lokal — lebih cepat dan lebih privat.
 
 > [!tip]- **Apakah ada batasan ukuran file?**

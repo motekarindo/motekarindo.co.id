@@ -20,6 +20,7 @@ const services = defineCollection({
     image: z.object({ file: z.string(), alt: z.string() }).optional(),
     is_localization: z.boolean().default(false),
     coverage: z.enum(["nasional", "jabodetabek"]).default("nasional"),
+    onsite_coverage: z.enum(["nasional", "jabodetabek"]).optional(),
   }),
 });
 

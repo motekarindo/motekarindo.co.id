@@ -43,9 +43,13 @@ if (
 
 const fm = item.data;
 const fmTitle = fm.title;
+const serviceName = fmTitle.replace(/^Jasa\s+/i, "");
+const onsiteAvailable =
+  fm.onsite_coverage === "nasional" ||
+  (fm.onsite_coverage === "jabodetabek" && jabodetabekSlugs.includes(city));
 
 const title = `${fmTitle} di ${cityName} | Motekarindo`;
-const description = `Jasa ${fmTitle.toLowerCase()} profesional di ${cityName} dan sekitarnya. Gratis konsultasi awal, tanpa komitmen.`;
+const description = `Jasa ${serviceName.toLowerCase()} profesional di ${cityName} dan sekitarnya. Gratis konsultasi awal, tanpa komitmen.`;
 
 const related = allServices
   .filter((s) => s.data.is_published !== false && s.data.slug !== service)
@@ -114,7 +118,14 @@ const waBottom = whatsappBase + encodeURIComponent(`Halo Motekarindo, saya ingin
 
           <p>Membutuhkan <strong>{fmTitle.toLowerCase()}</strong> di <strong>{cityName}</strong>? Kami menyediakan layanan profesional dengan standar yang sama di setiap project: terukur, terdokumentasi, bisa dirawat.</p>
 
-          <p>Kami melayani klien di {cityName} dan sekitarnya. Tim kami siap membantu — dari konsultasi awal hingga serah terima. Proses bisa dilakukan remote maupun onsite sesuai kebutuhan.</p>
+          <p>
+            Kami melayani klien di {cityName} dan sekitarnya. Tim kami siap membantu — dari konsultasi awal hingga serah terima.
+            {onsiteAvailable
+              ? " Proses bisa dilakukan secara remote maupun onsite sesuai kebutuhan."
+              : fm.onsite_coverage
+                ? " Untuk area ini, layanan dilakukan secara remote dengan koordinasi dan dokumentasi yang jelas."
+                : " Proses konsultasi dan koordinasi dapat dilakukan secara remote, sedangkan metode pengerjaan disesuaikan dengan kebutuhan proyek."}
+          </p>
 
           <h3>Mengapa Memilih Kami untuk {fmTitle} di {cityName}?</h3>
           <ul>
@@ -132,7 +143,12 @@ const waBottom = whatsappBase + encodeURIComponent(`Halo Motekarindo, saya ingin
           <h3>FAQ</h3>
 
           <p><strong>Apakah melayani {fmTitle.toLowerCase()} di {cityName}?</strong><br />
-          Ya. Kami melayani klien di {cityName} dan sekitarnya. Proses konsultasi dan koordinasi bisa dilakukan secara remote, sementara pengerjaan bisa dilakukan onsite jika diperlukan.</p>
+          Ya. Kami melayani klien di {cityName} dan sekitarnya.
+          {onsiteAvailable
+            ? " Proses dapat dilakukan secara remote maupun onsite sesuai kebutuhan."
+            : fm.onsite_coverage
+              ? " Untuk area ini, konsultasi, koordinasi, dan pengerjaan dilakukan secara remote."
+              : " Konsultasi dan koordinasi dapat dilakukan secara remote; metode pengerjaan disesuaikan dengan kebutuhan proyek."}</p>
 
           <p><strong>Berapa biaya {fmTitle.toLowerCase()} di {cityName}?</strong><br />
           Biaya tergantung pada kompleksitas dan skala proyek. Sesi konsultasi awal gratis — setelah itu kami kirim proposal transparan dengan rincian biaya dan deliverable sebelum Anda commit.</p>

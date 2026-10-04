@@ -9,6 +9,7 @@ featured: true
 order: 8
 is_published: true
 is_localization: true
+coverage: "nasional"
 ---
 
 ## Repositori Institusi Siap Online — Tanpa Pusing Teknis

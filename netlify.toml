@@ -5,6 +5,12 @@
 [build.environment]
   NODE_VERSION = "24.16.0"
 
+[[redirects]]
+  from = "/produk/pdf-tools/:city/"
+  to = "/produk/pdf-tools/"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/assets/*"
   [headers.values]
