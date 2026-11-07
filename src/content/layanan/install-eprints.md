@@ -8,7 +8,7 @@ icon: "repository"
 featured: true
 order: 8
 is_published: true
-is_localization: true
+is_localization: false
 coverage: "nasional"
 ---
 

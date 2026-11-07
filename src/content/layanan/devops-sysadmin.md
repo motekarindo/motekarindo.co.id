@@ -8,7 +8,7 @@ icon: "server"
 featured: true
 order: 3
 is_published: true
-is_localization: true 
+is_localization: false 
 coverage: "nasional"
 ---
 

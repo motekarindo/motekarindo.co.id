@@ -8,7 +8,7 @@ icon: "web"
 featured: true
 order: 2
 is_published: true
-is_localization: true
+is_localization: false
 coverage: "nasional"
 image:
   file: "web-development/test.webp"

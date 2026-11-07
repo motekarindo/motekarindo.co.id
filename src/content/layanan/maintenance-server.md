@@ -8,7 +8,7 @@ icon: "support"
 featured: true
 order: 6
 is_published: true
-is_localization: true
+is_localization: false
 coverage: "nasional"
 onsite_coverage: "jabodetabek"
 ---

@@ -8,7 +8,7 @@ icon: "install"
 featured: true
 order: 5
 is_published: true
-is_localization: true
+is_localization: false
 coverage: "nasional"
 ---
 

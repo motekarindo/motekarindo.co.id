@@ -10,7 +10,7 @@ audience: "Percetakan digital, percetakan offset, merchandise, dan jasa cetak cu
 featured: true
 order: 1
 is_published: true
-is_localization: true
+is_localization: false
 image:
   file: "erp-percetakan/pos-percetakan.webp"
   alt: "Dashboard aplikasi POS Percetakan menampilkan ringkasan order dan produksi"

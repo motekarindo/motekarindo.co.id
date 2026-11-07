@@ -8,7 +8,7 @@ icon: "writing"
 featured: true
 order: 10
 is_published: true
-is_localization: true
+is_localization: false
 coverage: "nasional"
 ---
 
