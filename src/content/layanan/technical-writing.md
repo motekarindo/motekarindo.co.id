@@ -8,8 +8,6 @@ icon: "writing"
 featured: true
 order: 10
 is_published: true
-is_localization: false
-coverage: "nasional"
 ---
 
 ## Sistem Anda Berjalan, Tapi Tidak Ada yang Paham Cara Kerjanya

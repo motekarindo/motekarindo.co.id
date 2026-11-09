@@ -8,8 +8,6 @@ icon: "consult"
 featured: true
 order: 1
 is_published: true
-is_localization: true
-coverage: "nasional"
 onsite_coverage: "jabodetabek"
 image:
   file: ""

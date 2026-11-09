@@ -4,7 +4,7 @@ import { getCollection } from "astro:content";
 import { byOrder } from "@/lib/content";
 import ServiceIllustration from "@/components/ServiceIllustration.astro";
 import { site } from "@/lib/site.data";
-import { jabodetabekCities } from "@/lib/cities";
+import { cities } from "@/lib/cities";
 
 export async function getStaticPaths() {
   const items = await getCollection("services");
@@ -42,6 +42,8 @@ if (fm.is_published === false) {
 }
 
 const allServices = byOrder(await getCollection("services"));
+const cityPages = (await getCollection("serviceCities", (e) => e.data.is_published && e.data.service === slug))
+  .map((e) => ({ slug: e.data.city, title: e.data.title, name: cities.find((c) => c.slug === e.data.city)?.name ?? e.data.city }));
 const related = allServices.filter((s) => s.data.is_published !== false && s.data.slug !== slug).slice(0, 3);
 
 const images = import.meta.glob<{ default: { src: string; width: number; height: number } }>(
@@ -159,14 +161,13 @@ const waBottom = whatsappBase + encodeURIComponent("Halo Motekarindo, saya ingin
           )}
         </article>
 
-        {fm.onsite_coverage === "jabodetabek" && (
+        {cityPages.length > 0 && (
           <section class="mt-16 border-t-2 border-brand-100 pt-10">
-            <h3 class="font-heading text-lg font-bold text-ink mb-5">Area layanan onsite</h3>
-            <p class="mb-5 text-sm leading-7 text-muted">Kunjungan onsite tersedia di area Jabodetabek. Di luar area ini, layanan tetap dapat dilakukan secara remote.</p>
+            <h3 class="font-heading text-lg font-bold text-ink mb-5">Tersedia di</h3>
             <div class="flex flex-wrap gap-3">
-              {jabodetabekCities.map((c) => (
-                <a href={`/layanan/${slug}/${c.slug}`} class="rounded-full border border-brand-200 bg-brand-50 px-4 py-2 text-sm font-semibold text-brand-700 transition-colors hover:border-brand-500 hover:bg-brand-100">
-                  Maintenance di {c.name}
+              {cityPages.map((c) => (
+                <a href={`/layanan/${slug}/${c.slug}`} title={c.title} class="rounded-full border border-brand-200 bg-brand-50 px-4 py-2 text-sm font-semibold text-brand-700 transition-colors hover:border-brand-500 hover:bg-brand-100">
+                  {c.name}
                 </a>
               ))}
             </div>

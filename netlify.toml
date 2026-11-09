@@ -11,6 +11,19 @@
   status = 301
   force = true
 
+# Bekas halaman kota hasil generate massal (500+ per layanan/produk) → 301 ke halaman induk.
+# Tanpa `force`: halaman kota yang memang ada (src/content/layanan-kota) tetap dilayani normal,
+# hanya URL yang sudah tidak ada yang di-redirect.
+[[redirects]]
+  from = "/layanan/:service/:city"
+  to = "/layanan/:service/"
+  status = 301
+
+[[redirects]]
+  from = "/produk/:product/:city"
+  to = "/produk/:product/"
+  status = 301
+
 [[headers]]
   for = "/assets/*"
   [headers.values]

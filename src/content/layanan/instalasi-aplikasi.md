@@ -8,8 +8,6 @@ icon: "install"
 featured: true
 order: 5
 is_published: true
-is_localization: false
-coverage: "nasional"
 ---
 
 ## Aplikasi Terpasang, Siap Pakai — Tanpa Pusing Konfigurasi

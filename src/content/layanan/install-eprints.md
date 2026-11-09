@@ -8,8 +8,6 @@ icon: "repository"
 featured: true
 order: 8
 is_published: true
-is_localization: false
-coverage: "nasional"
 ---
 
 ## Repositori Institusi Siap Online — Tanpa Pusing Teknis

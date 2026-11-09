@@ -8,8 +8,6 @@ icon: "backup"
 featured: true
 order: 9
 is_published: true
-is_localization: false
-coverage: "nasional"
 ---
 
 ## Website WordPress Sehat — Tanpa Khawatir Diretas atau Lambat

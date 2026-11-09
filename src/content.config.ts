@@ -18,9 +18,23 @@ const services = defineCollection({
     location: z.string().optional(),
     testimonial: z.string().optional(),
     image: z.object({ file: z.string(), alt: z.string() }).optional(),
-    is_localization: z.boolean().default(false),
-    coverage: z.enum(["nasional", "jabodetabek"]).default("nasional"),
     onsite_coverage: z.enum(["nasional", "jabodetabek"]).optional(),
+  }),
+});
+
+// Halaman layanan per kota — ditulis manual, satu file per kombinasi layanan+kota.
+// Path: src/content/layanan-kota/<slug-layanan>/<slug-kota>.md → /layanan/<slug-layanan>/<slug-kota>
+// File berawalan "_" (mis. _template.md) diabaikan.
+const serviceCities = defineCollection({
+  loader: glob({ pattern: ["**/*.md", "!**/_*.md"], base: "./src/content/layanan-kota" }),
+  schema: z.object({
+    service: z.string(), // slug layanan induk (frontmatter `slug` di src/content/layanan)
+    city: z.string(), // slug kota dari src/lib/cities.ts
+    title: z.string(), // judul halaman / H1, mis. "Jasa Install OJS Bogor"
+    description: z.string(), // meta description unik, 120-160 karakter
+    summary: z.string().optional(), // paragraf hero; fallback ke description
+    onsite: z.boolean().default(false), // bisa kunjungan langsung ke kota ini?
+    is_published: z.boolean().default(false),
   }),
 });
 
@@ -116,6 +130,7 @@ const portofolio = defineCollection({
 
 export const collections = {
   services,
+  serviceCities,
   solutions,
   products,
   clients,

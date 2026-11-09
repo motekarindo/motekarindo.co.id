@@ -8,8 +8,6 @@ icon: "web"
 featured: true
 order: 2
 is_published: true
-is_localization: false
-coverage: "nasional"
 image:
   file: "web-development/test.webp"
   alt: "Tim web developer Motekarindo sedang mengerjakan tampilan website di monitor"

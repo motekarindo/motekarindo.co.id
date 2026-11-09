@@ -8,8 +8,6 @@ icon: "journal"
 featured: true
 order: 7
 is_published: true
-is_localization: false
-coverage: "nasional"
 ---
 
 ## Jurnal Ilmiah Siap Online — Tanpa Pusing Teknis
