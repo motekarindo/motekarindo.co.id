@@ -5,7 +5,7 @@ title: "Jasa Pembuatan Website & Aplikasi Web Bogor"
 description: "Jasa pembuatan website dan aplikasi web custom di Bogor, untuk pemerintahan, kampus, dan UMKM. Kode terdokumentasi, bisa dirawat sendiri. Konsultasi gratis."
 summary: "Dari company profile sampai aplikasi internal seperti POS, manajemen aset, atau sistem verifikasi berkas, kami membangun aplikasi web untuk organisasi di Bogor. Tim berbasis di Kabupaten Bogor, jadi sesi diskusi kebutuhan bisa tatap muka."
 onsite: true
-is_published: false
+is_published: true
 ---
 
 ## Developer Website dan Aplikasi Web di Bogor
@@ -18,9 +18,9 @@ Untuk klien di Bogor, tahap *discovery* (memahami alur kerja dan kebutuhan) bisa
 
 ## Proyek yang Sudah Kami Bangun di Bogor
 
-**Digitalisasi verifikasi berkas, Pemerintah Kabupaten Bogor.** Sebelumnya staf harus membawa dokumen fisik ke dinas lain, mengantre, lalu mencatat hasilnya secara manual. Kami membangun aplikasi berbasis Laravel, PostgreSQL, dan Redis di atas Docker. Sekarang pengajuan cukup dengan unggah dokumen, alur validasi berjalan di sistem, ada notifikasi status, dan setiap langkah tercatat sebagai audit trail. Sistem ini sudah live dan dipakai dalam operasional harian, dan staf sudah dilatih untuk mengoperasikannya sendiri.
+**Digitalisasi verifikasi berkas, Pemerintah Kabupaten Bogor.** Pemkab membutuhkan alur verifikasi berkas antarperangkat daerah yang digital dan tercatat. Kami membangun aplikasi web berbasis Laravel. Pengajuan cukup dengan unggah dokumen, alur validasi berjalan di sistem, ada notifikasi status, dan setiap langkah tercatat sebagai audit trail. Sistem ini sudah live dan dipakai dalam operasional harian, dan staf sudah dilatih untuk mengoperasikannya sendiri.
 
-**Aplikasi manajemen aset dan POS, UQIMEDIA Digital Printing.** Percetakan digital di Bogor ini dulu mencatat aset di spreadsheet dan order di nota tulis tangan. Kami membangun dua aplikasi. Yang pertama mencatat aset produksi beserta riwayat dan jadwal perawatannya. Yang kedua adalah POS untuk counter, dengan kalkulasi harga otomatis, database pelanggan, dan invoice sekali klik. Pengembangannya bertahap, sehingga modul inti sudah bisa dipakai sambil fitur lain menyusul.
+**Aplikasi manajemen aset dan POS, UQIMEDIA Digital Printing.** Percetakan digital di Bogor ini membutuhkan pencatatan aset yang terstruktur dan kasir yang cepat. Kami membangun dua aplikasi. Yang pertama mencatat aset produksi beserta riwayat dan jadwal perawatannya. Yang kedua adalah POS untuk counter, dengan kalkulasi harga otomatis, database pelanggan, dan invoice sekali klik. Pengembangannya bertahap, sehingga modul inti sudah bisa dipakai sambil fitur lain menyusul.
 
 ## Jenis Pekerjaan yang Kami Terima
 

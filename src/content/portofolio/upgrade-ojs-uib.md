@@ -68,7 +68,7 @@ Kami selalu bekerja di staging environment dulu — server terpisah yang isinya 
 
 **Berapa biaya maintenance bulanan?**
 
-Tergantung skala jurnal. Untuk jurnal dengan traffic ~5.000 kunjungan/bulan, paket maintenance mulai dari Rp 500.000/bulan — sudah termasuk monitoring uptime, backup harian, dan update keamanan.
+Tergantung skala jurnal — diskusikan langsung lewat chat. Paket maintenance sudah termasuk monitoring uptime, backup harian, dan update keamanan.
 
 **Bisa bantu submit ke indeks Sinta/DOAJ?**
 

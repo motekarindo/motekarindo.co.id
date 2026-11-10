@@ -5,7 +5,7 @@ title: "Jasa Maintenance Server Bogor"
 description: "Jasa maintenance server & VPS di Bogor: monitoring 24/7, backup teruji, hardening, dan respons insiden cepat. Tim berbasis di Kabupaten Bogor, bisa onsite."
 summary: "Kami merawat server dan aplikasi untuk instansi pemerintah, kampus, dan bisnis di Bogor, dari monitoring dan backup sampai perbaikan bug. Kantor kami di Leuwisadeng, Kabupaten Bogor, jadi kunjungan onsite tidak perlu dijadwalkan berminggu-minggu."
 onsite: true
-is_published: false
+is_published: true
 ---
 
 ## Maintenance Server untuk Instansi dan Bisnis di Bogor
@@ -16,7 +16,7 @@ Motekarindo berkantor di **Bogor**. Sebagian besar pekerjaan maintenance kami la
 
 ## Pengalaman Kami Merawat Sistem di Bogor
 
-**JDIH Pemerintah Kabupaten Bogor.** Portal dokumentasi hukum ini memuat 1.964 dokumen hukum dengan lebih dari 655.000 tampilan dan 615.000 unduhan. Saat kami tangani, ada bug di pencarian dan filter, error 500 di jam sibuk, dan waktu muat 5–8 detik. Setelah perbaikan bug, hardening Nginx, optimasi query, dan pemasangan monitoring 24/7 dengan alert WhatsApp, waktu muat turun ke di bawah 2 detik dan error sporadis hilang.
+**JDIH Pemerintah Kabupaten Bogor.** Portal dokumentasi hukum ini memuat 1.964 dokumen hukum dengan lebih dari 655.000 tampilan dan 615.000 unduhan. Kami merawatnya dengan bug fixing berbasis prioritas, optimasi performa, dan monitoring 24/7 dengan alert otomatis. Hasilnya, halaman termuat di bawah 2 detik dan portal tetap stabil di jam sibuk.
 
 **Sistem verifikasi berkas Pemkab Bogor.** Selain membangun aplikasinya, kami juga menangani deployment, maintenance VPS, bug fixing, dan pelatihan pengguna agar staf bisa mengoperasikan sistem secara mandiri.
 
@@ -30,7 +30,7 @@ Motekarindo berkantor di **Bogor**. Sebagian besar pekerjaan maintenance kami la
 - **Bug fixing aplikasi** yang dicatat di issue tracker dan diverifikasi sebelum deploy.
 - **Changelog dan dokumentasi** yang bisa Anda akses, termasuk seluruh kredensial. Tidak ada lock-in.
 
-Paket bulanan mulai dari Rp 500 ribu untuk aplikasi kecil. Detailnya ada di halaman layanan utama.
+Cakupan dan biaya disesuaikan dengan skala sistem Anda. Ceritakan kebutuhannya lewat chat, kami bantu susun paket yang pas.
 
 ## Pertanyaan dari Klien di Bogor
 

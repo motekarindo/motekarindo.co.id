@@ -64,7 +64,7 @@ Kami memilih teknologi berdasarkan kebutuhan proyek, bukan tren:
 ### FAQ
 
 > [!tip]+ **Berapa biaya pembuatan website?**  
-> Biaya tergantung kompleksitas. Website company profile sederhana mulai dari Rp 3-8 juta. Aplikasi web custom atau e-commerce bisa Rp 15-50 juta, tergantung fitur. Semua proposal mencantumkan rincian biaya transparan — tidak ada biaya tersembunyi.
+> Biaya tergantung kompleksitas dan fitur yang dibutuhkan. Ceritakan kebutuhan Anda lewat chat — setelah scope jelas, kami kirim proposal dengan rincian biaya yang transparan, tanpa biaya tersembunyi.
 
 > [!tip]- **Berapa lama proses pengerjaan?**  
 > Website company profile: 2-4 minggu. Landing page: 1-2 minggu. Aplikasi web kompleks: 2-3 bulan. Timeline detail disertakan dalam proposal.

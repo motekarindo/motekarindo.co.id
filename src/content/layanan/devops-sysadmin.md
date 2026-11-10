@@ -62,7 +62,7 @@ Layanan **DevOps as a Service** dari Motekarindo memberi Anda keahlian infrastru
 ### FAQ
 
 > [!tip]+ **Apakah layanan ini cocok untuk startup kecil?**  
-> Sangat cocok. Anda mendapat keahlian DevOps tanpa biaya rekrutmen. Paket fleksibel — bisa per jam, per proyek, atau retainer bulanan mulai dari Rp 2 juta.
+> Sangat cocok. Anda mendapat keahlian DevOps tanpa biaya rekrutmen. Paket fleksibel — bisa per proyek atau retainer bulanan. Biaya disesuaikan dengan kebutuhan; diskusikan langsung lewat chat.
 
 > [!tip]- **Bagaimana jika server sudah ada dan sedang berjalan?**  
 > Kami bisa mengaudit dan mengoptimalkan setup existing Anda. Semua perubahan dilakukan di staging dulu — tidak ada downtime yang mengganggu operasional.

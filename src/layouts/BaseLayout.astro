@@ -15,9 +15,11 @@ interface Props {
   title: string;
   description: string;
   image?: string;
+  /** true = halaman tidak diindeks Google (juga dikeluarkan dari sitemap via astro.config) */
+  noindex?: boolean;
 }
 
-const { title, description, image } = Astro.props;
+const { title, description, image, noindex = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, "https://motekarindo.co.id");
 const ogImage = image ?? "https://motekarindo.co.id/og-default.png";
 ---
@@ -53,7 +55,7 @@ const ogImage = image ?? "https://motekarindo.co.id/og-default.png";
         gtag("config", "G-RCGSBJBH9L");
       });
     </script>
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="robots" content={noindex ? "noindex, follow" : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"} />
     <meta name="author" content="Motekar Teknologi Indonesia" />
     <meta name="geo.region" content="ID" />
     <meta name="geo.placename" content="Indonesia" />

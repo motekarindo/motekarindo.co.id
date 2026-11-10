@@ -9,7 +9,12 @@ export default defineConfig({
   site: "https://motekarindo.co.id",
 
   integrations: [
-    sitemap(),
+    sitemap({
+      // Halaman yang belum siap diindeks (pakai `noindex` di BaseLayout juga).
+      filter: (page) =>
+        !page.startsWith("https://motekarindo.co.id/solusi") &&
+        !/^https:\/\/motekarindo\.co\.id\/klien\/[^/]+\/$/.test(page),
+    }),
     compress({
       CSS: false,
       HTML: true,
