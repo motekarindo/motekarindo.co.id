@@ -3,8 +3,8 @@ title: "Maintenance & Perbaikan JDIH — Pemerintah Daerah Kabupaten Bogor"
 slug: "maintenance-jdih-bogor"
 client: "Pemerintah Daerah Kabupaten Bogor"
 clientPublic: true
-problem: "Website JDIH mengalami bug dan error yang mengganggu akses publik terhadap dokumen hukum. Perlu maintenance rutin untuk memastikan sistem tetap andal."
-solution: "Identifikasi dan perbaikan bug, hardening server, optimasi performa, dan maintenance berkala — memastikan ribuan dokumen hukum tetap bisa diakses publik tanpa hambatan."
+problem: "Portal JDIH melayani ribuan dokumen hukum untuk publik — perlu dirawat rutin agar tetap cepat, stabil, dan mudah dicari."
+solution: "Perbaikan bug, optimasi performa, monitoring 24/7, dan maintenance berkala — memastikan ribuan dokumen hukum tetap bisa diakses publik tanpa hambatan."
 services:
   - "Maintenance Server"
   - "Bug Fixing"
@@ -13,7 +13,8 @@ technologies:
   - "Nginx"
   - "MySQL"
   - "Linux"
-outcome: "Bug diperbaiki, server stabil, ribuan dokumen hukum tetap bisa diakses masyarakat. Total 655.000+ tampilan dan 615.000+ unduhan terlayani tanpa downtime."
+highlight: "655.000+ tampilan dokumen hukum"
+outcome: "Portal stabil dan cepat, ribuan dokumen hukum tetap bisa diakses masyarakat. Total 655.000+ tampilan dan 615.000+ unduhan terlayani."
 featured: true
 order: 3
 is_published: true
@@ -34,35 +35,33 @@ JDIH (Jaringan Dokumentasi dan Informasi Hukum) Kabupaten Bogor adalah portal re
 
 Dengan traffic yang tinggi — **655.000+ tampilan** dan **615.000+ unduhan** — sistem ini harus selalu online, cepat, dan bebas bug. Satu error kecil bisa menghambat akses masyarakat terhadap informasi hukum yang mereka butuhkan.
 
-## Masalah: Bug mengganggu akses publik
+## Kebutuhan: tetap cepat, stabil, dan mudah dicari
 
-Beberapa kendala teknis yang muncul dan harus segera ditangani:
+Untuk portal publik sebesar ini, pemeliharaan rutin berfokus pada lima hal:
 
-- **Bug pada fitur pencarian dan filter** — user tidak bisa menemukan dokumen dengan mudah. Kategori tidak muncul, hasil pencarian tidak akurat.
-- **Halaman error sporadis** — di jam-jam sibuk, beberapa halaman gagal dimuat. User mendapat error 500 tanpa penjelasan.
-- **Performa lambat** — loading halaman mencapai 5-8 detik, terutama di halaman dengan banyak data (daftar peraturan, hasil pencarian).
-- **Server tidak terpantau** — tidak ada monitoring yang memberi tahu jika server down atau disk penuh. Masalah baru diketahui setelah user komplain.
-- **Tidak ada dokumentasi teknis** — konfigurasi server dan aplikasi tidak tercatat. Kalau ada masalah, harus investigasi dari nol.
+- **Pencarian dan filter yang akurat** — masyarakat harus menemukan dokumen yang mereka cari dengan mudah.
+- **Stabil di jam sibuk** — halaman tetap terbuka saat trafik sedang tinggi.
+- **Waktu muat yang cepat** — terutama di halaman dengan banyak data, seperti daftar peraturan dan hasil pencarian.
+- **Server yang dipantau terus** — gangguan terdeteksi sebelum dirasakan pengguna.
+- **Dokumentasi teknis** — konfigurasi dan prosedur tercatat, sehingga sistem bisa dirawat siapa pun.
 
-## Solusi: Maintenance terstruktur, setiap masalah didokumentasikan
+## Yang kami kerjakan
 
-Motekarindo mengambil alih aspek teknis JDIH dengan pendekatan sistematis:
-
-- **Bug fixing prioritas** — setiap bug dicatat di issue tracker (GitHub Issues), diprioritaskan berdasarkan dampak ke user, diperbaiki, dan diverifikasi sebelum deploy. Bug pencarian dan filter yang paling mengganggu diselesaikan lebih dulu.
-- **Hardening server** — konfigurasi Nginx dioptimasi, rate limiting diterapkan, firewall diaktifkan. Server kini lebih aman dan stabil.
-- **Optimasi performa** — query database yang lambat di-rewrite, caching diaktifkan, aset statis dikompresi. Waktu loading turun drastis.
-- **Monitoring uptime** — server dipantau 24/7. Notifikasi langsung via WhatsApp jika ada anomali. Response time insiden rata-rata di bawah 30 menit.
-- **Dokumentasi** — setiap konfigurasi server, perubahan kode, dan prosedur operasional didokumentasikan. Tim internal Pemkab bisa mengakses dan memahami setup teknis — **bisa dirawat sendiri.**
+- **Bug fixing prioritas** — setiap bug dicatat di issue tracker, diprioritaskan berdasarkan dampak ke pengguna, diperbaiki, dan diverifikasi sebelum deploy.
+- **Keamanan dan stabilitas server** — konfigurasi server ditinjau dan diperkuat sesuai praktik standar.
+- **Optimasi performa** — query database dioptimasi, caching diaktifkan, aset statis dikompresi.
+- **Monitoring uptime** — server dipantau 24/7 dengan notifikasi otomatis jika ada anomali. Respons insiden rata-rata di bawah 30 menit.
+- **Dokumentasi** — setiap konfigurasi, perubahan kode, dan prosedur operasional didokumentasikan. Tim internal Pemkab bisa mengakses dan memahami setup teknis — **bisa dirawat sendiri.**
 
 ## Hasil
 
-| Aspek | Sebelum | Sesudah |
-|-------|---------|---------|
-| Bug pencarian & filter | Error, hasil tidak akurat | Berfungsi normal |
-| Error sporadis (500) | Terjadi di jam sibuk | 0 |
-| Waktu loading halaman | 5–8 detik | <2 detik |
-| Monitoring server | Tidak ada | 24/7 dengan alert WhatsApp |
-| Dokumentasi teknis | Tidak ada | Lengkap, bisa diakses tim internal |
+| Aspek | Hasil |
+|-------|-------|
+| Pencarian & filter | Berfungsi normal |
+| Stabilitas | Stabil di jam sibuk |
+| Waktu muat halaman | <2 detik |
+| Monitoring server | 24/7 dengan alert otomatis |
+| Dokumentasi teknis | Lengkap, bisa diakses tim internal |
 
 ## Statistik JDIH (per Juli 2026)
 

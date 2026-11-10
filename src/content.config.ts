@@ -116,6 +116,7 @@ const portofolio = defineCollection({
     services: z.array(z.string()),
     technologies: z.array(z.string()),
     outcome: z.string(),
+    highlight: z.string().optional(), // ringkasan hasil 1 baris untuk tabel studi kasus di beranda
     featured: z.boolean().default(false),
     order: z.number(),
     is_published: z.boolean().default(true),

@@ -15,3 +15,11 @@ export function statusLabel(status: string) {
 
   return labels[status] ?? status;
 }
+
+/**
+ * Nama layanan versi pendek untuk konteks ringkas (footer, kalimat di halaman kota, pesan WhatsApp).
+ * "Jasa Instalasi OJS Profesional" → "Instalasi OJS". Judul halaman (H1/<title>) tetap memakai `title` asli.
+ */
+export function serviceName(title: string) {
+  return title.replace(/^Jasa\s+/i, "").replace(/\s+Profesional$/i, "").trim();
+}

@@ -19,4 +19,4 @@ Motekarindo berkontribusi dalam pengembangan fullstack aplikasi **Layanan Kursus
 
 Aplikasi ini melayani ribuan lembaga di seluruh Indonesia dan menjadi tulang punggung digital untuk penyaluran Bantuan Pemerintah program PKK dan PKW.
 
-[Lihat studi kasus →](/portofolio/layanankursus-kemendikdasmen)
+<!--[Lihat studi kasus →](/portofolio/layanankursus-kemendikdasmen)-->

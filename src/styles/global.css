@@ -3,34 +3,37 @@
 @import "rehype-callouts/theme/github";
 
 @theme {
-  /* brand: hijau ColorHunt, 50=paling terang, 900=paling gelap */
-  --color-brand-50: #f2faf7;   /* background cards, hover ringan */
-  --color-brand-100: #daf0e8;   /* badge bg, highlight tipis */
-  --color-brand-200: #b5e1d2;   /* border ringan, dot pattern */
-  --color-brand-300: #8fd2bc;
-  --color-brand-400: #6fcf97;   /* ColorHunt hijau cerah, badge CTA di dark bg */
-  --color-brand-500: #4fbf8e;   /* connector line, check icon */
-  --color-brand-600: #2fa084;   /* ColorHunt primary — tombol, badge, link aktif */
-  --color-brand-700: #278873;   /* teks hijau gelap, hover teks */
-  --color-brand-800: #1f6f5f;   /* ColorHunt dark green — footer heading */
-  --color-brand-900: #175346;   /* teks di atas brand-400 */
+  /* Arah D — technical / blueprint. Netral bernuansa hijau, hijau tua untuk aksi, hijau terang untuk "status". */
+  --color-brand-50: #eaf2ee;   /* latar tipis, hover */
+  --color-brand-100: #dcede6;  /* badge, highlight */
+  --color-brand-200: #b9dccd;  /* border aksen ringan */
+  --color-brand-300: #8cc4ad;
+  --color-brand-400: #5aa98a;
+  --color-brand-500: #2f8f71;
+  --color-brand-600: #1d7a63;  /* primary — tombol, link aktif (kontras 5.3:1 dgn putih) */
+  --color-brand-700: #17624f;  /* hover, teks hijau */
+  --color-brand-800: #134e40;
+  --color-brand-900: #0f3d33;
 
   /* neutral */
-  --color-ink: #171717;         /* teks utama, heading */
-  --color-muted: #525252;       /* teks deskripsi */
-  --color-soft: #a3a3a3;        /* teks tersier, label */
-  --color-line: #e5e7eb;        /* border ringan */
-  --color-surface: #ffffff;     /* background putih */
-  --color-surface-alt: #eeeeee; /* ColorHunt #EEEEEE — bg alternatif */
+  --color-ink: #0f1a16;         /* teks utama, heading */
+  --color-muted: #3c4a44;       /* teks deskripsi */
+  --color-soft: #5b6a63;        /* teks tersier, label (lolos 4.5:1) */
+  --color-line: #d5dbd7;        /* border */
+  --color-grid: #e4e8e5;        /* garis latar blueprint */
+  --color-surface: #ffffff;
+  --color-surface-alt: #f6f7f5; /* latar section alternatif */
 
-  /* dark section & accent */
-  --color-asphalt: #2FA084;     /* bg gelap CTA & footer — netral hitam */
-  --color-accent: #eeeeee;       /* ColorHunt hijau cerah — tombol CTA di dark bg */
-  --color-accent-hover: #2fa084; /* hover tombol accent */
+  /* section gelap & aksen */
+  --color-asphalt: #0f1a16;     /* CTA & footer */
+  --color-accent: #1d7a63;
+  --color-accent-hover: #17624f;
+  --color-signal: #34d399;      /* titik status, highlight di latar gelap */
+  --color-highlight: #c7f0dc;   /* stabilo judul, badge */
 
-  --font-heading: "Sora", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
-  --radius-card: 0.75rem;
+  --font-heading: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --radius-card: 1rem;
   --radius-btn: 0.5rem;
 }
 
@@ -45,7 +48,7 @@
     -moz-osx-font-smoothing: grayscale;
   }
   body { min-height: 100vh; margin: 0; }
-  ::selection { background: #b5e1d2; color: #175346; } /* seleksi teks: brand-200 + brand-900 */
+  ::selection { background: #b9dccd; color: #0f3d33; }
   a { text-underline-offset: 0.2em; }
   :focus-visible { outline: 2.5px solid var(--color-brand-600); outline-offset: 3px; border-radius: 2px; } /* aksesibilitas keyboard */
 }
@@ -62,10 +65,35 @@
 .stagger-4 { animation-delay: 0.24s; }
 .stagger-5 { animation-delay: 0.3s; }
 
-.bg-dots {
-  background-image: radial-gradient(circle, #b5e1d2 1.5px, transparent 1.5px);
-  background-size: 24px 24px;
+/* Strip logo klien berjalan — dipakai otomatis jika klien > 6 */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
+/* Hanya tepi kanan yang memudar; tepi kiri tertutup label "Dipercaya oleh" (lihat index.astro). */
+.marquee {
+  mask-image: linear-gradient(to right, #000 92%, transparent);
+}
+.marquee-track { animation: marquee 40s linear infinite; }
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+  .marquee { overflow-x: auto; }
+}
+
+/* Latar kertas grid (gaya blueprint) */
+.bg-grid {
+  background-color: var(--color-surface-alt);
+  background-image:
+    linear-gradient(var(--color-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-grid) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+/* Label bagian: "// LAYANAN" */
+.eyebrow::before { content: "// "; }
+/* Stabilo di judul */
+.mark-hl { background: linear-gradient(transparent 62%, var(--color-highlight) 62%); }
 
 /* Callout alignment fix */
 .callout-title {

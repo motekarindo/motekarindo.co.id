@@ -32,7 +32,7 @@ const id = "gallery_" + Math.random().toString(36).slice(2, 8);
 const galleryJson = JSON.stringify(resolved.map(({ src, caption }) => ({ src, alt: caption, caption })));
 ---
 
-<section class="mt-16 border-t-2 border-brand-100 pt-10" id={`${id}-section`}>
+<section class="mt-16 border-t border-line pt-10" id={`${id}-section`}>
   <h3 class="font-heading text-lg font-bold text-ink mb-6">Galeri Produk</h3>
 
   <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" id={`${id}-grid`}>

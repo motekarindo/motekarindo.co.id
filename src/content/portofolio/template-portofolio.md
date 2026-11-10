@@ -4,7 +4,7 @@ slug: "template-portofolio"
 title: "Template File Portofolio"
 client: "Nama Klien"
 clientPublic: false            # false = nama klien dirahasiakan
-problem: "Uraian masalah yang dihadapi klien."
+problem: "Kebutuhan klien, ditulis netral (apa yang ingin dicapai) — jangan uraikan kelemahan/kondisi internal klien."
 solution: "Uraian solusi yang dikerjakan Motekarindo."
 services:                      # wajib, array
   - "Web Development"
@@ -15,6 +15,7 @@ technologies:                  # wajib, array
   - "Tailwind CSS"
   - "Static hosting"
 outcome: "Hasil yang dicapai setelah project selesai."
+highlight: "Ringkasan hasil 1 baris untuk beranda, mis. 655.000+ tampilan dokumen"   # opsional
 featured: false
 order: 99
 is_published: false            # true = muncul di list, false = hidden
