@@ -15,9 +15,9 @@ website: "https://iuqibogor.ac.id"
 
 Institut Ummul Quro Al-Islami (IUQI) adalah institusi pendidikan tinggi di Bogor yang mengelola jurnal ilmiah melalui platform Open Journal Systems (OJS).
 
-Motekarindo menangani maintenance OJS, perbaikan notifikasi email, setup monitoring server dengan Grafana, optimasi SEO jurnal, dan maintenance VPS.
+<!--Motekarindo menangani maintenance OJS, perbaikan notifikasi email, setup monitoring server dengan Grafana, optimasi SEO jurnal, dan maintenance VPS.
 
-Hasilnya: impresi jurnal naik dari 34 ribu (dalam 3 bulan) menjadi 74 ribu (dalam 1 bulan), notifikasi email stabil, server 0 downtime, dan semua metrik server terpantau real-time melalui dashboard Grafana.
+Hasilnya: impresi jurnal mencapai 74 ribu dalam satu bulan, notifikasi email stabil, server 0 downtime sejak dikelola, dan kondisi server terpantau real-time melalui dashboard monitoring.
 
 [Lihat studi kasus infrastruktur →](/portofolio/maintenance-infra-iuqi)  
-[Lihat studi kasus SEO →](/portofolio/seo-jurnal-iuqi)
+[Lihat studi kasus SEO →](/portofolio/seo-jurnal-iuqi)-->

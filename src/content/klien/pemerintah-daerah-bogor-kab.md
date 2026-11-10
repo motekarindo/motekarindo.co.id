@@ -17,10 +17,10 @@ Pemerintah Daerah Kabupaten Bogor adalah salah satu pemda terbesar di Jawa Barat
 
 Motekarindo menangani maintenance aplikasi, bug fixing, deployment, maintenance VPS, dan training user — memastikan sistem tetap berjalan optimal dan tim internal mampu mengelola secara mandiri.
 
-Dua project utama yang kami kerjakan:
+<!--Dua project utama yang kami kerjakan:
 
-- **Digitalisasi verifikasi berkas** — proses yang tadinya mengharuskan staf membawa dokumen fisik ke dinas lain kini digantikan oleh pengajuan melalui aplikasi. Tidak perlu antar fisik, tidak ada antrean, proses selesai dalam sistem.
+- **Digitalisasi verifikasi berkas** — pengajuan verifikasi berkas antarperangkat daerah kini dilakukan melalui aplikasi, dengan status yang bisa dipantau dan setiap langkah tercatat di sistem.
 - **Maintenance & perbaikan JDIH** — portal Jaringan Dokumentasi dan Informasi Hukum Kabupaten Bogor dengan 1.964 dokumen hukum, 655.000+ tampilan, dan 615.000+ unduhan. Kami tangani bug fixing, optimasi performa, hardening server, dan monitoring 24/7.
 
 [Digitalisasi verifikasi berkas →](/portofolio/digitalisasi-pemkab-bogor)  
-[Maintenance & perbaikan JDIH →](/portofolio/maintenance-jdih-bogor)
+[Maintenance & perbaikan JDIH →](/portofolio/maintenance-jdih-bogor)-->

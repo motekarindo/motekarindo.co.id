@@ -12,7 +12,7 @@ is_published: false
 
 Banyak server di Bogor, baik milik dinas, kampus, maupun usaha, berjalan tanpa ada yang benar-benar memantaunya. Aplikasinya dibuat vendor beberapa tahun lalu, developernya sudah tidak bisa dihubungi, dan masalah baru ketahuan setelah ada pengguna yang komplain. Di titik itu, yang dibutuhkan bukan sekadar "teknisi panggilan", tapi tim yang mau mengambil alih, mendokumentasikan, lalu merawat sistem secara rutin.
 
-Motekarindo berkantor di **Leuwisadeng, Kabupaten Bogor**. Sebagian besar pekerjaan maintenance kami lakukan remote. Tapi untuk server on-premise, ruang server kantor, atau insiden yang perlu dicek langsung, tim kami bisa datang ke lokasi Anda di wilayah Bogor.
+Motekarindo berkantor di **Bogor**. Sebagian besar pekerjaan maintenance kami lakukan remote. Tapi untuk server on-premise, ruang server kantor, atau insiden yang perlu dicek langsung, tim kami bisa datang ke lokasi Anda di wilayah Bogor.
 
 ## Pengalaman Kami Merawat Sistem di Bogor
 
@@ -20,11 +20,11 @@ Motekarindo berkantor di **Leuwisadeng, Kabupaten Bogor**. Sebagian besar pekerj
 
 **Sistem verifikasi berkas Pemkab Bogor.** Selain membangun aplikasinya, kami juga menangani deployment, maintenance VPS, bug fixing, dan pelatihan pengguna agar staf bisa mengoperasikan sistem secara mandiri.
 
-**Server jurnal Institut Ummul Quro Al-Islami (IUQI).** Sebelumnya server down tanpa ada alert dan email OJS sering gagal terkirim. Kami pasang dashboard Grafana, memperbaiki SMTP relay, mengatur backup harian, dan melakukan hardening VPS. Hasilnya nol downtime sejak dikelola, dengan respons insiden di bawah 15 menit.
+**Server jurnal Institut Ummul Quro Al-Islami (IUQI).** Jurnal OJS yang dipakai dosen dan author setiap hari kami rawat dengan dashboard monitoring, pengiriman email notifikasi yang andal, backup harian, dan pembaruan keamanan rutin. Hasilnya nol downtime sejak dikelola, dengan respons insiden di bawah 15 menit.
 
 ## Cakupan Maintenance
 
-- **Monitoring 24/7** untuk CPU, memori, disk, dan uptime, dengan alert langsung ke WhatsApp.
+- **Monitoring 24/7** untuk CPU, memori, disk, dan uptime, dengan alert langsung ke Telegram.
 - **Backup otomatis yang diuji restore secara berkala**, bukan sekadar file backup yang tidak pernah dicek.
 - **Update keamanan dan hardening**: firewall, rate limiting, serta patch OS dan aplikasi.
 - **Bug fixing aplikasi** yang dicatat di issue tracker dan diverifikasi sebelum deploy.

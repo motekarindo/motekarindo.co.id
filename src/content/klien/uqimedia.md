@@ -15,12 +15,11 @@ website: ""
 
 UQIMEDIA adalah perusahaan percetakan digital yang memproduksi merchandise, packaging, dan material promosi untuk klien korporat dan retail.
 
-Motekarindo mengembangkan dua sistem aplikasi untuk UQIMEDIA:
+<!--Motekarindo mengembangkan dua sistem aplikasi untuk UQIMEDIA:
 
 - **Aplikasi manajemen aset** — sistem untuk mencatat, melacak, dan mengelola aset produksi (mesin cetak, peralatan finishing, hingga perlengkapan kantor). Dari pencatatan pembelian, pemeliharaan berkala, hingga riwayat perbaikan — semua tercatat dalam satu dashboard.
 - **Aplikasi point of sales (POS)** — sistem kasir dan manajemen order untuk melayani transaksi di counter. Dari input pesanan, kalkulasi harga, pembayaran, hingga cetak invoice — semuanya terintegrasi.
 
 Kedua sistem ini membantu UQIMEDIA menjalankan operasional harian dengan lebih efisien — mengurangi kesalahan pencatatan manual dan mempercepat layanan ke pelanggan.
 
-[Lihat studi kasus →](/portofolio/aset-pos-uqimedia)
-
+[Lihat studi kasus →](/portofolio/aset-pos-uqimedia)-->

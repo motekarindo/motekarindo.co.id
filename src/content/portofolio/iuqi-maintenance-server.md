@@ -3,8 +3,8 @@ title: "Maintenance Server Jurnal — Institut Ummul Quro Al-Islami"
 slug: "maintenance-server-iuqi"
 client: "Institut Ummul Quro Al-Islami"
 clientPublic: true
-problem: "Jurnal down tanpa alert, email notifikasi gagal kirim, VPS tidak dimonitor, tidak ada dashboard performa."
-solution: "Maintenance VPS, hardening server, perbaikan SMTP relay, setup monitoring Grafana dengan alert real-time, backup database harian."
+problem: "Jurnal OJS IUQI dipakai dosen, reviewer, dan author setiap hari — butuh server yang dipantau terus, email notifikasi yang andal, dan kondisi sistem yang bisa dilihat kapan saja."
+solution: "Maintenance VPS, pengiriman email notifikasi melalui layanan relay, monitoring dengan alert real-time, backup database harian, dan dokumentasi operasional."
 services:
   - "Maintenance Server"
   - "Instalasi OJS"
@@ -15,7 +15,8 @@ technologies:
   - "MySQL"
   - "Grafana"
   - "Uptime Kuma"
-outcome: "0 downtime, email stabil, semua metrik server terpantau Grafana real-time, response insiden di bawah 15 menit."
+highlight: "0 downtime sejak dikelola"
+outcome: "0 downtime sejak dikelola, email notifikasi stabil, kondisi server terpantau real-time, dan respons insiden rata-rata di bawah 15 menit."
 featured: true
 order: 4
 is_published: true
@@ -24,40 +25,39 @@ metrics:
   - label: "Downtime"
     value: "0"
   - label: "Monitoring"
-    value: "Grafana"
+    value: "24/7"
   - label: "Email"
     value: "Stabil"
   - label: "Respons"
     value: "<15m"
 ---
 
-## Sebelum: Jurnal down, tidak ada yang memantau
+## Kebutuhan: jurnal yang selalu bisa diakses
 
-Institut Ummul Quro Al-Islami (IUQI) mengelola beberapa jurnal ilmiah menggunakan platform **Open Journal Systems (OJS)**. Tim editorial yang terdiri dari dosen dan peneliti sering menghadapi kendala teknis yang mengganggu proses publikasi:
+Institut Ummul Quro Al-Islami (IUQI) mengelola beberapa jurnal ilmiah menggunakan **Open Journal Systems (OJS)**. Tim editorial — dosen dan peneliti — membutuhkan infrastruktur yang mendukung proses publikasi tanpa hambatan:
 
-- **Server down tanpa alert** — VPS tidak dimonitor. Downtime baru diketahui setelah user komplain. Tidak ada yang tahu kondisi CPU, memory, atau disk server.
-- **Email notifikasi gagal kirim** — Konfirmasi submission, notifikasi reviewer, dan keputusan editorial tidak sampai ke author. Proses review molor karena komunikasi terputus.
-- **Tidak ada dashboard monitoring** — Tidak ada visibilitas ke performa server. Masalah baru ketahuan setelah berdampak ke pengguna.
-- **Server tidak ter-hardening** — Tidak ada firewall, rate limiting, atau proteksi dasar. Server rentan terhadap serangan brute-force.
+- **Server yang dipantau terus** — gangguan terdeteksi dan ditangani sebelum berdampak ke pengguna.
+- **Email notifikasi yang andal** — konfirmasi submission, undangan reviewer, dan keputusan editorial sampai ke tujuan.
+- **Kondisi sistem yang terlihat** — performa server bisa dilihat kapan saja, tidak hanya oleh vendor.
+- **Data yang aman** — backup rutin dan pembaruan keamanan berkala.
 
-## Solusi: Infrastruktur andal dengan monitoring real-time
+## Yang kami kerjakan
 
-Motekarindo mengambil alih seluruh aspek teknis infrastruktur jurnal IUQI:
-
-- **Maintenance VPS** — Hardening server dengan konfigurasi LEMP teroptimasi, firewall ketat, rate limiting, dan proteksi DDoS. Update rutin OS dan aplikasi. Server kini stabil — **0 downtime** sejak dikelola.
-- **Perbaikan sistem email** — Konfigurasi SMTP via layanan relay profesional. Seluruh notifikasi OJS (submission, review, editorial decision) kini terkirim dengan andal. Ditambah alert otomatis jika terjadi kegagalan pengiriman.
-- **Setup monitoring Grafana** — Dashboard monitoring real-time menampilkan CPU usage, memory, disk space, dan network traffic. Alert otomatis via WhatsApp jika ada anomali. Semua metrik tercatat dan bisa ditinjau kapan saja — **terukur, terdokumentasi**.
-- **Backup database harian** — Backup otomatis dengan retensi mingguan. Database jurnal aman dari kehilangan data.
-- **Dokumentasi penuh** — Semua konfigurasi server, kredensial, dan prosedur operasional didokumentasikan. Tim IUQI bisa mengakses dashboard monitoring sendiri — **bisa dirawat tanpa ketergantungan**.
+- **Maintenance VPS** — pembaruan rutin sistem operasi dan aplikasi, serta konfigurasi keamanan sesuai praktik standar.
+- **Sistem email** — notifikasi OJS dikirim melalui layanan relay profesional, dengan alert otomatis jika ada pengiriman yang gagal.
+- **Dashboard monitoring** — CPU, memori, disk, dan trafik terpantau real-time, dengan alert otomatis jika ada anomali. Semua metrik tercatat — **terukur, terdokumentasi**.
+- **Backup database harian** — backup otomatis dengan retensi mingguan.
+- **Dokumentasi penuh** — konfigurasi dan prosedur operasional didokumentasikan. Tim IUQI bisa mengakses dashboard monitoring sendiri — **bisa dirawat tanpa ketergantungan**.
 
 ## Hasil
 
-| Metrik | Sebelum | Sesudah |
-|--------|---------|---------|
-| Monitoring server | Tidak ada | Grafana real-time |
-| Email deliverability | Sering gagal | Stabil |
-| Response insiden | Tidak terpantau | <15 menit |
-| Backup | Tidak rutin | Harian + teruji |
+| Aspek | Hasil |
+|-------|-------|
+| Ketersediaan | 0 downtime sejak dikelola |
+| Monitoring server | Real-time 24/7, bisa diakses tim IUQI |
+| Email notifikasi | Stabil |
+| Respons insiden | Rata-rata <15 menit |
+| Backup | Harian + teruji |
 
 ## FAQ
 

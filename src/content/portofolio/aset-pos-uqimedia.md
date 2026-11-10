@@ -3,7 +3,7 @@ title: "Aplikasi Aset Manajemen & Point of Sales — UQIMEDIA Digital Printing"
 slug: "aset-pos-uqimedia"
 client: "UQIMEDIA Digital Printing"
 clientPublic: true
-problem: "Pencatatan aset produksi masih manual di spreadsheet — sulit dilacak, riwayat perbaikan tidak tercatat. Transaksi di counter juga masih manual — order ditulis di kertas, kalkulasi harga rawan salah, invoice lambat."
+problem: "UQIMEDIA membutuhkan sistem untuk mencatat aset produksi beserta riwayat perawatannya, serta kasir yang menghitung harga dan mencetak invoice otomatis."
 solution: "Pengembangan dua aplikasi terintegrasi: sistem manajemen aset untuk mencatat dan melacak seluruh aset produksi, serta point of sales (POS) untuk transaksi counter — dari input order hingga cetak invoice."
 services:
   - "Web Development"
@@ -13,6 +13,7 @@ technologies:
   - "MySQL"
   - "Nginx"
   - "Linux"
+highlight: "Invoice tercetak dalam 1 klik"
 outcome: "Dua sistem berjalan paralel — aset tercatat rapi dengan riwayat lengkap, transaksi counter lebih cepat, kalkulasi harga akurat, invoice tercetak otomatis."
 featured: true
 order: 6
@@ -28,37 +29,31 @@ metrics:
     value: "Live"
 ---
 
-## Konteks: Percetakan digital dengan dua masalah paralel
+## Konteks: Percetakan digital yang terus berkembang
 
-UQIMEDIA Digital Printing adalah perusahaan percetakan yang memproduksi merchandise, packaging, dan material promosi. Dengan mesin cetak, peralatan finishing, dan perlengkapan produksi yang terus bertambah, pencatatan aset menjadi makin kompleks. Di sisi lain, transaksi di counter masih mengandalkan pencatatan manual — dari nota tulis tangan hingga kalkulasi harga yang dihitung satu per satu.
+UQIMEDIA Digital Printing memproduksi merchandise, packaging, dan material promosi. Dengan mesin cetak, peralatan finishing, dan perlengkapan produksi yang terus bertambah, UQIMEDIA membutuhkan pencatatan aset yang lebih terstruktur — sekaligus kasir yang cepat dan konsisten di counter.
 
-Dua masalah ini terlihat terpisah, tapi dampaknya sama: **waktu habis untuk administrasi, bukan untuk produksi dan pelayanan.**
+## Kebutuhan
 
-## Sebelum: Spreadsheet dan nota kertas — dua kelemahan yang sama
+**Manajemen aset**
+- Setiap aset tercatat lengkap beserta penanggung jawabnya.
+- Riwayat servis dan penggantian suku cadang tersimpan per mesin.
+- Pengingat jadwal pemeliharaan rutin.
 
-### Masalah 1: Manajemen aset tanpa sistem
+**Transaksi counter**
+- Harga dihitung otomatis dari bahan, ukuran, finishing, dan jumlah.
+- Invoice tercetak langsung dari order, tanpa input ulang.
+- Data pelanggan dan riwayat order tersimpan untuk repeat order.
 
-- **Pencatatan aset di spreadsheet** — siapa yang punya akses edit? Siapa yang terakhir update? Tidak ada audit trail. Data bisa berubah tanpa diketahui siapa dan kapan.
-- **Riwayat perbaikan tidak tercatat** — mesin cetak A pernah diservis kapan? Suku cadang apa yang diganti? Tidak ada catatan. Setiap kali ada masalah, harus cari-cari nota servis yang entah disimpan di mana.
-- **Tidak ada jadwal pemeliharaan** — mesin dirawat saat rusak, bukan sebelum rusak. Tidak ada sistem yang mengingatkan kapan waktunya maintenance rutin.
-- **Aset kecil terlupakan** — perlengkapan kantor, tools finishing, peralatan pendukung — tidak masuk spreadsheet. Hilang satu per satu tanpa diketahui.
-
-### Masalah 2: Transaksi counter tanpa sistem
-
-- **Order ditulis di kertas** — nama pelanggan, jenis produk, jumlah, harga — semua dicatat manual. Tulisan tangan kadang tidak terbaca, kadang hilang.
-- **Kalkulasi harga rawan salah** — setiap jenis produk punya variabel harga sendiri: bahan, ukuran, finishing, quantity. Dihitung manual, hasilnya bisa beda tiap staf.
-- **Invoice dicetak terpisah** — setelah order dicatat, invoice dibuat di aplikasi terpisah. Double entry, dua kali kerja, dua kali risiko error.
-- **Tidak ada riwayat pelanggan** — pelanggan repeat order harus diinput ulang dari awal. Tidak ada database yang mencatat siapa pesan apa, kapan, berapa.
-
-## Solusi: Dua aplikasi, satu arsitektur — terukur dan terdokumentasi
+## Yang kami kerjakan: dua aplikasi, satu arsitektur
 
 Motekarindo mengembangkan dua aplikasi yang berjalan di atas fondasi yang sama:
 
 ### Aplikasi Manajemen Aset
 
-- **Pencatatan aset lengkap** — setiap aset dicatat dengan detail: nama, kategori, tanggal beli, nilai, lokasi, penanggung jawab. Tidak ada lagi spreadsheet tanpa audit trail.
+- **Pencatatan aset lengkap** — setiap aset dicatat dengan detail: nama, kategori, tanggal beli, nilai, lokasi, penanggung jawab. Setiap perubahan tercatat.
 - **Riwayat pemeliharaan** — setiap kali ada servis, perbaikan, atau penggantian suku cadang, semuanya dicatat. Kapan, oleh siapa, apa yang dikerjakan, berapa biayanya — lengkap dalam satu timeline.
-- **Jadwal pemeliharaan otomatis** — sistem mengingatkan kapan mesin harus diservis rutin. Tidak perlu ingat-ingat, tidak perlu Excel.
+- **Jadwal pemeliharaan otomatis** — sistem mengingatkan kapan mesin harus diservis rutin.
 - **Dashboard status aset** — ringkasan kondisi seluruh aset: aktif, dalam perbaikan, perlu perhatian. Satu layar, semua kelihatan.
 
 ### Aplikasi Point of Sales (POS)
@@ -70,16 +65,16 @@ Motekarindo mengembangkan dua aplikasi yang berjalan di atas fondasi yang sama:
 
 ## Hasil
 
-| Aspek | Sebelum | Sesudah |
-|-------|---------|---------|
-| Pencatatan aset | Spreadsheet, tidak ada audit trail | Sistem terpusat, riwayat lengkap |
-| Riwayat perbaikan | Nota kertas, tersebar | Timeline digital per aset |
-| Jadwal maintenance | Tidak ada, reaktif | Otomatis, proaktif |
-| Input order | Nota tulis tangan | POS digital |
-| Kalkulasi harga | Manual, rawan beda | Otomatis, konsisten |
-| Invoice | Dibuat terpisah | Satu klik cetak |
-| Data pelanggan | Tidak tercatat | Database lengkap |
-| Laporan penjualan | Rekap manual | Dashboard real-time |
+| Aspek | Hasil |
+|-------|-------|
+| Pencatatan aset | Sistem terpusat, riwayat lengkap |
+| Riwayat perbaikan | Timeline digital per aset |
+| Jadwal maintenance | Otomatis, proaktif |
+| Input order | POS digital |
+| Kalkulasi harga | Otomatis, konsisten |
+| Invoice | Satu klik cetak |
+| Data pelanggan | Database lengkap |
+| Laporan penjualan | Dashboard real-time |
 
 ## FAQ
 
@@ -93,4 +88,4 @@ Motekarindo mengembangkan dua aplikasi yang berjalan di atas fondasi yang sama:
 > Pengembangan dilakukan bertahap — dimulai dari modul yang paling kritis (pencatatan aset utama dan POS counter), lalu diperluas dengan fitur tambahan. Pendekatan bertahap memungkinkan UQIMEDIA langsung menggunakan sistem sambil kami terus mengembangkannya.
 
 > [!tip]- **Apakah aplikasi ini bisa diakses dari luar kantor?**
-> Aplikasi berjalan di server internal UQIMEDIA dan bisa diakses melalui jaringan lokal. Konfigurasi akses remote bisa ditambahkan sesuai kebutuhan bisnis ke depannya.
+> Akses aplikasi dikonfigurasi sesuai kebutuhan operasional UQIMEDIA. Akses jarak jauh bisa ditambahkan bila diperlukan.

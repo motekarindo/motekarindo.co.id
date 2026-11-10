@@ -6,14 +6,14 @@ description: "Motekarindo menangani maintenance OJS 3, maintenance server, dan m
 public: true
 logo: "universitas-islam-bogor/universitas-islam-bogor.webp"
 location: "Bogor, Jawa Barat"
-testimonial: "Upgrade adalah mimpi buruk bagi kami. Motekarindo menyelesaikan migrasi ribuan artikel tanpa satu pun data hilang. Sekarang tampilan jurnal lebih modern dan traffic naik signifikan. Sehingga kami bisa fokus pada operasional harian."
+testimonial: ""
 featured: true
 order: 2
-is_published: false
+is_published: true
 website: "https://uibogor.ac.id"
 ---
 
-## Sebelum: Terjebak OJS 2, traffic menurun
+<!--## Sebelum: Terjebak OJS 2, traffic menurun
 
 Universitas Islam Bogor memiliki jurnal terakreditasi **Sinta 2** yang masih berjalan di **OJS versi 2** — versi yang sudah tidak mendapat update keamanan sejak 2020. Tampilan usang, tidak mobile-friendly, dan mulai ditinggalkan author. **Traffic organik menurun** karena Google memprioritaskan situs dengan HTTPS dan mobile-responsive.
 
@@ -54,4 +54,4 @@ Tergantung skala jurnal. Untuk jurnal dengan traffic ~5.000 kunjungan/bulan, pak
 
 **Bisa bantu submit ke indeks Sinta/DOAJ?**
 
-Ya. Kami bantu siapkan semua persyaratan teknis dan administratif: sitemap, metadata Dublin Core, OAI-PMH, dan template sesuai standar Arjuna.
+Ya. Kami bantu siapkan semua persyaratan teknis dan administratif: sitemap, metadata Dublin Core, OAI-PMH, dan template sesuai standar Arjuna.-->

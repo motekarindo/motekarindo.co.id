@@ -3,7 +3,7 @@ title: "Optimasi SEO Jurnal — Institut Ummul Quro Al-Islami"
 slug: "seo-jurnal-iuqi"
 client: "Institut Ummul Quro Al-Islami"
 clientPublic: true
-problem: "Impresi jurnal hanya 34 ribu dalam 3 bulan. Artikel sulit ditemukan di Google Scholar. Tidak ada optimasi SEO teknis."
+problem: "IUQI ingin artikel jurnalnya lebih mudah ditemukan di Google dan Google Scholar, sehingga jangkauan publikasi meningkat."
 solution: "Implementasi SEO teknis: sitemap XML, metadata Dublin Core, OAI-PMH, optimasi kecepatan halaman, dan struktur heading semantik."
 services:
   - "Optimasi SEO Jurnal"
@@ -14,7 +14,8 @@ technologies:
   - "OAI-PMH"
   - "Google Scholar"
   - "Schema.org"
-outcome: "Impresi naik dari 34 ribu (3 bulan) menjadi 74 ribu (1 bulan). Artikel mulai terindeks lebih cepat di Google Scholar."
+highlight: "74.000 impresi dalam 1 bulan"
+outcome: "Impresi jurnal mencapai 74 ribu dalam satu bulan, dan artikel terindeks lebih cepat di Google Scholar."
 featured: true
 order: 4
 is_published: true
@@ -22,51 +23,46 @@ icon: "apps"
 metrics:
   - label: "Impresi"
     value: "74.000"
-  - label: "Sebelum"
-    value: "34.000"
   - label: "Periode"
-    value: "3 bln → 1 bln"
-  - label: "Kenaikan"
-    value: "2,2x"
+    value: "1 bulan"
+  - label: "Waktu muat"
+    value: "<1,5 dtk"
+  - label: "Metadata"
+    value: "Lengkap"
 coverImage:
   file: "iuqi-seo-jurnal/iuqi-seo-jurnal-setelah.webp"
   alt: "Impresi jurnal setelah optimasi"
 ---
 
-## Sebelum: Artikel sulit ditemukan, impresi stagnan
+## Kebutuhan: artikel berkualitas yang lebih mudah ditemukan
 
-Jurnal ilmiah IUQI sudah memiliki konten berkualitas — tapi tidak dioptimasi untuk mesin pencari. Dampaknya:
+Jurnal ilmiah IUQI memiliki konten berkualitas. Agar artikel-artikelnya menjangkau lebih banyak pembaca dan peneliti, jurnal perlu fondasi SEO teknis yang dipahami mesin pencari akademik:
 
-- **Impresi rendah** — Hanya 34.000 impresi dalam 3 bulan. Artikel tidak muncul di halaman pertama Google Scholar.
-- **Metadata tidak lengkap** — Tidak ada Dublin Core, OAI-PMH tidak terkonfigurasi. Google kesulitan memahami struktur artikel.
-- **Kecepatan halaman buruk** — Waktu muat 4-8 detik. Google memprioritaskan situs yang cepat.
-- **Tidak ada sitemap** — Crawler Google tidak bisa menemukan semua halaman jurnal secara efisien.
+- **Metadata standar** — Dublin Core dan OAI-PMH, agar Google Scholar dan agregator membaca artikel dengan akurat.
+- **Sitemap lengkap** — supaya crawler menemukan setiap issue dan artikel baru dengan cepat.
+- **Halaman yang cepat** — mesin pencari memprioritaskan situs yang ringan.
+- **Struktur halaman yang jelas** — heading dan markup yang menggambarkan isi artikel.
 
-## Solusi: Fondasi SEO teknis yang solid
+## Yang kami kerjakan
 
-Motekarindo menerapkan optimasi SEO teknis menyeluruh:
-
-- **Metadata Dublin Core** — Setiap artikel dilengkapi metadata author, title, abstract, date, dan identifier. Google Scholar bisa membaca dan mengindeks artikel dengan akurat.
-- **OAI-PMH** — Protokol standar untuk harvesting metadata. Jurnal IUQI kini kompatibel dengan agregator dan repositori akademik global.
-- **Sitemap XML** — Semua halaman jurnal — homepage, issue, artikel — terdaftar di sitemap. Crawler Google bisa menemukan konten baru lebih cepat.
-- **Optimasi kecepatan** — Kompresi, caching, dan optimasi gambar. Waktu muat turun dari 4-8 detik ke <1.5 detik. User experience lebih baik, Google memberi peringkat lebih tinggi.
-- **Struktur heading semantik** — H1, H2, H3 ditata sesuai hierarki konten. Google memahami struktur halaman dengan lebih baik.
-- **Schema.org markup** — Artikel ilmiah diberi markup `ScholarlyArticle`. Rich snippets di hasil pencarian Google.
+- **Metadata Dublin Core** — setiap artikel dilengkapi metadata author, title, abstract, date, dan identifier. Google Scholar bisa membaca dan mengindeks artikel dengan akurat.
+- **OAI-PMH** — protokol standar untuk harvesting metadata. Jurnal IUQI kompatibel dengan agregator dan repositori akademik global.
+- **Sitemap XML** — semua halaman jurnal — homepage, issue, artikel — terdaftar di sitemap.
+- **Optimasi kecepatan** — kompresi, caching, dan optimasi gambar. Waktu muat kini di bawah 1,5 detik.
+- **Struktur heading semantik** — H1, H2, H3 ditata sesuai hierarki konten.
+- **Schema.org markup** — artikel ilmiah diberi markup `ScholarlyArticle` untuk rich snippets di hasil pencarian.
 
 ## Hasil
 
-| Metrik | Sebelum | Sesudah |
-|--------|---------|---------|
-| Impresi | 34.000 (3 bulan) | 74.000 (1 bulan) |
-| Kenaikan impresi | — | 2,2x lipat |
-| Kecepatan halaman | 4–8 detik | <1.5 detik |
-| Metadata Dublin Core | Tidak ada | Lengkap |
-| OAI-PMH | Tidak terkonfigurasi | Aktif |
+| Aspek | Hasil |
+|-------|-------|
+| Impresi | 74.000 dalam 1 bulan |
+| Kecepatan halaman | <1,5 detik |
+| Metadata Dublin Core | Lengkap |
+| OAI-PMH | Aktif |
+| Google Scholar | Artikel terindeks lebih cepat |
 
-
-![Impresi jurnal sebelum optimasi](../../assets/images/portofolio/iuqi-seo-jurnal/iuqi-seo-jurnal-sebelum.webp)
 ![Impresi jurnal setelah optimasi](../../assets/images/portofolio/iuqi-seo-jurnal/iuqi-seo-jurnal-setelah.webp)
-
 
 ## FAQ
 
